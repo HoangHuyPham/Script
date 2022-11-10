@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("httpps://raw.githubusercontent.com/Kaizenofficiall/ZenHub/main/bloxfrui%20v0.3", true))()
