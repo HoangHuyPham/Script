@@ -1017,8 +1017,8 @@ local function InitGUI(gamepasses)
     initConnection()
 
 end
-
-game.Players.LocalPlayer:FindFirstChild"statz".ChildAdded:Connect(function()
+InitGUI(gamepasses)
+game.Players.LocalPlayer:WaitForChild("statz",  TIME_OUT).ChildAdded:Connect(function()
 	InitGUI(gamepasses)
 end)
 
