@@ -1018,5 +1018,10 @@ local function InitGUI(gamepasses)
 
 end
 
-InitGUI(gamepasses)
+game.Players.LocalPlayer:FindFirstChild"statz".ChildAdded:Connect(function()
+	task.wait(5)
+	InitGUI(gamepasses)
+end)
+
+
 
