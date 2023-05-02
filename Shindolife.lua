@@ -1,6 +1,6 @@
---loadstring(game:HttpGet"https://raw.githubusercontent.com/HoangHuyPham/Script/master/Shindolife.lua")()
+-- loadstring(game:HttpGet"https://raw.githubusercontent.com/HoangHuyPham/Script/master/Shindolife.lua")()
 while not game:IsLoaded() do
-	task.wait()
+    task.wait()
 end
 local TIME_OUT = 10
 local UserInputService = game:GetService("UserInputService")
@@ -20,8 +20,8 @@ local spin = nil
 local isChosen = false
 local spinned = 0
 local initialSpin = {
-	element = 0,
-	bloodline = 0
+    element = 0,
+    bloodline = 0
 }
 
 local ToolBox = Instance.new("ScreenGui")
@@ -54,51 +54,51 @@ SpinnedLabel.TextWrapped = true
 SpinnedLabel.Size = UDim2.new(0.6, 0, 0.1, 0)
 
 local function createMenuList(name, value, parent)
-	value = value or "null"
-	parent = parent or nil
-	local btn = Instance.new("TextButton")
-	btn.Name = name
-	btn.Text = value
-	btn.Parent = parent
-	btn.Position = UDim2.new(0, 0, 0, 0)
-	btn.Size = UDim2.new(1, -parent.ScrollBarThickness, parent.Size.Y.Scale, 0)
-	btn.TextColor3 = Color3.fromRGB(0, 0, 0)
-	btn.BorderSizePixel = 0
-	btn.BackgroundColor3 = Color3.fromRGB(85, 103, 112)
-	btn:SetAttribute("checked", false)
-	btn.TextScaled = true
-	btn.Activated:Connect(function()
-		btn:SetAttribute("checked", not btn:GetAttribute("checked"))
-		if (btn:GetAttribute("checked")) then
-			local count = 0
-			for _, v in pairs(stop_spin_choose_scroll_frame:GetChildren()) do
-				count = count + 1
-			end
-			if not (count > 20) then
-				btn.TextColor3 = Color3.fromRGB(255, 0, 0)
-				local btnClone = btn:Clone()
-				btnClone.Size = UDim2.new(1 / 6, 0, 1, 0)
-				btnClone.Activated:Connect(function()
-					btn.TextColor3 = Color3.fromRGB(0, 0, 0)
-					for _, v in pairs(stop_spin_choose_scroll_frame:GetChildren()) do
-						if (v.Name == btn.Name) then
-							stop_spin_choose_scroll_frame:FindFirstChild(v.Name):Remove()
-						end
-					end
-				end)
-				btnClone.Parent = stop_spin_choose_scroll_frame
-			else
-				btn:SetAttribute("checked", not btn:GetAttribute("checked"))
-			end
-		else
-			btn.TextColor3 = Color3.fromRGB(0, 0, 0)
-			for _, v in pairs(stop_spin_choose_scroll_frame:GetChildren()) do
-				if (v.Name == btn.Name) then
-					stop_spin_choose_scroll_frame:FindFirstChild(v.Name):Remove()
-				end
-			end
-		end
-	end)
+    value = value or "null"
+    parent = parent or nil
+    local btn = Instance.new("TextButton")
+    btn.Name = name
+    btn.Text = value
+    btn.Parent = parent
+    btn.Position = UDim2.new(0, 0, 0, 0)
+    btn.Size = UDim2.new(1, -parent.ScrollBarThickness, parent.Size.Y.Scale, 0)
+    btn.TextColor3 = Color3.fromRGB(0, 0, 0)
+    btn.BorderSizePixel = 0
+    btn.BackgroundColor3 = Color3.fromRGB(85, 103, 112)
+    btn:SetAttribute("checked", false)
+    btn.TextScaled = true
+    btn.Activated:Connect(function()
+        btn:SetAttribute("checked", not btn:GetAttribute("checked"))
+        if (btn:GetAttribute("checked")) then
+            local count = 0
+            for _, v in pairs(stop_spin_choose_scroll_frame:GetChildren()) do
+                count = count + 1
+            end
+            if not (count > 20) then
+                btn.TextColor3 = Color3.fromRGB(255, 0, 0)
+                local btnClone = btn:Clone()
+                btnClone.Size = UDim2.new(1 / 6, 0, 1, 0)
+                btnClone.Activated:Connect(function()
+                    btn.TextColor3 = Color3.fromRGB(0, 0, 0)
+                    for _, v in pairs(stop_spin_choose_scroll_frame:GetChildren()) do
+                        if (v.Name == btn.Name) then
+                            stop_spin_choose_scroll_frame:FindFirstChild(v.Name):Remove()
+                        end
+                    end
+                end)
+                btnClone.Parent = stop_spin_choose_scroll_frame
+            else
+                btn:SetAttribute("checked", not btn:GetAttribute("checked"))
+            end
+        else
+            btn.TextColor3 = Color3.fromRGB(0, 0, 0)
+            for _, v in pairs(stop_spin_choose_scroll_frame:GetChildren()) do
+                if (v.Name == btn.Name) then
+                    stop_spin_choose_scroll_frame:FindFirstChild(v.Name):Remove()
+                end
+            end
+        end
+    end)
 end
 
 local Element1Frame = Instance.new("Frame")
@@ -107,14 +107,14 @@ Element1Frame.Parent = ToolBoxFrame
 Element1Frame.Position = UDim2.new(0.05, 0, 0.3, 0)
 Element1Frame.Size = UDim2.new(WIDTH_SLOT, 0, 0.1, 0)
 Element1Frame.InputBegan:Connect(function(input)
-	if (input.UserInputType == Enum.UserInputType.MouseButton1) then
-		if not (Element1Frame:FindFirstChild("Element1ValueLabel").Text == "Locked") then
-			Element1Frame:FindFirstChild("Element1ValueLabel").Text = "Locked"
-		else
-			Element1Frame:FindFirstChild("Element1ValueLabel").Text = getCurrentValues().element[1]
-		end
+    if (input.UserInputType == Enum.UserInputType.MouseButton1) then
+        if not (Element1Frame:FindFirstChild("Element1ValueLabel").Text == "Locked") then
+            Element1Frame:FindFirstChild("Element1ValueLabel").Text = "Locked"
+        else
+            Element1Frame:FindFirstChild("Element1ValueLabel").Text = getCurrentValues().element[1]
+        end
 
-	end
+    end
 end)
 
 local Element1Label = Instance.new("TextLabel")
@@ -142,17 +142,17 @@ local Element2Frame = Instance.new("Frame")
 Element2Frame.Name = "Element2Frame"
 Element2Frame.Parent = ToolBoxFrame
 Element2Frame.Position = UDim2.new(Element1Frame.Position.X.Scale, 0,
-	Element1Frame.Position.Y.Scale + Element1Frame.Size.Y.Scale, 0)
+    Element1Frame.Position.Y.Scale + Element1Frame.Size.Y.Scale, 0)
 Element2Frame.Size = UDim2.new(WIDTH_SLOT, 0, 0.1, 0)
 Element2Frame.InputBegan:Connect(function(input)
-	if (input.UserInputType == Enum.UserInputType.MouseButton1) then
-		if not (Element2Frame:FindFirstChild("Element2ValueLabel").Text == "Locked") then
-			Element2Frame:FindFirstChild("Element2ValueLabel").Text = "Locked"
-		else
-			Element2Frame:FindFirstChild("Element2ValueLabel").Text = getCurrentValues().element[2]
-		end
+    if (input.UserInputType == Enum.UserInputType.MouseButton1) then
+        if not (Element2Frame:FindFirstChild("Element2ValueLabel").Text == "Locked") then
+            Element2Frame:FindFirstChild("Element2ValueLabel").Text = "Locked"
+        else
+            Element2Frame:FindFirstChild("Element2ValueLabel").Text = getCurrentValues().element[2]
+        end
 
-	end
+    end
 end)
 
 local Element2Label = Instance.new("TextLabel")
@@ -180,22 +180,22 @@ local Element3Frame = Instance.new("Frame")
 Element3Frame.Name = "Element3Frame"
 Element3Frame.Parent = ToolBoxFrame
 Element3Frame.Position = UDim2.new(Element2Frame.Position.X.Scale, 0,
-	Element2Frame.Position.Y.Scale + Element2Frame.Size.Y.Scale, 0)
+    Element2Frame.Position.Y.Scale + Element2Frame.Size.Y.Scale, 0)
 Element3Frame.Size = UDim2.new(WIDTH_SLOT, 0, 0.1, 0)
 Element3Frame.InputBegan:Connect(function(input)
-	if (input.UserInputType == Enum.UserInputType.MouseButton1) then
-		if not (Element3Frame:FindFirstChild("Element3ValueLabel").Text == "Locked") then
-			Element3Frame:FindFirstChild("Element3ValueLabel").Text = "Locked"
-		else
-			if (gamepasses.element3) then
-				Element3Frame:FindFirstChild("Element3ValueLabel").Text = getCurrentValues().element[3]
-			else
-				Element3Frame:FindFirstChild("Element3ValueLabel").Text = "Not have this gamepass!"
-			end
+    if (input.UserInputType == Enum.UserInputType.MouseButton1) then
+        if not (Element3Frame:FindFirstChild("Element3ValueLabel").Text == "Locked") then
+            Element3Frame:FindFirstChild("Element3ValueLabel").Text = "Locked"
+        else
+            if (gamepasses.element3) then
+                Element3Frame:FindFirstChild("Element3ValueLabel").Text = getCurrentValues().element[3]
+            else
+                Element3Frame:FindFirstChild("Element3ValueLabel").Text = "Not have this gamepass!"
+            end
 
-		end
+        end
 
-	end
+    end
 end)
 
 local WIDTH_SLOT = 0.4
@@ -225,22 +225,22 @@ local Element4Frame = Instance.new("Frame")
 Element4Frame.Name = "Element4Frame"
 Element4Frame.Parent = ToolBoxFrame
 Element4Frame.Position = UDim2.new(Element3Frame.Position.X.Scale, 0,
-	Element3Frame.Position.Y.Scale + Element3Frame.Size.Y.Scale, 0)
+    Element3Frame.Position.Y.Scale + Element3Frame.Size.Y.Scale, 0)
 Element4Frame.Size = UDim2.new(WIDTH_SLOT, 0, 0.1, 0)
 Element4Frame.InputBegan:Connect(function(input)
-	if (input.UserInputType == Enum.UserInputType.MouseButton1) then
-		if not (Element4Frame:FindFirstChild("Element4ValueLabel").Text == "Locked") then
-			Element4Frame:FindFirstChild("Element4ValueLabel").Text = "Locked"
-		else
-			if (gamepasses.element4) then
-				Element4Frame:FindFirstChild("Element4ValueLabel").Text = getCurrentValues().element[4]
-			else
-				Element4Frame:FindFirstChild("Element4ValueLabel").Text = "Not have this gamepass!"
-			end
+    if (input.UserInputType == Enum.UserInputType.MouseButton1) then
+        if not (Element4Frame:FindFirstChild("Element4ValueLabel").Text == "Locked") then
+            Element4Frame:FindFirstChild("Element4ValueLabel").Text = "Locked"
+        else
+            if (gamepasses.element4) then
+                Element4Frame:FindFirstChild("Element4ValueLabel").Text = getCurrentValues().element[4]
+            else
+                Element4Frame:FindFirstChild("Element4ValueLabel").Text = "Not have this gamepass!"
+            end
 
-		end
+        end
 
-	end
+    end
 end)
 
 local WIDTH_SLOT = 0.4
@@ -272,14 +272,14 @@ Bloodline1Frame.Parent = ToolBoxFrame
 Bloodline1Frame.Position = UDim2.new(0.5, 0, 0.3, 0)
 Bloodline1Frame.Size = UDim2.new(WIDTH_SLOT, 0, 0.1, 0)
 Bloodline1Frame.InputBegan:Connect(function(input)
-	if (input.UserInputType == Enum.UserInputType.MouseButton1) then
-		if not (Bloodline1Frame:FindFirstChild("Bloodline1ValueLabel").Text == "Locked") then
-			Bloodline1Frame:FindFirstChild("Bloodline1ValueLabel").Text = "Locked"
-		else
-			Bloodline1Frame:FindFirstChild("Bloodline1ValueLabel").Text = getCurrentValues().bloodline[1]
-		end
+    if (input.UserInputType == Enum.UserInputType.MouseButton1) then
+        if not (Bloodline1Frame:FindFirstChild("Bloodline1ValueLabel").Text == "Locked") then
+            Bloodline1Frame:FindFirstChild("Bloodline1ValueLabel").Text = "Locked"
+        else
+            Bloodline1Frame:FindFirstChild("Bloodline1ValueLabel").Text = getCurrentValues().bloodline[1]
+        end
 
-	end
+    end
 end)
 
 local Bloodline1Label = Instance.new("TextLabel")
@@ -307,17 +307,17 @@ local Bloodline2Frame = Instance.new("Frame")
 Bloodline2Frame.Name = "Bloodline2Frame"
 Bloodline2Frame.Parent = ToolBoxFrame
 Bloodline2Frame.Position = UDim2.new(Bloodline1Frame.Position.X.Scale, 0,
-	Bloodline1Frame.Position.Y.Scale + Bloodline1Frame.Size.Y.Scale, 0)
+    Bloodline1Frame.Position.Y.Scale + Bloodline1Frame.Size.Y.Scale, 0)
 Bloodline2Frame.Size = UDim2.new(WIDTH_SLOT, 0, 0.1, 0)
 Bloodline2Frame.InputBegan:Connect(function(input)
-	if (input.UserInputType == Enum.UserInputType.MouseButton1) then
-		if not (Bloodline2Frame:FindFirstChild("Bloodline2ValueLabel").Text == "Locked") then
-			Bloodline2Frame:FindFirstChild("Bloodline2ValueLabel").Text = "Locked"
-		else
-			Bloodline2Frame:FindFirstChild("Bloodline2ValueLabel").Text = getCurrentValues().bloodline[2]
-		end
+    if (input.UserInputType == Enum.UserInputType.MouseButton1) then
+        if not (Bloodline2Frame:FindFirstChild("Bloodline2ValueLabel").Text == "Locked") then
+            Bloodline2Frame:FindFirstChild("Bloodline2ValueLabel").Text = "Locked"
+        else
+            Bloodline2Frame:FindFirstChild("Bloodline2ValueLabel").Text = getCurrentValues().bloodline[2]
+        end
 
-	end
+    end
 end)
 
 local WIDTH_SLOT = 0.4
@@ -347,22 +347,22 @@ local Bloodline3Frame = Instance.new("Frame")
 Bloodline3Frame.Name = "Bloodline3Frame"
 Bloodline3Frame.Parent = ToolBoxFrame
 Bloodline3Frame.Position = UDim2.new(Bloodline2Frame.Position.X.Scale, 0,
-	Bloodline2Frame.Position.Y.Scale + Bloodline2Frame.Size.Y.Scale, 0)
+    Bloodline2Frame.Position.Y.Scale + Bloodline2Frame.Size.Y.Scale, 0)
 Bloodline3Frame.Size = UDim2.new(WIDTH_SLOT, 0, 0.1, 0)
 Bloodline3Frame.InputBegan:Connect(function(input)
-	if (input.UserInputType == Enum.UserInputType.MouseButton1) then
-		if not (Bloodline3Frame:FindFirstChild("Bloodline3ValueLabel").Text == "Locked") then
-			Bloodline3Frame:FindFirstChild("Bloodline3ValueLabel").Text = "Locked"
-		else
-			if (gamepasses.genkai3) then
-				Bloodline3Frame:FindFirstChild("Bloodline3ValueLabel").Text = getCurrentValues().bloodline[3]
-			else
-				Bloodline3Frame:FindFirstChild("Bloodline3ValueLabel").Text = "Not have this gamepass!"
-			end
+    if (input.UserInputType == Enum.UserInputType.MouseButton1) then
+        if not (Bloodline3Frame:FindFirstChild("Bloodline3ValueLabel").Text == "Locked") then
+            Bloodline3Frame:FindFirstChild("Bloodline3ValueLabel").Text = "Locked"
+        else
+            if (gamepasses.genkai3) then
+                Bloodline3Frame:FindFirstChild("Bloodline3ValueLabel").Text = getCurrentValues().bloodline[3]
+            else
+                Bloodline3Frame:FindFirstChild("Bloodline3ValueLabel").Text = "Not have this gamepass!"
+            end
 
-		end
+        end
 
-	end
+    end
 end)
 
 local WIDTH_SLOT = 0.4
@@ -392,22 +392,22 @@ local Bloodline4Frame = Instance.new("Frame")
 Bloodline4Frame.Name = "Bloodline4Frame"
 Bloodline4Frame.Parent = ToolBoxFrame
 Bloodline4Frame.Position = UDim2.new(Bloodline3Frame.Position.X.Scale, 0,
-	Bloodline3Frame.Position.Y.Scale + Bloodline3Frame.Size.Y.Scale, 0)
+    Bloodline3Frame.Position.Y.Scale + Bloodline3Frame.Size.Y.Scale, 0)
 Bloodline4Frame.Size = UDim2.new(WIDTH_SLOT, 0, 0.1, 0)
 Bloodline4Frame.InputBegan:Connect(function(input)
-	if (input.UserInputType == Enum.UserInputType.MouseButton1) then
-		if not (Bloodline4Frame:FindFirstChild("Bloodline4ValueLabel").Text == "Locked") then
-			Bloodline4Frame:FindFirstChild("Bloodline4ValueLabel").Text = "Locked"
-		else
-			if (gamepasses.genkai4) then
-				Bloodline4Frame:FindFirstChild("Bloodline4ValueLabel").Text = getCurrentValues().bloodline[4]
-			else
-				Bloodline4Frame:FindFirstChild("Bloodline4ValueLabel").Text = "Not have this gamepass!"
-			end
+    if (input.UserInputType == Enum.UserInputType.MouseButton1) then
+        if not (Bloodline4Frame:FindFirstChild("Bloodline4ValueLabel").Text == "Locked") then
+            Bloodline4Frame:FindFirstChild("Bloodline4ValueLabel").Text = "Locked"
+        else
+            if (gamepasses.genkai4) then
+                Bloodline4Frame:FindFirstChild("Bloodline4ValueLabel").Text = getCurrentValues().bloodline[4]
+            else
+                Bloodline4Frame:FindFirstChild("Bloodline4ValueLabel").Text = "Not have this gamepass!"
+            end
 
-		end
+        end
 
-	end
+    end
 end)
 
 local WIDTH_SLOT = 0.4
@@ -475,17 +475,17 @@ SpinBtn.BorderSizePixel = 0
 SpinBtn.TextScaled = true
 SpinBtn.TextWrapped = true
 SpinBtn.Activated:Connect(function()
-	SpinBtn.Selected = not SpinBtn.Selected
-	if (SpinBtn.Selected) then
-		SpinBtn.Text = "Spinning..."
-		SpinBtn.TextColor3 = Color3.fromRGB(100, 255, 0)
-		isSpin = true
-		spin()
-	else
-		SpinBtn.Text = "Spin"
-		SpinBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-		isSpin = false
-	end
+    SpinBtn.Selected = not SpinBtn.Selected
+    if (SpinBtn.Selected) then
+        SpinBtn.Text = "Spinning..."
+        SpinBtn.TextColor3 = Color3.fromRGB(100, 255, 0)
+        isSpin = true
+        spin()
+    else
+        SpinBtn.Text = "Spin"
+        SpinBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+        isSpin = false
+    end
 end)
 
 stop_spin_choose_scroll_frame = Instance.new("ScrollingFrame")
@@ -512,421 +512,437 @@ local dragStart = nil
 local startPos = nil
 
 local function update(input)
-	local delta = input.Position - dragStart
-	GUI.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale,
-		startPos.Y.Offset + delta.Y)
+    local delta = input.Position - dragStart
+    GUI.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale,
+        startPos.Y.Offset + delta.Y)
 end
 
 MoveGUIBtn.InputBegan:Connect(function(input)
-	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-		dragging = true
-		dragStart = input.Position
-		startPos = GUI.Position
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = true
+        dragStart = input.Position
+        startPos = GUI.Position
 
-		input.Changed:Connect(function()
-			if input.UserInputState == Enum.UserInputState.End then
-				dragging = false
-			end
-		end)
-	end
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
 end)
 
 MoveGUIBtn.InputChanged:Connect(function(input)
-	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-		dragInput = input
-	end
+    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+        dragInput = input
+    end
 end)
 
 UserInputService.InputChanged:Connect(function(input)
-	if input == dragInput and dragging then
-		update(input)
-	end
+    if input == dragInput and dragging then
+        update(input)
+    end
 end)
 
 local function getAllValues(alljutsu)
-	local result = {}
-	local resultDisplay = {}
-	local currentIndex = #result + 1
-	for _, v in pairs(alljutsu:GetChildren()) do
-		if v:FindFirstChild(string.upper("kg")) then
-			resultDisplay[currentIndex] = v:FindFirstChild(string.upper("realname")).Value
-			result[currentIndex] = v.Name
-			currentIndex = currentIndex + 1
-		end
-		if v:FindFirstChild(string.upper("element")) then
-			resultDisplay[currentIndex] = v:FindFirstChild(string.upper("realname")).Value
-			result[currentIndex] = v.Name
-			currentIndex = currentIndex + 1
-		end
-	end
-	return result, resultDisplay
+    local result = {}
+    local resultDisplay = {}
+    local currentIndex = #result + 1
+    for _, v in pairs(alljutsu:GetChildren()) do
+        if v:FindFirstChild(string.upper("kg")) then
+            resultDisplay[currentIndex] = v:FindFirstChild(string.upper("realname")).Value
+            result[currentIndex] = v.Name
+            currentIndex = currentIndex + 1
+        end
+        if v:FindFirstChild(string.upper("element")) then
+            resultDisplay[currentIndex] = v:FindFirstChild(string.upper("realname")).Value
+            result[currentIndex] = v.Name
+            currentIndex = currentIndex + 1
+        end
+    end
+    return result, resultDisplay
 end
 
 local function getDisplayName(name)
-	local data, dataDisplay = getAllValues(alljutsu)
-	for k, v in pairs(data) do
-		if (string.upper(v) == string.upper(name)) then
-			return dataDisplay[k]
-		end
-	end
+    local data, dataDisplay = getAllValues(alljutsu)
+    for k, v in pairs(data) do
+        if (string.upper(v) == string.upper(name)) then
+            return dataDisplay[k]
+        end
+    end
 end
 
 local function getName(displayname)
-	local data, dataDisplay = getAllValues(alljutsu)
-	for k, v in pairs(dataDisplay) do
-		if (string.upper(v) == string.upper(displayname)) then
-			return data[k]
-		end
-	end
+    local data, dataDisplay = getAllValues(alljutsu)
+    for k, v in pairs(dataDisplay) do
+        if (string.upper(v) == string.upper(displayname)) then
+            return data[k]
+        end
+    end
 end
 
 function getCurrentValues()
-	local main = statz:FindFirstChild("main")
-	local e1, e2, e3, e4
-	local b1, b2, b3, b4
-	e1 = getDisplayName(main:FindFirstChild("element1").Value)
-	e2 = getDisplayName(main:FindFirstChild("element2").Value)
-	if (gamepasses.element3) then
-		e3 = getDisplayName(main:FindFirstChild("element3").Value)
-		if (gamepasses.element4) then
-			e4 = getDisplayName(main:FindFirstChild("element4").Value)
-		end
-	end
+    local main = statz:FindFirstChild("main")
+    local e1, e2, e3, e4
+    local b1, b2, b3, b4
+    e1 = getDisplayName(main:FindFirstChild("element1").Value)
+    e2 = getDisplayName(main:FindFirstChild("element2").Value)
+    if (gamepasses.element3) then
+        e3 = getDisplayName(main:FindFirstChild("element3").Value)
+        if (gamepasses.element4) then
+            e4 = getDisplayName(main:FindFirstChild("element4").Value)
+        end
+    end
 
-	b1 = getDisplayName(main:FindFirstChild("kg1").Value)
-	b2 = getDisplayName(main:FindFirstChild("kg2").Value)
-	if (gamepasses.genkai3) then
-		b3 = getDisplayName(main:FindFirstChild("kg3").Value)
-		if (gamepasses.genkai4) then
-			b4 = getDisplayName(main:FindFirstChild("kg4").Value)
-		end
-	end
-	return {
-		element = {e1, e2, e3, e4},
-		bloodline = {b1, b2, b3, b4}
-	}
+    b1 = getDisplayName(main:FindFirstChild("kg1").Value)
+    b2 = getDisplayName(main:FindFirstChild("kg2").Value)
+    if (gamepasses.genkai3) then
+        b3 = getDisplayName(main:FindFirstChild("kg3").Value)
+        if (gamepasses.genkai4) then
+            b4 = getDisplayName(main:FindFirstChild("kg4").Value)
+        end
+    end
+    return {
+        element = {e1, e2, e3, e4},
+        bloodline = {b1, b2, b3, b4}
+    }
 end
 
 function setValues(currentValues)
-	currentValues = currentValues or getCurrentValues()
-	-- Element loop
-	local element = currentValues.element
-	local bloodline = currentValues.bloodline
-	for i = 1, 4 do
-		if (element[i]) then
-			if (ToolBoxGUI.Frame:WaitForChild("Element" .. i .. "Frame", TIME_OUT):WaitForChild("Element" .. i ..
-				"ValueLabel",
-				TIME_OUT).Text ~= "Locked") then
-				ToolBoxGUI.Frame:WaitForChild("Element" .. i .. "Frame", TIME_OUT):WaitForChild("Element" .. i ..
-					"ValueLabel",
-				TIME_OUT).Text = element[i]
-			end
-		end
-	end
-	for i = 1, 4 do
-		if (bloodline[i]) then
-			if (ToolBoxGUI.Frame:WaitForChild("Bloodline" .. i .. "Frame", TIME_OUT):WaitForChild("Bloodline" .. i ..
-				"ValueLabel",
-				TIME_OUT).Text ~= "Locked") then
-				ToolBoxGUI.Frame:WaitForChild("Bloodline" .. i .. "Frame", TIME_OUT):WaitForChild("Bloodline" .. i ..
-					"ValueLabel",
-				TIME_OUT).Text = bloodline[i]
-			end
-		end
-	end
+    currentValues = currentValues or getCurrentValues()
+    -- Element loop
+    local element = currentValues.element
+    local bloodline = currentValues.bloodline
+    for i = 1, 4 do
+        if (element[i]) then
+            if (ToolBoxGUI.Frame:WaitForChild("Element" .. i .. "Frame", TIME_OUT):WaitForChild("Element" .. i ..
+                                                                                                    "ValueLabel",
+                TIME_OUT).Text ~= "Locked") then
+                ToolBoxGUI.Frame:WaitForChild("Element" .. i .. "Frame", TIME_OUT):WaitForChild("Element" .. i ..
+                                                                                                    "ValueLabel",
+                    TIME_OUT).Text = element[i]
+            end
+        end
+    end
+    for i = 1, 4 do
+        if (bloodline[i]) then
+            if (ToolBoxGUI.Frame:WaitForChild("Bloodline" .. i .. "Frame", TIME_OUT):WaitForChild("Bloodline" .. i ..
+                                                                                                      "ValueLabel",
+                TIME_OUT).Text ~= "Locked") then
+                ToolBoxGUI.Frame:WaitForChild("Bloodline" .. i .. "Frame", TIME_OUT):WaitForChild("Bloodline" .. i ..
+                                                                                                      "ValueLabel",
+                    TIME_OUT).Text = bloodline[i]
+            end
+        end
+    end
 end
 
 local function initValues(currentValues)
-	if (not gamepasses.genkai4) then
-		if (not gamepasses.genkai3) then
-			ToolBoxGUI.Frame.Bloodline4Frame.Bloodline4ValueLabel.Text = "Not have this gamepass!"
-			ToolBoxGUI.Frame.Bloodline4Frame.Active = false
-			ToolBoxGUI.Frame.Bloodline3Frame.Bloodline3ValueLabel.Text = "Not have this gamepass!"
-			ToolBoxGUI.Frame.Bloodline3Frame.Active = false
+    if (not gamepasses.genkai4) then
+        if (not gamepasses.genkai3) then
+            ToolBoxGUI.Frame.Bloodline4Frame.Bloodline4ValueLabel.Text = "Not have this gamepass!"
+            ToolBoxGUI.Frame.Bloodline4Frame.Active = false
+            ToolBoxGUI.Frame.Bloodline3Frame.Bloodline3ValueLabel.Text = "Not have this gamepass!"
+            ToolBoxGUI.Frame.Bloodline3Frame.Active = false
 
-		else
-			ToolBoxGUI.Frame.Bloodline4Frame.Bloodline4ValueLabel.Text = "Not have this gamepass!"
-			ToolBoxGUI.Frame.Bloodline4Frame.Active = false
-		end
-	end
-	if (not gamepasses.element4) then
-		if (not gamepasses.element4) then
-			ToolBoxGUI.Frame.Element4Frame.Element4ValueLabel.Text = "Not have this gamepass!"
-			ToolBoxGUI.Frame.Element4Frame.Active = false
-			ToolBoxGUI.Frame.Element3Frame.Element3ValueLabel.Text = "Not have this gamepass!"
-			ToolBoxGUI.Frame.Element3Frame.Active = false
+        else
+            ToolBoxGUI.Frame.Bloodline4Frame.Bloodline4ValueLabel.Text = "Not have this gamepass!"
+            ToolBoxGUI.Frame.Bloodline4Frame.Active = false
+        end
+    end
+    if (not gamepasses.element4) then
+        if (not gamepasses.element4) then
+            ToolBoxGUI.Frame.Element4Frame.Element4ValueLabel.Text = "Not have this gamepass!"
+            ToolBoxGUI.Frame.Element4Frame.Active = false
+            ToolBoxGUI.Frame.Element3Frame.Element3ValueLabel.Text = "Not have this gamepass!"
+            ToolBoxGUI.Frame.Element3Frame.Active = false
 
-		else
-			ToolBoxGUI.Frame.Element4Frame.Element4ValueLabel.Text = "Not have this gamepass!"
-			ToolBoxGUI.Frame.Element4Frame.Active = false
-		end
-	end
-	setValues(currentValues)
-	local _, dataDisplay = getAllValues(alljutsu)
-	for k, v in pairs(dataDisplay) do
-		createMenuList("btn" .. tostring(k), v, StopSpinScrollFrame)
-	end
+        else
+            ToolBoxGUI.Frame.Element4Frame.Element4ValueLabel.Text = "Not have this gamepass!"
+            ToolBoxGUI.Frame.Element4Frame.Active = false
+        end
+    end
+    setValues(currentValues)
+    local _, dataDisplay = getAllValues(alljutsu)
+    for k, v in pairs(dataDisplay) do
+        createMenuList("btn" .. tostring(k), v, StopSpinScrollFrame)
+    end
 end
 
 function startSpinSupport(name, chosenItems)
-	local result = false
-	for _, v in pairs(chosenItems) do
-		if (v.Name ~= "UIListLayout") then
-			if (name == v.Text) then
-				result = true
-			end
-		end
-	end
-	return result
+    local result = false
+    for _, v in pairs(chosenItems) do
+        if (v.Name ~= "UIListLayout") then
+            if (name == v.Text) then
+                result = true
+            end
+        end
+    end
+    return result
 end
 
 function startSpin(chosenItems)
-	local isE1 = false
-	local isE2 = false
-	local isE3 = false
-	local isE4 = false
-	local isB1 = false
-	local isB2 = false
-	local isB3 = false
-	local isB4 = false
-	if Element1ValueLabel.Text ~= "Locked" and isSpin then
-		if (chosenItems) then
-			if not startSpinSupport(Element1ValueLabel.Text, chosenItems) then
-				isE1 = true
-			end
-		else
-			isE1 = true
-		end
-	end
+    local isE1 = false
+    local isE2 = false
+    local isE3 = false
+    local isE4 = false
+    local isB1 = false
+    local isB2 = false
+    local isB3 = false
+    local isB4 = false
+    if Element1ValueLabel.Text ~= "Locked" and isSpin then
+        if (chosenItems) then
+            if not startSpinSupport(Element1ValueLabel.Text, chosenItems) then
+                isE1 = true
+            end
+        else
+            isE1 = true
+        end
+    end
 
-	if Element2ValueLabel.Text ~= "Locked" and isSpin then
-		if (chosenItems) then
-			if not startSpinSupport(Element2ValueLabel.Text, chosenItems) then
-				isE2 = true
-			end
-		else
-			isE2 = true
-		end
+    if Element2ValueLabel.Text ~= "Locked" and isSpin then
+        if (chosenItems) then
+            if not startSpinSupport(Element2ValueLabel.Text, chosenItems) then
+                isE2 = true
+            end
+        else
+            isE2 = true
+        end
 
-	end
-	if Element3ValueLabel.Text ~= "Locked" and gamepasses.element3 and isSpin then
-		if (chosenItems) then
-			if not startSpinSupport(Element3ValueLabel.Text, chosenItems) then
-				isE3 = true
-			end
-		else
-			isE3 = true
-		end
+    end
+    if Element3ValueLabel.Text ~= "Locked" and gamepasses.element3 and isSpin then
+        if (chosenItems) then
+            if not startSpinSupport(Element3ValueLabel.Text, chosenItems) then
+                isE3 = true
+            end
+        else
+            isE3 = true
+        end
 
-	end
-	if Element4ValueLabel.Text ~= "Locked" and gamepasses.element4 and isSpin then
-		if (chosenItems) then
-			if not startSpinSupport(Element4ValueLabel.Text, chosenItems) then
-				isE4 = true
-			end
-		else
-			isE4 = true
-		end
+    end
+    if Element4ValueLabel.Text ~= "Locked" and gamepasses.element4 and isSpin then
+        if (chosenItems) then
+            if not startSpinSupport(Element4ValueLabel.Text, chosenItems) then
+                isE4 = true
+            end
+        else
+            isE4 = true
+        end
 
-	end
-	if Bloodline1ValueLabel.Text ~= "Locked" and isSpin then
-		if (chosenItems) then
-			if not startSpinSupport(Bloodline1ValueLabel.Text, chosenItems) then
-				isB1 = true
-			end
-		else
-			isB1 = true
-		end
+    end
+    if Bloodline1ValueLabel.Text ~= "Locked" and isSpin then
+        if (chosenItems) then
+            if not startSpinSupport(Bloodline1ValueLabel.Text, chosenItems) then
+                isB1 = true
+            end
+        else
+            isB1 = true
+        end
 
-	end
-	if Bloodline2ValueLabel.Text ~= "Locked" and isSpin then
-		if (chosenItems) then
-			if not startSpinSupport(Bloodline2ValueLabel.Text, chosenItems) then
-				isB2 = true
-			end
-		else
-			isB2 = true
-		end
+    end
+    if Bloodline2ValueLabel.Text ~= "Locked" and isSpin then
+        if (chosenItems) then
+            if not startSpinSupport(Bloodline2ValueLabel.Text, chosenItems) then
+                isB2 = true
+            end
+        else
+            isB2 = true
+        end
 
-	end
-	if Bloodline3ValueLabel.Text ~= "Locked" and gamepasses.genkai3 and isSpin then
-		if (chosenItems) then
-			if not startSpinSupport(Bloodline3ValueLabel.Text, chosenItems) then
-				isB3 = true
-			end
-		else
-			isB3 = true
-		end
+    end
+    if Bloodline3ValueLabel.Text ~= "Locked" and gamepasses.genkai3 and isSpin then
+        if (chosenItems) then
+            if not startSpinSupport(Bloodline3ValueLabel.Text, chosenItems) then
+                isB3 = true
+            end
+        else
+            isB3 = true
+        end
 
-	end
-	if Bloodline4ValueLabel.Text ~= "Locked" and gamepasses.genkai4 and isSpin then
-		if (chosenItems) then
-			if not startSpinSupport(Bloodline4ValueLabel.Text, chosenItems) then
-				isB4 = true
-			end
-		else
-			isB4 = true
-		end
+    end
+    if Bloodline4ValueLabel.Text ~= "Locked" and gamepasses.genkai4 and isSpin then
+        if (chosenItems) then
+            if not startSpinSupport(Bloodline4ValueLabel.Text, chosenItems) then
+                isB4 = true
+            end
+        else
+            isB4 = true
+        end
 
-	end
+    end
+    local setSpinnedLabel = nil
+    if (statz:FindFirstChild("spins").Value > 0) then
+        if isE1 or isE2 or isE3 or isE4 or isB1 or isB2 or isB3 or isB4 then
 
-	if (statz:FindFirstChild("spins").Value > 0) then
-		if isE1 or isE2 or isE3 or isE4 or isB1 or isB2 or isB3 or isB4 then
+            if (isE1 and not statz:FindFirstChild("main"):FindFirstChild("element1"):FindFirstChild("dontspin")) then
+                startevent:FireServer("spin", "element1")
+                initialSpin.element = initialSpin.element + 1
+                setSpinnedLabel()
+            end
+            if (isE2 and not statz:FindFirstChild("main"):FindFirstChild("element2"):FindFirstChild("dontspin")) then
+                startevent:FireServer("spin", "element2")
+                initialSpin.element = initialSpin.element + 1
+                setSpinnedLabel()
+            end
+            if (isE3 and not statz:FindFirstChild("main"):FindFirstChild("element3"):FindFirstChild("dontspin")) then
+                startevent:FireServer("spin", "element3")
+                initialSpin.element = initialSpin.element + 1
+                setSpinnedLabel()
+            end
+            if (isE4 and not statz:FindFirstChild("main"):FindFirstChild("element4"):FindFirstChild("dontspin")) then
+                startevent:FireServer("spin", "element4")
+                initialSpin.element = initialSpin.element + 1
+                setSpinnedLabel()
+            end
 
-			if (isE1 and not statz:FindFirstChild("main"):FindFirstChild("element1"):FindFirstChild("dontspin")) then
-				startevent:FireServer("spin", "element1")
-			end
-			if (isE2 and not statz:FindFirstChild("main"):FindFirstChild("element2"):FindFirstChild("dontspin")) then
-				startevent:FireServer("spin", "element2")
-			end
-			if (isE3 and not statz:FindFirstChild("main"):FindFirstChild("element3"):FindFirstChild("dontspin")) then
-				startevent:FireServer("spin", "element3")
-			end
-			if (isE4 and not statz:FindFirstChild("main"):FindFirstChild("element4"):FindFirstChild("dontspin")) then
-				startevent:FireServer("spin", "element4")
-			end
-
-			if (isB1 and not statz:FindFirstChild("main"):FindFirstChild("kg1"):FindFirstChild("dontspin")) then
-				startevent:FireServer("spin", "kg1")
-			end
-			if (isB2 and not statz:FindFirstChild("main"):FindFirstChild("kg2"):FindFirstChild("dontspin")) then
-				startevent:FireServer("spin", "kg2")
-			end
-			if (isB3 and not statz:FindFirstChild("main"):FindFirstChild("kg3"):FindFirstChild("dontspin")) then
-				startevent:FireServer("spin", "kg3")
-			end
-			if (isB4 and not statz:FindFirstChild("main"):FindFirstChild("kg4"):FindFirstChild("dontspin")) then
-				startevent:FireServer("spin", "kg4")
-			end
-		else
-			SpinBtn.Selected = not SpinBtn.Selected
-			if (SpinBtn.Selected) then
-				SpinBtn.Text = "Spinning..."
-				SpinBtn.TextColor3 = Color3.fromRGB(100, 255, 0)
-				isSpin = true
-			else
-				SpinBtn.Text = "Spin"
-				SpinBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-				isSpin = false
-			end
-		end
-	else
-		SpinBtn.Selected = not SpinBtn.Selected
-		if (SpinBtn.Selected) then
-			SpinBtn.Text = "Spinning..."
-			SpinBtn.TextColor3 = Color3.fromRGB(100, 255, 0)
-			isSpin = true
-		else
-			SpinBtn.Text = "Spin"
-			SpinBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-			isSpin = false
-		end
-	end
+            if (isB1 and not statz:FindFirstChild("main"):FindFirstChild("kg1"):FindFirstChild("dontspin")) then
+                startevent:FireServer("spin", "kg1")
+                initialSpin.bloodline = initialSpin.bloodline + 1
+                setSpinnedLabel()
+            end
+            if (isB2 and not statz:FindFirstChild("main"):FindFirstChild("kg2"):FindFirstChild("dontspin")) then
+                startevent:FireServer("spin", "kg2")
+                initialSpin.bloodline = initialSpin.bloodline + 1
+                setSpinnedLabel()
+            end
+            if (isB3 and not statz:FindFirstChild("main"):FindFirstChild("kg3"):FindFirstChild("dontspin")) then
+                startevent:FireServer("spin", "kg3")
+                initialSpin.bloodline = initialSpin.bloodline + 1
+                setSpinnedLabel()
+            end
+            if (isB4 and not statz:FindFirstChild("main"):FindFirstChild("kg4"):FindFirstChild("dontspin")) then
+                startevent:FireServer("spin", "kg4")
+                initialSpin.bloodline = initialSpin.bloodline + 1
+                setSpinnedLabel()
+            end
+        else
+            SpinBtn.Selected = not SpinBtn.Selected
+            if (SpinBtn.Selected) then
+                SpinBtn.Text = "Spinning..."
+                SpinBtn.TextColor3 = Color3.fromRGB(100, 255, 0)
+                isSpin = true
+            else
+                SpinBtn.Text = "Spin"
+                SpinBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+                isSpin = false
+            end
+        end
+    else
+        SpinBtn.Selected = not SpinBtn.Selected
+        if (SpinBtn.Selected) then
+            SpinBtn.Text = "Spinning..."
+            SpinBtn.TextColor3 = Color3.fromRGB(100, 255, 0)
+            isSpin = true
+        else
+            SpinBtn.Text = "Spin"
+            SpinBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+            isSpin = false
+        end
+    end
 
 end
 
 local function spinWithChosen(chosenItems)
-	local element = getCurrentValues().element
-	local bloodline = getCurrentValues().bloodline
-	for i = 1, 4 do
-		if (element[i]) then
-			if (ToolBoxGUI.Frame:WaitForChild("Element" .. i .. "Frame", TIME_OUT):WaitForChild("Element" .. i ..
-				"ValueLabel",
-				TIME_OUT).Text ~= "Locked") then
-				for _, v in pairs(chosenItems) do
-					if (v.Name ~= "UIListLayout") then
-						if (v.Text == element[i]) then
-							v:Remove()
-							for k1, v1 in pairs(StopSpinScrollFrame:GetChildren()) do
-								if (v1.Name ~= "UIListLayout") then
-									if (v1.Text == element[i]) then
-										v1.TextColor3 = Color3.fromRGB(50, 0, 255)
-										v1:SetAttribute("checked", not v:GetAttribute("checked"))
-										ToolBoxGUI.Frame:WaitForChild("Element" .. i .. "Frame", TIME_OUT):WaitForChild(
-										"Element" .. i .. "ValueLabel", TIME_OUT).Text = "Locked"
-									end
-								end
-							end
-						end
-					end
-				end
-			end
-		end
-	end
-	for i = 1, 4 do
-		if (bloodline[i]) then
-			if (ToolBoxGUI.Frame:WaitForChild("Bloodline" .. i .. "Frame", TIME_OUT):WaitForChild("Bloodline" .. i ..
-				"ValueLabel",
-				TIME_OUT).Text ~= "Locked") then
-				for _, v in pairs(chosenItems) do
-					if (v.Name ~= "UIListLayout") then
-						if (v.Text == bloodline[i]) then
-							v:Remove()
-							for k1, v1 in pairs(StopSpinScrollFrame:GetChildren()) do
-								if (v1.Name ~= "UIListLayout") then
-									if (v1.Text == bloodline[i]) then
-										v1.TextColor3 = Color3.fromRGB(50, 0, 255)
-										v1:SetAttribute("checked", not v:GetAttribute("checked"))
-										ToolBoxGUI.Frame:WaitForChild("Bloodline" .. i .. "Frame", TIME_OUT)
-										:WaitForChild("Bloodline" .. i .. "ValueLabel", TIME_OUT).Text = "Locked"
-									end
-								end
-							end
-						end
-					end
-				end
-			end
-		end
-	end
-	local count = -1
-	chosenItems = stop_spin_choose_scroll_frame:GetChildren()
-	for k, v in pairs(chosenItems) do
-		if v.Name then
-			count = count + 1
-		end
+    local element = getCurrentValues().element
+    local bloodline = getCurrentValues().bloodline
+    for i = 1, 4 do
+        if (element[i]) then
+            if (ToolBoxGUI.Frame:WaitForChild("Element" .. i .. "Frame", TIME_OUT):WaitForChild("Element" .. i ..
+                                                                                                    "ValueLabel",
+                TIME_OUT).Text ~= "Locked") then
+                for _, v in pairs(chosenItems) do
+                    if (v.Name ~= "UIListLayout") then
+                        if (v.Text == element[i]) then
+                            v:Remove()
+                            for k1, v1 in pairs(StopSpinScrollFrame:GetChildren()) do
+                                if (v1.Name ~= "UIListLayout") then
+                                    if (v1.Text == element[i]) then
+                                        v1.TextColor3 = Color3.fromRGB(50, 0, 255)
+                                        v1:SetAttribute("checked", not v:GetAttribute("checked"))
+                                        ToolBoxGUI.Frame:WaitForChild("Element" .. i .. "Frame", TIME_OUT):WaitForChild(
+                                            "Element" .. i .. "ValueLabel", TIME_OUT).Text = "Locked"
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+    for i = 1, 4 do
+        if (bloodline[i]) then
+            if (ToolBoxGUI.Frame:WaitForChild("Bloodline" .. i .. "Frame", TIME_OUT):WaitForChild("Bloodline" .. i ..
+                                                                                                      "ValueLabel",
+                TIME_OUT).Text ~= "Locked") then
+                for _, v in pairs(chosenItems) do
+                    if (v.Name ~= "UIListLayout") then
+                        if (v.Text == bloodline[i]) then
+                            v:Remove()
+                            for k1, v1 in pairs(StopSpinScrollFrame:GetChildren()) do
+                                if (v1.Name ~= "UIListLayout") then
+                                    if (v1.Text == bloodline[i]) then
+                                        v1.TextColor3 = Color3.fromRGB(50, 0, 255)
+                                        v1:SetAttribute("checked", not v:GetAttribute("checked"))
+                                        ToolBoxGUI.Frame:WaitForChild("Bloodline" .. i .. "Frame", TIME_OUT)
+                                            :WaitForChild("Bloodline" .. i .. "ValueLabel", TIME_OUT).Text = "Locked"
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+    local count = -1
+    chosenItems = stop_spin_choose_scroll_frame:GetChildren()
+    for k, v in pairs(chosenItems) do
+        if v.Name then
+            count = count + 1
+        end
 
-	end
+    end
 
-	if count == 0 then
-		SpinBtn.Text = "Spin"
-		SpinBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-		isSpin = false
-		isChosen = false
-	end
+    if count == 0 then
+        SpinBtn.Text = "Spin"
+        SpinBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+        isSpin = false
+        isChosen = false
+    end
 end
 
 local function spinDefault()
-	startSpin()
+    startSpin()
 end
 
 function spin()
-	while (isSpin) do
-		local count = -1
-		local choosenItems = stop_spin_choose_scroll_frame:GetChildren()
-		for k, v in pairs(choosenItems) do
-			if v.Name then
-				count = count + 1
-			end
+    while (isSpin) do
+        local count = -1
+        local choosenItems = stop_spin_choose_scroll_frame:GetChildren()
+        for k, v in pairs(choosenItems) do
+            if v.Name then
+                count = count + 1
+            end
 
-		end
+        end
 
-		if count > 0 then
-			spinWithChosen(choosenItems)
-			startSpin(choosenItems)
-			isChosen = true
-		else
-			if (not isChosen) then
-				spinDefault()
-			else
-				SpinBtn.Text = "Spin"
-				SpinBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-				isSpin = false
-				isChosen = false
-			end
-		end
+        if count > 0 then
+            spinWithChosen(choosenItems)
+            startSpin(choosenItems)
+            isChosen = true
+        else
+            if (not isChosen) then
+                spinDefault()
+            else
+                SpinBtn.Text = "Spin"
+                SpinBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+                isSpin = false
+                isChosen = false
+            end
+        end
 
-		task.wait(0.2)
-	end
+        task.wait(0.2)
+    end
 end
 
 local LocalPlayer = game.Players.LocalPlayer
@@ -938,91 +954,74 @@ startevent = LocalPlayer:WaitForChild("startevent", TIME_OUT)
 ToolBoxGUI = LocalPlayer.PlayerGui:WaitForChild("ToolBox", TIME_OUT)
 
 gamepasses = {
-	genkai3 = LocalPlayer:WaitForChild("gamepasses", TIME_OUT):FindFirstChild("genkai3"),
-	genkai4 = LocalPlayer:WaitForChild("gamepasses", TIME_OUT):FindFirstChild("genkai4"),
-	element3 = LocalPlayer:WaitForChild("gamepasses", TIME_OUT):FindFirstChild("element3"),
-	element4 = LocalPlayer:WaitForChild("gamepasses", TIME_OUT):FindFirstChild("element4")
+    genkai3 = LocalPlayer:WaitForChild("gamepasses", TIME_OUT):FindFirstChild("genkai3"),
+    genkai4 = LocalPlayer:WaitForChild("gamepasses", TIME_OUT):FindFirstChild("genkai4"),
+    element3 = LocalPlayer:WaitForChild("gamepasses", TIME_OUT):FindFirstChild("element3"),
+    element4 = LocalPlayer:WaitForChild("gamepasses", TIME_OUT):FindFirstChild("element4")
 }
 local stop_spin_data = getAllValues(alljutsu)
 
-local function setSpinnedLabel()
-	local text = "Spinned: " .. (initialSpin.bloodline + initialSpin.element) .. "(" .. (initialSpin.bloodline) ..
-		" bloodlines, " .. (initialSpin.element) .. " elements)"
-	SpinnedLabel.Text = text
+setSpinnedLabel = function()
+    local text = "Spinned: " .. (initialSpin.bloodline + initialSpin.element) .. "(" .. (initialSpin.bloodline) ..
+                     " bloodlines, " .. (initialSpin.element) .. " elements)"
+    SpinnedLabel.Text = text
 end
 local function initConnection()
-	statz:FindFirstChild("main"):FindFirstChild("kg1").Changed:Connect(function()
-		setValues()
-		initialSpin.bloodline = initialSpin.bloodline + 1
-		setSpinnedLabel()
-	end)
-	statz:FindFirstChild("main"):FindFirstChild("kg2").Changed:Connect(function()
-		setValues()
-		initialSpin.bloodline = initialSpin.bloodline + 1
-		setSpinnedLabel()
-	end)
-	if (gamepasses.genkai3) then
-		statz:FindFirstChild("main"):FindFirstChild("kg3").Changed:Connect(function()
-			setValues()
-			initialSpin.bloodline = initialSpin.bloodline + 1
-			setSpinnedLabel()
-		end)
-		if (gamepasses.genkai4) then
-			statz:FindFirstChild("main"):FindFirstChild("kg4").Changed:Connect(function()
-				setValues()
-				initialSpin.bloodline = initialSpin.bloodline + 1
-				setSpinnedLabel()
-			end)
-		end
-	end
+    statz:FindFirstChild("main"):FindFirstChild("kg1").Changed:Connect(function()
+        setValues()
 
-	statz:FindFirstChild("main"):FindFirstChild("element1").Changed:Connect(function()
-		setValues()
-		initialSpin.element = initialSpin.element + 1
-		setSpinnedLabel()
-	end)
-	statz:FindFirstChild("main"):FindFirstChild("element2").Changed:Connect(function()
-		setValues()
-		initialSpin.element = initialSpin.element + 1
-		setSpinnedLabel()
-	end)
-	if (gamepasses.element3) then
-		statz:FindFirstChild("main"):FindFirstChild("element3").Changed:Connect(function()
-			setValues()
-			initialSpin.element = initialSpin.element + 1
-			setSpinnedLabel()
-		end)
-		if (gamepasses.element4) then
-			statz:FindFirstChild("main"):FindFirstChild("element4").Changed:Connect(function()
-				setValues()
-				initialSpin.element = initialSpin.element + 1
-				setSpinnedLabel()
-			end)
-		end
-	end
+    end)
+    statz:FindFirstChild("main"):FindFirstChild("kg2").Changed:Connect(function()
+        setValues()
+
+    end)
+    if (gamepasses.genkai3) then
+        statz:FindFirstChild("main"):FindFirstChild("kg3").Changed:Connect(function()
+            setValues()
+
+        end)
+        if (gamepasses.genkai4) then
+            statz:FindFirstChild("main"):FindFirstChild("kg4").Changed:Connect(function()
+                setValues()
+
+            end)
+        end
+    end
+
+    statz:FindFirstChild("main"):FindFirstChild("element1").Changed:Connect(function()
+        setValues()
+    end)
+    statz:FindFirstChild("main"):FindFirstChild("element2").Changed:Connect(function()
+        setValues()
+    end)
+    if (gamepasses.element3) then
+        statz:FindFirstChild("main"):FindFirstChild("element3").Changed:Connect(function()
+            setValues()
+        end)
+        if (gamepasses.element4) then
+            statz:FindFirstChild("main"):FindFirstChild("element4").Changed:Connect(function()
+                setValues()
+            end)
+        end
+    end
 
 end
 local function InitGUI(gamepasses)
-	initValues(getCurrentValues())
-	initConnection()
+    initValues(getCurrentValues())
+    initConnection()
 
 end
 local UserInputService = game:GetService("UserInputService")
-UserInputService.InputBegan:Connect(
-	function(input)
-		if (input.UserInputType == Enum.UserInputType.Keyboard) then
-			if (input.KeyCode.Value == 305) then
-				ToolBoxFrame.Visible = not ToolBoxFrame.Visible 
-			end
-		end
-	end
-)
+UserInputService.InputBegan:Connect(function(input)
+    if (input.UserInputType == Enum.UserInputType.Keyboard) then
+        if (input.KeyCode.Value == 305) then
+            ToolBoxFrame.Visible = not ToolBoxFrame.Visible
+        end
+    end
+end)
 
 InitGUI(gamepasses)
 game.Players.LocalPlayer:FindFirstChild("statz").ChildAdded:Connect(function()
-	InitGUI(gamepasses)
+    InitGUI(gamepasses)
 end)
-
-
-
 
