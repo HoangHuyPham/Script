@@ -1019,7 +1019,6 @@ local function InitGUI(gamepasses)
 end
 
 game.Players.LocalPlayer:FindFirstChild"statz".ChildAdded:Connect(function()
-	task.wait(5)
 	InitGUI(gamepasses)
 end)
 
