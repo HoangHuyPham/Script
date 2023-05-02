@@ -1,4 +1,4 @@
---loadstring(game:HttpGet"https://raw.githubusercontent.com/HoangHuyPham/Script/master/Shindolife.lua")()
+-- loadstring(game:HttpGet"https://raw.githubusercontent.com/HoangHuyPham/Script/master/Shindolife.lua")()
 while not game:IsLoaded() do
     task.wait()
 end
@@ -1002,6 +1002,16 @@ local function initConnection()
     end
 
 end
+
+local UserInputService = game:GetService("UserInputService")
+UserInputService.InputBegan:Connect(function(input)
+    if (input.UserInputType == Enum.UserInputType.Keyboard) then
+        if (input.KeyCode.Value == 305) then
+            ToolBoxFrame.Visible = not ToolBoxFrame.Visible
+        end
+    end
+end)
+
 local function InitGUI(gamepasses)
     initValues(getCurrentValues())
     initConnection()
