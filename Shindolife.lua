@@ -1007,13 +1007,6 @@ local function InitGUI(gamepasses)
 	initConnection()
 
 end
-
-InitGUI(gamepasses)
-game.Players.LocalPlayer:FindFirstChild("statz", TIME_OUT).ChildAdded:Connect(function()
-	InitGUI(gamepasses)
-end)
-
-
 local UserInputService = game:GetService("UserInputService")
 UserInputService.InputBegan:Connect(
 	function(input)
@@ -1024,4 +1017,12 @@ UserInputService.InputBegan:Connect(
 		end
 	end
 )
+
+InitGUI(gamepasses)
+game.Players.LocalPlayer:FindFirstChild("statz", TIME_OUT).ChildAdded:Connect(function()
+	InitGUI(gamepasses)
+end)
+
+
+
 
