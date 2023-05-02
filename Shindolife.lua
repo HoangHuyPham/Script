@@ -1,1 +1,1012 @@
-return(function(e,...)local F="This file was obfuscated using PSU Obfuscator 4.0.A | https://www.psu.dev/ & discord.gg/psu";local S=e['AHZDd9e1Lm'];local r=e.QQ4diH;local Y=e.VI8EhPpNeq;local x=e["vZY1xVaDc2"];local y=e[(267419623)];local R=e[(473414816)];local z=e['R3ZX9'];local i=e["zwLUy1"];local E=e[((789870231-#("Luraph v12.6 has been released!: changed absolutely fucking nothing but donate to my patreon!")))];local s=e.VT2il;local f=e['deIkMQ'];local d=e[(107405699)];local Z=e['RcrrRSpUGw'];local Q=e.AQs1pC8XR;local k=e[((674509816-#("why does psu.dev attract so many ddosing retards wtf")))];local L=e[(825750826)];local n=e[(464560692)];local a=e[(939955001)];local C=e[(270521086)];local B=e['imtYz1x'];local m=e[(742594565)];local X=e['k30XPWB'];local h=e[(702421299)];local N=e.hW2dPtUM;local O=e[(924861340)];local g=e[(143102442)];local w=e[((#{958;26;953;460;(function(...)return 198,583,982;end)()}+690175923))];local T=e.oYCfgCTI0d;local c=e[(780320400)];local M=e[(923180317)];local I=((getfenv)or(function(...)return(_ENV);end));local o,u,l=({}),(""),(I(n));local t=((l["\98\105"..e[r]..e.N2099b..e.aFr682dyr4])or(l[""..e[c].."\105\116"])or({}));local o=(((t)and(t[""..e[c].."\120"..e[f].."\114"]))or(function(e,o)local l,n=n,d;while((e>d)and(o>d))do local r,t=e%a,o%a;if r~=t then n=n+l;end;e,o,l=(e-r)/a,(o-t)/a,l*a;end;if e<o then e=o;end;while e>d do local o=e%a;if o>d then n=n+l;end;e,l=(e-o)/a,l*a;end;return(n);end));local p=(a^B);local b=(p-n);local A,D,v;local p=(u[""..e[R].."\115\117"..e[c]]);local V=(u[""..e[C]..e[x]..e[s].."\114"]);local p=(u[""..e[c].."\121\116\101"]);local u=(u["\115\117\98"]);local P=(l["\112\97"..e[g]..e[i].."\115"]);local R=(l[""..e[w].."\101\116"..e[k].."\101\116\97"..e[r]..e[s]..e[c].."\108\101"]);local R=(l[""..e[i].."\97"..e.fq0H6Ag..e[w].."\101\116"]);local U=(l[""..e[r]..e[f]..e[m].."\117"..e[k].."\98\101"..e[i]]);local R=(l["\116"..e[Q]..e['Rjw1Ln1wCi']..e["Vkk20"]]);local y=((l["\117\110"..e.Rjw1Ln1wCi.."\97\99\107"])or(l[""..e[r]..e[s]..e[c].."\108"..e['Vkk20']]["\117\110\112\97"..e[C]..e[y]]));local Q=(l[""..e[k].."\97"..e[r]..e[x]][""..e.eDTCvQDQLl.."\108"..e[f].."\111\114"]);local R=(l["\115"..e['Vkk20']..e[h]..e['Vkk20']..e[C].."\116"]);local G=((l["\109"..e[s].."\116"..e[x]][""..e[h]..e[L]..e["Vkk20"].."\120"..e.Rjw1Ln1wCi])or(function(e,l,...)return((e*a)^l);end));local q=(t["\98\111"..e[i]])or(function(l,e,...)return(b-v(b-l,b-e));end);D=((t[""..e[i]..e[w]..e[x]..e[g]..e["eDTCvQDQLl"]..e[r]])or(function(l,e,...)if(e<d)then return(A(l,-(e)));end;return(Q(l%a^B/a^e));end));A=((t[""..e[h]..e[w]..e[x].."\105\102\116"])or(function(l,e,...)if(e<d)then return(D(l,-(e)));end;return((l*a^e)%a^B);end));local b=(t["\98"..e[m].."\111"..e[r]])or(function(e,...)return(b-e);end);v=(t["\98"..e[s].."\110\100"])or(function(l,e,...)return(((l+e)-o(l,e))/a);end);if((not(l[""..e[c]..e[g].."\116"..e["N2099b"].."\50"]))and(not(l[""..e[c]..e[g].."\116"])))then t["\98"..e[f]..e[i]]=q;t[""..e[h].."\115"..e[x].."\105\102"..e[r]]=A;t[""..e[c]..e[s]..e[m]..e[L]]=v;t[""..e[c].."\120"..e[f]..e[i]]=o;t[""..e[i]..e[w]..e[x].."\105"..e["eDTCvQDQLl"].."\116"]=D;t["\98"..e[m].."\111"..e[r]]=b;end;local L=(((l["\116"..e[s]..e[c]..e[h].."\101"]["\99"..e[i].."\101\97\116\101"]))or((function(e,...)return({y({},d,e);});end)));local a=(l["\116\97\98"..e[h].."\101"][""..e[g]..e[m].."\115"..e["Vkk20"]..e[i].."\116"]);local a=(l[""..e[r]..e[s]..e[c]..e[h].."\101"][""..e[i].."\101"..e[k]..e[f]..e[X].."\101"]);local s=(l[""..e[r]..e[s].."\98\108"..e["Vkk20"]][""..e[C]..e[f].."\110\99"..e[s]..e[r]]);l["\98\105"..e[r].."\51\50"]=t;local l=(T);local a=(#F+M);local r,h=({}),({});for e=d,a-n do local l=V(e);r[e]=l;h[e]=l;h[l]=e;end;local d,t=(function(o)local c,e,t=p(o,n,Z);if((c+e+t)~=N)then l=l+Y;a=a+O;end;o=u(o,z);local l,t,c=(""),(""),({});local e=n;local function i()local l=U(u(o,e,e),E);e=e+n;local o=U(u(o,e,e+l-n),E);e=e+l;return(o);end;l=h[i()];c[n]=l;while(e<#o)do local e=i();if r[e]then t=r[e];else t=l..u(l,n,n);end;r[a]=l..u(t,n,n);c[#c+n],l,a=t,t,a+n;end;return(s(c));end)("PSU|25Z21G111110101e1e2782781521z21u2781Y2141a27821u21C1r1A1821421813131T2282161827822021P1O1C1F11161D21Y2131527822c21N1t111s22527X2782212101t121r1q1s1122421B1d27822821o1d1l1i191t1V21q2131L1F1A21y28i102281Y28o28Q1B1n2282111727821w1X1m17161T1m22j29A224215131I22c22p21f1v2272171927821V2a41J1j121N1H29H210162A61521g1j1C1822Y21O27c27826823024D21827B1021Y21b171a1Y21B1R111721J21711151821y2121427823b1M181T23F1f2AP23k25i23Q26a28928v21D1j1621w1i29j28V28x1O1S1n1122929u215141n1J2131z1f231121z2151B28V29D28p1122623821P142AM2bk27C2Bm1622q2bq1022E21j1D1P1g21z29a21W2191Q1i131e191121y1W122A62362c928A29b2Bs1621x21c1Z2BC27822F2901822u2cw2241R2dt22u2DQ1022621B2aL21z2a427822A21N1e1F1S29z2a12a32a51022C21D141c21A27s27U27W27Y102212131t172961D1621Z2cw22A152DZ2bx1022a21J1919141i1m21Z1X132782321b1i23C2cR27c21C23422Q29A2382b31r1o1F1729H2E122f21E192ba2Cg2782302fa15112C22Ew1L172292g4102242191i1721321i1h1w2CO1821z28t27829v29x22c23721N171q1P182g922821A1c2E821j1428U1l22H21U1E1D12182eT2dJ21v21B13111B21Z21g1m27821Z1Y1h2102bZ2c121G21g28m21A2A82Aa2AC1N23H2Fm2aP1Y2ff2782DH1522z2I8102682671t2h527821T21f101N29o21E29w2H21N235131y2E122R1b191J2282af29l1X1h1L18172242CW2802821f22421i1k2gT2Gi1721h2io2IQ172Ev1921421510297162i62ig26822n24d2E71022f21i1D1721k1z1l102Dc2J52DK1j1N1B1Q22e2kE2371G1h1R1P1423F2452FG2fn2461t2GS2gG1z1e152132I32Ab2aD2i72aP27825c26A2Au27822U2fW2b02B22b42B62b82BA2E122V162E52lC2F62ea2eC2gw2gY2H02Iu2282e12311C1L1s22V2IG21w1422Q2Il2k421I2BH2IS1T21d2B72b921y21C1I2ld1K28M21421C1p191N21F21b192J11M2b7132242C2102bw21J27d151F21a2101521i21I15152Ix2N921s21S2Nd1r2mr2dj172ew1K1629k102nd1S25421R24b27821D21D2761e182Ag101x2N91K2Np161324N24x1K2771O1O16161e162Er1H151k12122ND1j21E2O72O92Ix2132oL2O32oa1H1Y21c2782oI121g2P32P5162n72Oy21N21N2OI2Nk1j2771018181L1K2G22Pa1s24824E1q2AP2OI112KN2781i2p9102oI2pC162762OI1321E21H141H1H2oI1a1O2Q12q321a2Oy2q62Oa21E1421h2172172Qe2QG2P42q22PB2Qj2Q52852Qm2161r21E21e2qS1c1U2PA2q41x1x2q71H21I2102782nn2Gc2q12PL2n7215182Oq2Pl13122pP2qv1S1e1B1p2PA2P72rW2R81t2Q12Nn2N7212172oQ2nn29X1V1E2nN2oI2Pi2S02QV2N71X2pk2Ja172iX2S62s82sm1i2jX2SD162Sf2RX2sh1t2Sg2s421a2s61m29o2sM2ko2EH2rk21a2Rm2RA2rP1H21l2172782f92gC21621k2781A1a2Gc21421M2781B1b2pN1a2Ch2sK1s1T2nQ2pl2Nn2oO172T42sE112qH2Qw2oY2oq2q71Y2OY2132oy2qm2121N2Og2QS2U82Q42UB2oa2UD1621p21p2Q721e2Ui2uK162QF2112n42sH2qx2NB2uC2oY1g1G2V5162152152Pg1q2PJ2QV1N152V02Rg172s5172NB2s91i2Gl2st2Pi2S32Vl2T1171R1R2vP1A2vZ29P2sU1Y2101l21B21B2ul2Qu2t02S62pE2Nn2Nk2GC2tg192PN182eH2NN2pr26T2352ap2nn28R2252pZ2r62vK2vm2ra2S92rD2Rf2sK2rI2qU2f92N7214192oQ2f92RQ2WL2Vk2Ru182Pu102nn2P72Xg2Wx2S22Qu2T82RM2Ro182sA2o22sL2pI2Xl2XI2Vl2xn2782xP2SL2RP2SR1n2U1172XW2XH2s41t2nk2Y1182rl182Tb2xs1H21r2192wi2GC1o27K102Tm2GC21221G2tr2tt1K2TV2yE2ru2Yd102x621A2X821t21T2XB1H21821Q2Tl1A2n72171a2182182TM131H21921r2YW2pN2vf2TM2VH2tE2Zp172Zb2781C28321A2191c2ZI2zZ2zl1v28u101d28Y2oE27c2ZZ142g827c2F91I1J2g22F92pl2u32bg2xv2u72wb2vv2wD2Gy2VX191E1S2Yn1K2xd2xY2PR241310c2vK1123b23a2WV2R72xy2wy1x2x02Re2Ye2x42Wi2x72X92RR192xC2wm172RU1d1v2VK2P7311t2xM2RJ2YF2T92RN2hg2XS1I2sb2y72PI311X311D2Y02sK2yG1S1S2Y42Jx31271131292yb2z22Y22yI2ZL2YU2yN172Yp2zd2yt2YV102tS2tU2tW2Pl2Z12eH2z42Z62z8311o2ZA2zC2yR2zE2I22Zh2zJ1A2zL2zn2zP3116313a2ZT2TF312x2Tt2zw31392ZZ2n7310231041c2ZL111j278310a2zq310d1C310F2vF310i310K2wl2g218310o31271G1M313j1d24p23725z2781w1w2O124224C2pz2uM2qX2PE2Pg191W21E311I2PO2Er2Oi2pr21A24Q2pV2Q524G24H314Q2Qu2QI2oY2R32uu2r12qL2Qf314r2Qk2Qz2q82QA2W82WA2R82QX2qL2q82Qo1y1Y2QS2VJ2v22OY2v42uP2OY2Ts314u21A2ao312C31211F1F2RP1y2RM21627X182NK2q12TM1f2rV2yq313121p2rM2VY2RP2Rr3150161S21p2ug2Oi1628o2VF2oi2Gn2111k2OG2ND2qF31292Q324R22O25g2782ux1m24V2553159315p2UA122v92us2rc2Vu2vM2We310W310y311031122WN2EY1n2VS312j311u315y316Y2Vd3171161h132XX317A23925t317E2oh161M25s25i317J31832uO2oX162Uf317P310s317R310V2WG2nR2TH3111311q1S317Y3180318a2U93184316z2Ve27c3172132sG317A2OD2oF318f1M25H25V2PZ319A319331843170319731872FC314f24P319c1027T2O125Y260319i2sW317A23D265318E2oI1m25o262319Y317k3194319M2PA3188315X315B163160318n3163316z1931652yE2Yg3169316b316d316F316H2Qu316j316L2z0316O316G1R316R2Rs3151316W31Aa319631ac21c2ov2rC2MK2WX2vW2wz2t521m214314y2Vf2nN1n2lO2Ev2w32oT31B93161162nH314u21J211314Y31B2316U31B431bT31aK2n231Bx316T2RU21D1z2WX1E122Ku2Pl1q2b327c31BK162u331bo111U2H62SX2YL2vk314131B731bQ318N21L21L3185319N1h31B82oo2ow2uQ31c12NK21o21a31c42Pq31C021s314u1X2iO2X3314z31d92sJ2vy2Vp31cJ2SE2Ou31d12v931D41931d631d82rT31Da314U21G21231DT31511E31C731C931Cb2YE31Ce31BJ2fX31ci1K2Vs1y31743176152tV2vF318e25S25S27H2GF2f72rn1r2gN21F1J2KI22E2CW2CY2D02d22f52EJ1n101J2ja22427j2E82131r21P21I1N141v1a2eZ29a2Ej2th1V2tz22E21f1H278235142v71g21M21C112mF1H31FJ31Fl2lQ31en28n1H1Z21f1R1d1n2Tz28r2k323B1O1T1p1o2zl317M21z2f521V2181T1N1y21e1S2232F521Z21h2KG31fK1D22J2k322c1Z2Mk1B2uf2WL2252Cw22s2b41N1I21X29A2aX152jS2141M1r2222GF2hT1H2Lj2B91M2Kh2242F522X172JA2H6122252kE2202152972WL2E62EH220213311U1l1N21C2172jB2ke21v2aI2AK2Gq2KE28W1d2C029h2ky21v21I29k2kH1q21J1Y2al2C821v31F62kZ1821G31FB31fd31Ff21z2FZ2G12ba2mj27822B21K2TN1h171d1e1j1m21G28x28z2912a22KY22821r2nQ1q171w31J631fE2eZ2Ib1031hW2KJ31GL2A41F2x92kD2o42371M31872VX31HU2nr21X2171F2D92db21Y31k322T1M1322A2KY2271X31FA31FC2Kg21j31ER31Et2F52361N1K141s1R1n31gK2Nr22v182J1121b1121z21L1R2J613171K31Gg2B62wj2132161a171H182i22wj21d31l131jx2292k322p2oE1R31l829K1r22E2F522V121H2aA1b1O22c31J231IS313y1L21I31M231EU2Dj22T31F11T27v2CW22u31jj1V2fd29a31me2ad1h1T310z2292M922B21O31Ce1a21j31K031J82f531fm2jx1r1T21T2ZA2av2j01931K92p7152jx31ex1m2gE2Tw31Kd2Qd31FC1531Lh121L22J31Hv1q21821p31lW1L31j12Yq2ax31l92nB31ky29H2m92K52Mc2152ME2mg2ll2bd1022Q28u132262m92eT1O2KQ1e31oh142kg22831j231hO2Gl31fc31k12fe2KU22121M21e22R2LQ22621n2fV2FX1X2Ji31Fr1b2EY2F02DJ22B21N1D2a52262gF22421L1K21E2Gm102jR1K31nx2gT1Z1C121d21R21C2ko2kq31mR2782222111D2172192992er31hU2eB2Ty171921x31NH21F31nJ1T21s1g2CW29m1631QB2262K32K52k72k92kB2dc2K322E141131nf2eZ31fn31je21e1o21G31Hj2N231R421j21J31L6314d1722E2m92371i2C81c2jQ2ew1f31PQ31K72wJ101h2dc2kY21u31iF1a2Ne2DA1w31mq31iH2Eo31nL1H2kY2M01A1e31Bg1531NK1l31Km31PR27823428n2gz2kK31kC2Kn2kp1422e2LM2lO2GQ21e1G27Z2812832851d21I21p101R2102dL31MC2NR22P1F1Q1t2pl142272F522B2132J8101l31Kb2Fh2fU2FW29H2lQ2362vx21d21831KE29o1N21M21f1P1K21V2KE31HW29r31bL22e2Ky31qj31jW31jy31rH2GR310831r6318831Ge1P2122181J1P1E29h31j22Le31L91M1q2dA31s42262bs2iC31U931UB318G2fx21m21l1j31g731g92Q52242ke22r2AD141L1h31LB2ic31l531fR29O31FM31fO102251Y1Q318G21321J2772b322N23621B31ef2hH2F522a31Qx31992Fg31px2TW2Et1u2G821N2192yF2Jx31T12IC1J2971B1222731MX313F31q422831K321y191P23829a21U31h31m21H31Tm2E131V731La2Cw31vs2J131T531Ta27822D21231HS21N21331Wq1131p831J731k22ku2341s1U2h431cN31W51b1H2MQ21i31QE31T431qh2ei2ek2r62292E128C319t2262E12BF1j1S22421m1o31JE21m1431OZ28Y31gA21O21f151D1S1621R31Q931Qb1921831qN31Ve1031nZ2qQ1S1q31O121N2K62hn31TR1t31gz2e12A72Wj22E2192cr2f72M231eF31o431s92b12B331rV2LQ2ax2Az32002lI31oP31kO2kU31Ld1B2AX310822R2OQ31pp21m2191N2m22hF2EZ2GF31VS1j1I2vy31HS31p32jy2l826o25r1T31md31Mf2Jx31mi22c2f522i21h121F1b1c31NW31ZC31n331zf31ZH310f31ZJ1d31ZL31MV31gZ31PY31Z71D21O2hX29h2K331zQ2A92L529h2cw23831su2da31j931or2382nQ2d22hQ27831vs31Fc31Vv21M31vH31UD31vK31VM31g831GA2242M931h231h431kx31XZ31UU27822P22a172852nn322T1L31Mv172L22Dj31w531W72fD2f531In31ip2C32Cw21y2Aj2E52Cw31pt31ma31rW31Cn31j92aL2NB31Fo31Q52292f531kd31p931j81Z2Pj28931gC2gJ1H1s2al1E1h31WW1031N32Jx1231Kj2Eh22B31QE31f11B21531Gr22331k32fi1i22d2K332362c121h324e2k321u2191B1T21r31On2qd21z2Lq31hO21C29n2V81B31se31tq2gd31vr1c312J31O422E2gF31SY2yc31o021721K1I31gs2Gf2Ej1t1C31Xy31pA2E122B21i31Vu31t631or31KJ2Fu31x22dJ322l312X31vq2o4323i1831Za21Y31iM2bs31iv31W22h731Zw1a31Zy1121J31f81T2BT1231vX31yF325M21I320j22I2cw2342aA28U22632101h2D8321331K32371A1N22431xp10320f31lg1D21m31iT1o1N1D31z21531Vv324x2aV27M31b01f21P31Xs181o21121f31Zn22F29a2eT1Q1Y2cz2d131Sw31Zd2ZL1M1p2242k322X31o821O320g321J2Bb31or22D2zm31tU31K331WJ1O22j2e12381T27p22131yN2BG1T325U2782M02M22222cW328g2191422n1G31P631gr327b323Q2EZ327631HG1o2aD2vz191y31Kk31kM2Dc323D21N111R1631tn27822321a1s322c31Lh2d32ER31NP2gC2ZL1C22729A239318g2iq327h31oc29A31nZ31Q431qT31q631J231N31q1b320u31w12k321t1Y2Q22hR2ty1b22J2Ke22P181431S431mb2Fr31M829P329F21X2Ky2391r1u12325E2JX325g325I2232cW22c21231F31531wN31Je2oY329F21D328031Ey2NR22r3258312x31Wv31G121j32532G931pM323l32aD2C42Er22U322G31vo28r31vr1h31xn1r2252k32E931Qr21F21H2Kp22A2cW22821d32552292Ke29M171g28o32c227L324R1t21q21q324s2252GF31PI31pK1n31Sh31Nr21z31zt2be31SS1t1h21M21O1F151P1i31jK31JM32092782372Jx21S31I2329231IO1S2222E12E32e52Gf27m31fC1A1X21131uR32CO31kC32B131Qt31He2er2ET2Ev2Ex31RI31w331xJ2Pb31WG2842QC31Qy22831rJ324331mf28q28u2hN32b729231iC286328M31OR32Cl328y31iH31iY1831J032d932eP2QD31jm1Q182j81L322019329X31tc2jf31tf21Y2K331Ha2Lo32b81P31hH21Z31j22CD31PP1f1v1U320r1t31n831Cn2j02eY2Rn2fW327F1V1j21Z2de27822N1o22T32al1y31g91V320k31s931qo27831N331S82eL1U22931J232g22OL3218285328l29a2ht326E32fB1632Ar32Eo31nz32Er2kc1B32Eu1V32Ew31GZ2Cw21t314X1M32412cw31N31J1421T2GF31kd31vI31Ue328b326v2M922W29k2H932c5322i2LQ31N31n32bS1b2jx31Ga32fz31XC1Z2Hg31EP2HG22132f631FI2wj31Fk318O31rH22Y2I821S26726722q323s2TL2Jt2tW22E21R329O111k1d21l31xS1N23N26P2pZ26725P2ap2pN31zA2782761G1221e1W2782OQ2GC2xX27T2GC2zU101431vU1726225K2N52gc23822U2pa2gc23D22z31cq1721U228311I1724023M312r22j221312U1724c23Y2zV2vh2Zy2M11723K242313z28Y1723722p27827a2gC24I24w27831692gc22k2262782v72gc254315431S82J81722W23e2pz1i2GC25224k2782a92gC22q2342782O82GC22322H27832fD2gc24f23X2782T32gc32k32781n320k1731am102Og2gC21q2182781p1p2gc21P21B2781q1Q2gC23r2452782Vy2GC24923v278312E2gC23N24127831Mv2gc22827G101u1u2GC22522n2781V32ha31rV21W314K1W311J2o51X2Gc25X25J27H1Y2gc22x23F2781z2kA1723f22X2782102w61721C32An102112112Gc24e23w2782122122Gc1P2tW2uf2gc2ww102142142gC22622K2782vb2Gc21321H278316E2Gc31072782qq2Gc24223k2782ZI2gC25724p2782192192gC23X24F27821a21a2gC22T23B2782W82GC25624O27821C21C2gC24N2512NY21d2GC24J24x2782r32GC22Y23c27821F21F2Pn21E21F2762762n21Z21d32Jg31o41724A23S27832jk1724h24Z27832JO2Gc318832Jt1722D21z32Jx1723o24632k12Sg2pL2Gc23a22S312r32JC32kc315x312Y31Qt31ll102zz2Gc26025m32kN2GC22n2Wu2791e2gc2wH2jV1f2GC23H23332l21g2GC31BV2782qC2gC24X24j32LC2gC23g23232lH1j2gc23p24732LM1k2gc21y22C32lr32Fd1721z22D32Lw1M2gc24U25832M032M223j231318e2gc23i23032MA32mC1722122j32Mg32MI1722u23832Mm1r2wH31Bb32Ms172tP32mw1T2Gc24723P27832N22gc23y314p1032n82GC25U25C32Nc2GC24m2502782RA2GC24g24Y32nk2Gc2zx1032NQ2Gc31Bb1032NW2GC2np27832O22Gc24P25732O732O91722B21T27832od2K821627832Oh2GC1531F11032on1722h22332or2162GC21521N32Ov2172gc21S22a32p02182GC23622o32p532P71724Q25432pB32PD1725z25H32PH21b32Lt32Lv1032pN2Gc23C22Y32Ps2Gc24523r32pX21e2gc21021I32q232Q431Q121f2OQ32Q91I22422M32qd2GC24z3158319T132gC25524R32Qn32JP2eW32QR22f21X32Qv23v24932k132FA32k5313H2z32wj1722222g32kc23123J2zv2Fp32KI2GC23023I32rh1722m22432KS32RM1725Y317d32Rp2GC24123N32RU2Gc162jj32L72gC311h2N232LD17312Q31F232S81722022i32Sc2gC24l25332Sh2Gc25324L32Sm2GC24O25632SR2gc313x32SV1721w22e32sz2gC24R317I1032Mh2GC21T22b32T92gc22v23932mR1s2Gc24823U32Tg2Gc23223G32Tl32N31726325l32N732n925b24t32tv1724b23t32tZ32nG1723522r32U41724V25932nP32nR21b31Ti32uB32nx22R2wq32o132O32JM21332uk2GC22722L32uP2951724423q32UT32Oi1721X22F32Om2152Gc24623o32v32gc21721L32v82gc24K25232vd2GC23323h32vI2gC23q24432vn2Yo2YQ32PI1722A21S32pm32Po2T532w11731bG32w52Ti2Tk1032Q332Q521F319U2771i23L24332WJ1723U24832qi32wO1725924V32ws2Gc314w32qr1t2cr2OI2Gc2z22rh2S731tb2x31723T2NX32x52gC25a24s32Kc22P2372Zv23m24032Xf1725024M32xJ2pI32xn2gC26525r32kX32rq1721v22932Xw1725V25D32ry32L831cm32S31726625O32s72Gc1m31or32ln1723W24E32Yg1732Pq32Yk2aZ31yt2Ip32M222i22032YR31ds1032MB2GC25824U32t42GC26125n32Z417142HR1032td23s24A32zd1722s311a32N132Zi31dD32ZM2Gc25w318j10314l2Gc25T25f32Zu2gC22L22732ZZ23B22t33032gC24D23Z32NV32nx24T25b32UF330c25S25E330F1724Y24g330J2gC31dx330o2gc21f2Sj32Uy330U1723Z24D330Y1721n2ju1032ow1724s25A3316311r2av32P62gc312932pC2Gc24w24I32Vs2gC317u32VW331m23922V331o22C21y331R1K21f2QN31RF27732q932Qd2R623E22w332731CR32jN1432Fa337a32jT24622Q26933271625W25U2pZ32s531Bc2S62222222S931cb2DF2sK32FA22o236312R32S12Zd1F1T32Sa2YW2n72161B22C22c2TS2ZL337H32rC2M12jJ2Pj310a32531c31082ts2Ty32h72ts1B2Wl2Zr32732Ie23D313I2wl2Ts2F93149311q1p24a229337P32wn1726d26A337q32S632Wn2N71y1323L23l27T2rQ2RQ32ws32fA26425Q32Jt31l62Dj27T32ob22921V3327339h1323s23S339m315U1332P627T2NK31e22Ns327h339U3327316V339i31MV32JO2Ix2111424n24n32jO2Kp337Y2QV32Sd29P32ws31gG31Eh32M5"),(#F-S);local function n(e,l,...)if(e==960067266)then return(o(o(o(l,142352),680249),419275));elseif(e==91874195)then return(((((l)-876462)-761218)-179406)-714806);elseif(e==259836135)then return(o(o(o(l,315845),165177),293297));elseif(e==432315668)then return(o(o((((l)-199690)-220866)-154728,681626),555673));elseif(e==651399951)then return(o(o(o((l)-913803,71757),832138),627460));elseif(e==140544593)then return(o(o(o((o(l,807376))-299699,235776),838028),887790));elseif(e==414357613)then return((o((((l)-907995)-103786)-40886,747513))-752135);elseif(e==126089634)then return(((o(l,73455))-747928)-637086);elseif(e==829973350)then return((o((l)-824384,98115))-610043);elseif(e==972277615)then return(o(o((((l)-956793)-569696)-565857,424670),438684));elseif(e==914405492)then return(o(o(o((o(l,310102))-202525,447962),149127),150238));elseif(e==179600762)then return(o((((o(l,139022))-186793)-286457)-349142,98270));elseif(e==392610390)then return(o((o(l,262584))-572837,883161));elseif(e==720629909)then return((o((((l)-254030)-879934)-749978,605616))-840314);else end;end;local f=e[((#{194;364;397;20;(function(...)return 998,...;end)(962)}+939954995))];local n=e["xtR0rZ"];local x=e[((#{576;691;502;}+932002795))];local w=e[(107405699)];local i=e["E7uEall5vu"];local s=e[((#{929;221;(function(...)return 833,881,576;end)()}+238698775))];local c=e.RcrrRSpUGw;local a=e[((#{761;249;}+464560690))];local function r()local e,a,r,c=p(d,t,t+c);e=o(e,l);l=e%n;a=o(a,l);l=a%n;r=o(r,l);l=r%n;c=o(c,l);l=c%n;t=t+i;return((c*s)+(r*x)+(a*n)+e);end;local function i()local e,a=p(d,t,t+f);e=o(e,l);l=e%n;a=o(a,l);l=a%n;t=t+f;return((a*n)+e);end;local function c()local e=o(p(d,t,t),l);l=e%n;t=(t+a);return(e);end;local function s(l,e,o)if(o)then local e=(l/f^(e-a))%f^((o-a)-(e-a)+a);return(e-(e%a));else local e=f^(e-a);return(((l%(e+e)>=e)and(a))or(w));end;end;local E=""..e["UwIj6"];local function F(...)return({...}),R(E,...);end;local function S(...)local Q=e[((207865945-#("I'm not ignoring you, my DMs are full. Can't DM me? Shoot me a email: mem@mem.rip (Business enquiries only)")))];local U=e[((743102313-#("woooow u hooked an opcode, congratulations! i do NOT give a fuck.")))];local w=e["R3ZX9"];local I=e.vG4J5;local v=e[(327822521)];local x=e['imtYz1x'];local B=e[(971991785)];local T=e[((#{606;}+504412516))];local M=e[((#{}+329471037))];local V=e['GYDCSeU'];local g=e['RcrrRSpUGw'];local n=e[(464560692)];local m=e[(80577205)];local Z=e[((#{436;(function(...)return;end)()}+470159922))];local S=e[((#{}+15535415))];local N=e[((207198201-#("guys someone play Among Us with memcorrupt he is so lonely :(")))];local O=e[((811602591-#("I'm not ignoring you, my DMs are full. Can't DM me? Shoot me a email: mem@mem.rip (Business enquiries only)")))];local a=e[(107405699)];local y=e[((939955083-#("who the fuck looked at synapse xen and said 'yeah this is good enough for release'")))];local k=e[(346422020)];local z=e[(972366028)];local R=e[(33266447)];local Y=e[((991079842-#("still waiting for luci to fix the API :|")))];local b=e['E7uEall5vu'];local C=e["xtR0rZ"];local F=e[(47044879)];local E=e[(629766667)];local function D(...)local e=({});local A=({});local f=({});local L=i(l);for e=a,r(l)-n,n do A[e]=D();end;local D=c(l);for i=a,r(l)-n,n do local f=c(l);if(f==g)then local l=c(l);e[i]=(l~=a);elseif(f==T)then while(true)do local t=r(l);local o=r(l);local r=n;local t=(s(o,n,V)*(y^x))+t;local l=s(o,B,Q);local o=((-n)^s(o,x));if(l==a)then if(t==a)then e[i]=(o*a);break;else l=n;r=a;end;elseif(l==N)then e[i]=(t==a)and(o*(n/a))or(o*(a/a));break;end;e[i]=G(o,l-M)*(r+(t/(y^I)));break;end;elseif(f==Z)then while(true)do local r=r(l);if(r==a)then e[i]=('');break;end;if(r>R)then local a,c=(''),(u(d,t,t+r-n));t=t+r;for e=n,#c,n do local e=o(p(u(c,e,e)),l);l=e%C;a=a..h[e];end;e[i]=a;else local n,a=(''),({p(d,t,t+r-n)});t=t+r;for a,e in P(a)do local e=o(e,l);l=e%C;n=n..h[e];end;e[i]=n;end;break;end;else e[i]=(nil);end;end;local o=r(l);for e=a,o-n,n do f[e]=({});end;for B=a,o-n,n do local o=c(l);if(o~=a)then o=o-n;local u,t,C,d,x,p=a,a,a,a,a,a;local h=s(o,n,g);if(h==g)then t=f[(r(l))];u=(i(l));d=(i(l));x=(c(l));elseif(h==m)then elseif(h==w)then t=(r(l));u=(i(l));d=(i(l));x=(c(l));p=({});for e=n,u,n do p[e]=({[a]=c(l),[n]=i(l)});end;elseif(h==n)then t=(r(l));d=(i(l));x=(c(l));elseif(h==y)then t=f[(r(l))];d=(i(l));x=(c(l));elseif(h==a)then t=(i(l));u=(i(l));d=(i(l));x=(c(l));end;if(s(o,k,k)==n)then C=f[r(l)];else C=f[B+n];end;if(s(o,w,w)==n)then t=e[t];end;if(s(o,b,b)==n)then d=e[d];end;if(s(o,m,m)==n)then u=e[u];end;if(s(o,v,v)==n)then p=({});for e=n,c(),n do p[e]=r();end;end;local e=f[B];e['u96qDuWTg']=C;e["zMOGkCCc"]=d;e[U]=x;e[-S]=p;e['L3J0']=u;e[-E]=t;end;end;return({[O]=f;["gIBUnSpmtB"]=a;[z]=A;[Y]=e;["tmL"]=L;[-F]=D;});end;return(D(...));end;local function f(e,l,s,...)local l=0;local h=e[34205];local o=e[-271738];local c=e["tmL"];local n=e[988244];local e=e[852728];return(function(...)local n=({});local n=(433182024);local x={};local i=-(1);local p=759529;local r=e[l];local w='u96qDuWTg';local u=(R(E,...)-1);local e={};local a=-192756;local t='L3J0';local l=(true);local d={...};local n="zMOGkCCc";local l=-369706;for l=0,u,1 do if(l>=o)then x[l-o]=d[l+1];else e[l]=d[l+1];end;end;local l=u-o+1;while(true)do local l=r;local o=l[p];r=l[w];if(o<=13)then if(o<=6)then if(o<=2)then if(o<=0)then local o=l[n];local a=l[a];local n=50*(l[t]-1);local t=e[o];local l=0;for a=o+1,a do t[n+l+1]=e[o+(a-o)];l=l+1;end;elseif(o>1)then s[l[a]]=e[l[n]];elseif(o<2)then if(not(e[l[n]]))then r=l[a];end;end;elseif(o<=4)then if(o==3)then e[l[n]]=e[l[a]][l[t]];elseif(o<=4)then local l=l[n];local n,o=F(e[l](e[l+1]));i=o+l-1;local o=0;for l=l,i do o=o+1;e[l]=n[o];end;end;elseif(o>5)then local o=l[n];e[o]=0+(e[o]);e[o+1]=0+(e[o+1]);e[o+2]=0+(e[o+2]);local n=e[o];local t=e[o+2];if(t>0)then if(n>e[o+1])then r=l[a];else e[o+3]=n;end;elseif(n<e[o+1])then r=l[a];else e[o+3]=n;end;elseif(o<6)then e[l[n]]=e[l[a]]*e[l[t]];end;elseif(o<=9)then if(o<=7)then local o=l[n];local t=e[o+2];local n=e[o]+t;e[o]=n;if(t>0)then if(n<=e[o+1])then r=l[a];e[o+3]=n;end;elseif(n>=e[o+1])then r=l[a];e[o+3]=n;end;elseif(o>8)then local a=l[a];local o=e[a];for l=a+1,l[t]do o=o..e[l];end;e[l[n]]=o;elseif(o<9)then e[l[n]]=e[l[a]][e[l[t]]];end;elseif(o<=11)then if(o==10)then e[l[n]][l[a]]=l[t];elseif(o<=11)then e[l[n]]=#e[l[a]];end;elseif(o>12)then r=l[a];elseif(o<13)then e[l[n]]=L(256);end;elseif(o<=20)then if(o<=16)then if(o<=14)then if(e[l[n]]~=l[t])then r=l[a];end;elseif(o>15)then e[l[n]]=L(l[a]);elseif(o<16)then e[l[n]]=s[l[a]];end;elseif(o<=18)then if(o==17)then local l=l[n];e[l](e[l+1]);for l=l,c do e[l]=nil;end;elseif(o<=18)then local l=l[n];e[l]=e[l](y(e,l+1,i));for l=l+1,i do e[l]=nil;end;end;elseif(o>19)then e[l[n]]=f(h[l[a]],(nil),s);elseif(o<20)then e[l[n]][l[a]]=e[l[t]];end;elseif(o<=24)then if(o<=22)then if(o==21)then e[l[n]]=l[a];elseif(o<=22)then if(e[l[n]]==l[t])then r=l[a];end;end;elseif(o==23)then local l=l[n];e[l]=e[l](e[l+1]);for l=l+1,c do e[l]=nil;end;elseif(o<=24)then do return;end;end;elseif(o<=26)then if(o>25)then e[l[n]]=e[l[a]];elseif(o<26)then local o=l[n];e[o](y(e,o+1,l[a]));for l=o+1,c do e[l]=nil;end;end;elseif(o>27)then local o=l[n];e[o]=e[o](y(e,o+1,l[a]));for l=o+1,c do e[l]=nil;end;elseif(o<28)then local n=l[n];local o=e[l[a]];e[n+1]=o;e[n]=o[l[t]];end;end;end);end;return f(S(),{},I())(...);end)(({[(504412517)]=((15));[(473414816)]=(((#{861;782;925;}+119258134)));[(47044879)]=(((271820-#("who the fuck looked at synapse xen and said 'yeah this is good enough for release'"))));[(854642349)]=("\116");[(346422020)]=((8));[((742594630-#("woooow u hooked an opcode, congratulations! i do NOT give a fuck.")))]=(((862623808-#("ironbrew deobfuscator go brrrrrrrrrrrrrr"))));["QQ4diH"]=(((#{0;300;}+854642347)));[((458591370-#("Are you using AztupBrew, clvbrew, or IB2? Congratulations! You're deobfuscated!")))]=("\98");[((609459473-#("this isn't krnl support you bonehead moron")))]=("\100");[((33266542-#("uh oh everyone watch out pain exist coming in with the backspace method one dot two dot man dot")))]=(((5079-#("Are you using AztupBrew, clvbrew, or IB2? Congratulations! You're deobfuscated!"))));[((#{288;}+80577204))]=(((66-#("psu premium chads winning (only losers use the free version)"))));[((266195938-#("Are you using AztupBrew, clvbrew, or IB2? Congratulations! You're deobfuscated!")))]=("\111");["deIkMQ"]=(((#{}+266195859)));[(107405699)]=((0));AQs1pC8XR=(((#{717;}+285023331)));[((811602606-#("oh Mr. Pools, thats a little close please dont touch me there... please Mr. Pools I am only eight years old please stop...")))]=(((852821-#("Luraph v12.6 has been released!: changed absolutely fucking nothing but donate to my patreon!"))));[((207198180-#("ironbrew deobfuscator go brrrrrrrrrrrrrr")))]=(((#{}+2047)));["AHZDd9e1Lm"]=((90));eDTCvQDQLl=("\102");[(161151659)]=("\114");[(702421299)]=(((129430972-#("ililililililili guys look at me i'm intimidating"))));[((143102521-#("Are you using AztupBrew, clvbrew, or IB2? Congratulations! You're deobfuscated!")))]=((210842880));Rjw1Ln1wCi=("\112");[((238698841-#("guys someone play Among Us with memcorrupt he is so lonely :(")))]=((16777216));[(702329512)]=("\104");[(270521086)]=(((#{456;903;}+893389312)));["Vkk20"]=("\101");[(464560692)]=(((#{117;426;193;987;}-3)));['UwIj6']=("\35");[(326663143)]=("\97");[((#{875;278;}+129430922))]=("\108");xtR0rZ=((256));[(690175930)]=(((#{(function(...)return 147;end)()}+54883399)));[(789870138)]=(((#{376;978;807;}+33)));['RcrrRSpUGw']=((3));VI8EhPpNeq=(((145-#("psu 60fps, luraph 5fps, xen 0fps"))));['k30XPWB']=((783246681));vG4J5=(((#{749;395;(function(...)return 264,441;end)()}+48)));[(15535415)]=(((369891-#("Luraph: Probably considered the worst out of the three, Luraph is another Lua Obfuscator. It isnt remotely as secure as Ironbrew or Synapse Xen, and it isn't as fast as Ironbrew either."))));GYDCSeU=((20));[(327822521)]=(((74-#("i am not wally stop asking me for wally hub support please fuck off"))));["imtYz1x"]=((32));[(215180886)]=("\107");[((893389381-#("i am not wally stop asking me for wally hub support please fuck off")))]=("\99");["N2099b"]=("\51");['R3ZX9']=((5));[(470159923)]=((34));[((267419718-#("uh oh everyone watch out pain exist coming in with the backspace method one dot two dot man dot")))]=((215180886));[(929736987)]=("\109");["VT2il"]=((326663143));[((991079869-#("i am not wally stop asking me for wally hub support please fuck off")))]=((988244));[(674509764)]=((929736987));[(780320400)]=((458591291));[(862623768)]=("\110");[((#{(function(...)return 442,454,934,396;end)()}+285023328))]=("\121");['hW2dPtUM']=(((#{(function(...)return 111,238,949;end)()}+245)));["vZY1xVaDc2"]=((702329512));[(939955001)]=((2));[(54883400)]=("\115");fq0H6Ag=("\119");[(825750826)]=(((#{}+609459431)));[((971991907-#("oh Mr. Pools, thats a little close please dont touch me there... please Mr. Pools I am only eight years old please stop...")))]=(((206-#("Luraph: Probably considered the worst out of the three, Luraph is another Lua Obfuscator. It isnt remotely as secure as Ironbrew or Synapse Xen, and it isn't as fast as Ironbrew either."))));[((207865931-#("Luraph v12.6 has been released!: changed absolutely fucking nothing but donate to my patreon!")))]=(((#{439;380;499;(function(...)return 349,...;end)(962,212,192)}+24)));E7uEall5vu=(((46-#("this isn't krnl support you bonehead moron"))));oYCfgCTI0d=(((#{}+227)));[(329471037)]=(((1088-#("woooow u hooked an opcode, congratulations! i do NOT give a fuck."))));zwLUy1=(((161151726-#("i am not wally stop asking me for wally hub support please fuck off"))));[(743102248)]=(((759648-#("you dumped constants by printing the deserializer??? ladies and gentlemen stand clear we have a genius in the building."))));[((#{20;(function(...)return 827;end)()}+210842878))]=("\105");[(932002798)]=(((#{917;333;547;}+65533)));[((#{596;22;909;839;}+119258133))]=("\103");[((#{813;448;444;(function(...)return 843,175,...;end)(220)}+783246675))]=("\118");aFr682dyr4=("\50");[(972366028)]=(((34324-#("you dumped constants by printing the deserializer??? ladies and gentlemen stand clear we have a genius in the building."))));[((#{(function(...)return 409,10,...;end)(386,58,311)}+629766662))]=((192756));[(923180317)]=((165));[(924861340)]=((197));}),...);
+--loadstring(game:HttpGet"https://raw.githubusercontent.com/HoangHuyPham/Script/master/Shindolife.lua")()
+while not game:IsLoaded() do
+    task.wait()
+end
+local TIME_OUT = 10
+local UserInputService = game:GetService("UserInputService")
+local isSpin = false
+local ToolBoxGUI = nil
+local gamepasses = nil
+local statz = nil
+local alljutsu = nil
+local startevent = nil
+local WIDTH_SLOT = 0.4
+local HEIGHT_SLOT = 1
+local setValues = nil
+local getCurrentValues = nil
+local WIDTH_SLOT = 0.4
+local HEIGHT_SLOT = 1
+local spin = nil
+local isChosen = false
+local spinned = 0
+local initialSpin = {
+    element = 0,
+    bloodline = 0
+}
+
+local ToolBox = Instance.new("ScreenGui")
+ToolBox.Name = "ToolBox"
+ToolBox.Parent = game.Players.LocalPlayer.PlayerGui
+
+local ToolBoxFrame = Instance.new("Frame")
+ToolBoxFrame.Parent = ToolBox
+ToolBoxFrame.Position = UDim2.new(0.3, 0, 0.01, 0)
+ToolBoxFrame.Size = UDim2.new(0.3, 0, 0.4, 0)
+ToolBoxFrame.BackgroundColor3 = Color3.new(0, 0, 0)
+ToolBoxFrame.Transparency = 0.6
+
+local MoveGUIBtn = Instance.new("TextButton")
+MoveGUIBtn.Name = "MoveGUIBtn"
+MoveGUIBtn.Parent = ToolBoxFrame
+MoveGUIBtn.Text = ""
+MoveGUIBtn.BackgroundColor3 = Color3.new(0, 0, 0)
+MoveGUIBtn.Position = UDim2.new(0, 0, 0, 0)
+MoveGUIBtn.Size = UDim2.new(0, 20, 0, 20)
+
+local SpinnedLabel = Instance.new("TextLabel")
+SpinnedLabel.Name = "SpinnedLabel"
+SpinnedLabel.Parent = ToolBoxFrame
+SpinnedLabel.Text = "Spinned: 0(0 bloodlines, 0 elements)"
+SpinnedLabel.TextScaled = true
+SpinnedLabel.TextColor3 = Color3.new(255, 255, 255)
+SpinnedLabel.Position = UDim2.new(0.2, 0, 0.1, 0)
+SpinnedLabel.TextWrapped = true
+SpinnedLabel.Size = UDim2.new(0.6, 0, 0.1, 0)
+
+local function createMenuList(name, value, parent)
+    value = value or "null"
+    parent = parent or nil
+    local btn = Instance.new("TextButton")
+    btn.Name = name
+    btn.Text = value
+    btn.Parent = parent
+    btn.Position = UDim2.new(0, 0, 0, 0)
+    btn.Size = UDim2.new(1, -parent.ScrollBarThickness, parent.Size.Y.Scale, 0)
+    btn.TextColor3 = Color3.fromRGB(0, 0, 0)
+    btn.BorderSizePixel = 0
+    btn.BackgroundColor3 = Color3.fromRGB(85, 103, 112)
+    btn:SetAttribute("checked", false)
+    btn.TextScaled = true
+    btn.Activated:Connect(function()
+        btn:SetAttribute("checked", not btn:GetAttribute("checked"))
+        if (btn:GetAttribute("checked")) then
+            local count = 0
+            for _, v in pairs(stop_spin_choose_scroll_frame:GetChildren()) do
+                count = count + 1
+            end
+            if not (count > 20) then
+                btn.TextColor3 = Color3.fromRGB(255, 0, 0)
+                local btnClone = btn:Clone()
+                btnClone.Size = UDim2.new(1 / 6, 0, 1, 0)
+                btnClone.Activated:Connect(function()
+                    btn.TextColor3 = Color3.fromRGB(0, 0, 0)
+                    for _, v in pairs(stop_spin_choose_scroll_frame:GetChildren()) do
+                        if (v.Name == btn.Name) then
+                            stop_spin_choose_scroll_frame:FindFirstChild(v.Name):Remove()
+                        end
+                    end
+                end)
+                btnClone.Parent = stop_spin_choose_scroll_frame
+            else
+                btn:SetAttribute("checked", not btn:GetAttribute("checked"))
+            end
+        else
+            btn.TextColor3 = Color3.fromRGB(0, 0, 0)
+            for _, v in pairs(stop_spin_choose_scroll_frame:GetChildren()) do
+                if (v.Name == btn.Name) then
+                    stop_spin_choose_scroll_frame:FindFirstChild(v.Name):Remove()
+                end
+            end
+        end
+    end)
+end
+
+local Element1Frame = Instance.new("Frame")
+Element1Frame.Name = "Element1Frame"
+Element1Frame.Parent = ToolBoxFrame
+Element1Frame.Position = UDim2.new(0.05, 0, 0.3, 0)
+Element1Frame.Size = UDim2.new(WIDTH_SLOT, 0, 0.1, 0)
+Element1Frame.InputBegan:Connect(function(input)
+    if (input.UserInputType == Enum.UserInputType.MouseButton1) then
+        if not (Element1Frame:FindFirstChild("Element1ValueLabel").Text == "Locked") then
+            Element1Frame:FindFirstChild("Element1ValueLabel").Text = "Locked"
+        else
+            Element1Frame:FindFirstChild("Element1ValueLabel").Text = getCurrentValues().element[1]
+        end
+
+    end
+end)
+
+local Element1Label = Instance.new("TextLabel")
+Element1Label.Name = "Element1Label"
+Element1Label.Parent = Element1Frame
+Element1Label.Text = "Element1: "
+Element1Label.TextScaled = true
+Element1Label.TextColor3 = Color3.fromRGB(255, 255, 255)
+Element1Label.Position = UDim2.new(0, 0, 0, 0)
+Element1Label.Size = UDim2.new(WIDTH_SLOT - 0.01, 0, HEIGHT_SLOT, 0)
+Element1Label.TextWrapped = true
+Element1Label.BackgroundTransparency = 1
+
+local Element1ValueLabel = Instance.new("TextLabel")
+Element1ValueLabel.Name = "Element1ValueLabel"
+Element1ValueLabel.Parent = Element1Frame
+Element1ValueLabel.Position = UDim2.new(WIDTH_SLOT, 0, 0, 0)
+Element1ValueLabel.Size = UDim2.new(1 - WIDTH_SLOT, 0, HEIGHT_SLOT, 0)
+Element1ValueLabel.BorderSizePixel = 0
+Element1ValueLabel.Text = "No element!"
+Element1ValueLabel.TextScaled = true
+Element1ValueLabel.TextWrapped = true
+
+local Element2Frame = Instance.new("Frame")
+Element2Frame.Name = "Element2Frame"
+Element2Frame.Parent = ToolBoxFrame
+Element2Frame.Position = UDim2.new(Element1Frame.Position.X.Scale, 0,
+    Element1Frame.Position.Y.Scale + Element1Frame.Size.Y.Scale, 0)
+Element2Frame.Size = UDim2.new(WIDTH_SLOT, 0, 0.1, 0)
+Element2Frame.InputBegan:Connect(function(input)
+    if (input.UserInputType == Enum.UserInputType.MouseButton1) then
+        if not (Element2Frame:FindFirstChild("Element2ValueLabel").Text == "Locked") then
+            Element2Frame:FindFirstChild("Element2ValueLabel").Text = "Locked"
+        else
+            Element2Frame:FindFirstChild("Element2ValueLabel").Text = getCurrentValues().element[2]
+        end
+
+    end
+end)
+
+local Element2Label = Instance.new("TextLabel")
+Element2Label.Name = "Element2Label"
+Element2Label.Parent = Element2Frame
+Element2Label.Text = "Element2: "
+Element2Label.TextScaled = true
+Element2Label.TextColor3 = Color3.fromRGB(255, 255, 255)
+Element2Label.Position = UDim2.new(0, 0, 0, 0)
+Element2Label.Size = UDim2.new(WIDTH_SLOT - 0.01, 0, HEIGHT_SLOT, 0)
+Element2Label.TextWrapped = true
+Element2Label.BackgroundTransparency = 1
+
+local Element2ValueLabel = Instance.new("TextLabel")
+Element2ValueLabel.Name = "Element2ValueLabel"
+Element2ValueLabel.Parent = Element2Frame
+Element2ValueLabel.Position = UDim2.new(WIDTH_SLOT, 0, 0, 0)
+Element2ValueLabel.Size = UDim2.new(1 - WIDTH_SLOT, 0, HEIGHT_SLOT, 0)
+Element2ValueLabel.BorderSizePixel = 0
+Element2ValueLabel.Text = "No element!"
+Element2ValueLabel.TextScaled = true
+Element2ValueLabel.TextWrapped = true
+
+local Element3Frame = Instance.new("Frame")
+Element3Frame.Name = "Element3Frame"
+Element3Frame.Parent = ToolBoxFrame
+Element3Frame.Position = UDim2.new(Element2Frame.Position.X.Scale, 0,
+    Element2Frame.Position.Y.Scale + Element2Frame.Size.Y.Scale, 0)
+Element3Frame.Size = UDim2.new(WIDTH_SLOT, 0, 0.1, 0)
+Element3Frame.InputBegan:Connect(function(input)
+    if (input.UserInputType == Enum.UserInputType.MouseButton1) then
+        if not (Element3Frame:FindFirstChild("Element3ValueLabel").Text == "Locked") then
+            Element3Frame:FindFirstChild("Element3ValueLabel").Text = "Locked"
+        else
+            if (gamepasses.element3) then
+                Element3Frame:FindFirstChild("Element3ValueLabel").Text = getCurrentValues().element[3]
+            else
+                Element3Frame:FindFirstChild("Element3ValueLabel").Text = "Not have this gamepass!"
+            end
+
+        end
+
+    end
+end)
+
+local WIDTH_SLOT = 0.4
+local HEIGHT_SLOT = 1
+local Element3Label = Instance.new("TextLabel")
+Element3Label.Name = "Element3Label"
+Element3Label.Parent = Element3Frame
+Element3Label.Text = "Element3: "
+Element3Label.TextScaled = true
+Element3Label.TextColor3 = Color3.fromRGB(255, 255, 255)
+Element3Label.Position = UDim2.new(0, 0, 0, 0)
+Element3Label.Size = UDim2.new(WIDTH_SLOT - 0.01, 0, HEIGHT_SLOT, 0)
+Element3Label.TextWrapped = true
+Element3Label.BackgroundTransparency = 1
+
+local Element3ValueLabel = Instance.new("TextLabel")
+Element3ValueLabel.Name = "Element3ValueLabel"
+Element3ValueLabel.Parent = Element3Frame
+Element3ValueLabel.Position = UDim2.new(WIDTH_SLOT, 0, 0, 0)
+Element3ValueLabel.Size = UDim2.new(1 - WIDTH_SLOT, 0, HEIGHT_SLOT, 0)
+Element3ValueLabel.BorderSizePixel = 0
+Element3ValueLabel.Text = "No element!"
+Element3ValueLabel.TextScaled = true
+Element3ValueLabel.TextWrapped = true
+
+local Element4Frame = Instance.new("Frame")
+Element4Frame.Name = "Element4Frame"
+Element4Frame.Parent = ToolBoxFrame
+Element4Frame.Position = UDim2.new(Element3Frame.Position.X.Scale, 0,
+    Element3Frame.Position.Y.Scale + Element3Frame.Size.Y.Scale, 0)
+Element4Frame.Size = UDim2.new(WIDTH_SLOT, 0, 0.1, 0)
+Element4Frame.InputBegan:Connect(function(input)
+    if (input.UserInputType == Enum.UserInputType.MouseButton1) then
+        if not (Element4Frame:FindFirstChild("Element4ValueLabel").Text == "Locked") then
+            Element4Frame:FindFirstChild("Element4ValueLabel").Text = "Locked"
+        else
+            if (gamepasses.element4) then
+                Element4Frame:FindFirstChild("Element4ValueLabel").Text = getCurrentValues().element[4]
+            else
+                Element4Frame:FindFirstChild("Element4ValueLabel").Text = "Not have this gamepass!"
+            end
+
+        end
+
+    end
+end)
+
+local WIDTH_SLOT = 0.4
+local HEIGHT_SLOT = 1
+local Element4Label = Instance.new("TextLabel")
+Element4Label.Name = "Element4Label"
+Element4Label.Parent = Element4Frame
+Element4Label.Text = "Element4: "
+Element4Label.TextScaled = true
+Element4Label.TextColor3 = Color3.fromRGB(255, 255, 255)
+Element4Label.Position = UDim2.new(0, 0, 0, 0)
+Element4Label.Size = UDim2.new(WIDTH_SLOT - 0.01, 0, HEIGHT_SLOT, 0)
+Element4Label.TextWrapped = true
+Element4Label.BackgroundTransparency = 1
+
+local Element4ValueLabel = Instance.new("TextLabel")
+Element4ValueLabel.Name = "Element4ValueLabel"
+Element4ValueLabel.Parent = Element4Frame
+Element4ValueLabel.Position = UDim2.new(WIDTH_SLOT, 0, 0, 0)
+Element4ValueLabel.Size = UDim2.new(1 - WIDTH_SLOT, 0, HEIGHT_SLOT, 0)
+Element4ValueLabel.BorderSizePixel = 0
+Element4ValueLabel.Text = "No element!"
+Element4ValueLabel.TextScaled = true
+Element4ValueLabel.TextWrapped = true
+
+local Bloodline1Frame = Instance.new("Frame")
+Bloodline1Frame.Name = "Bloodline1Frame"
+Bloodline1Frame.Parent = ToolBoxFrame
+Bloodline1Frame.Position = UDim2.new(0.5, 0, 0.3, 0)
+Bloodline1Frame.Size = UDim2.new(WIDTH_SLOT, 0, 0.1, 0)
+Bloodline1Frame.InputBegan:Connect(function(input)
+    if (input.UserInputType == Enum.UserInputType.MouseButton1) then
+        if not (Bloodline1Frame:FindFirstChild("Bloodline1ValueLabel").Text == "Locked") then
+            Bloodline1Frame:FindFirstChild("Bloodline1ValueLabel").Text = "Locked"
+        else
+            Bloodline1Frame:FindFirstChild("Bloodline1ValueLabel").Text = getCurrentValues().bloodline[1]
+        end
+
+    end
+end)
+
+local Bloodline1Label = Instance.new("TextLabel")
+Bloodline1Label.Name = "Bloodline1Label"
+Bloodline1Label.Parent = Bloodline1Frame
+Bloodline1Label.Text = "Bloodline1: "
+Bloodline1Label.TextScaled = true
+Bloodline1Label.TextColor3 = Color3.fromRGB(255, 0, 0)
+Bloodline1Label.Position = UDim2.new(0, 0, 0, 0)
+Bloodline1Label.Size = UDim2.new(WIDTH_SLOT - 0.01, 0, HEIGHT_SLOT, 0)
+Bloodline1Label.TextWrapped = true
+Bloodline1Label.BackgroundTransparency = 1
+
+local Bloodline1ValueLabel = Instance.new("TextLabel")
+Bloodline1ValueLabel.Name = "Bloodline1ValueLabel"
+Bloodline1ValueLabel.Parent = Bloodline1Frame
+Bloodline1ValueLabel.Position = UDim2.new(WIDTH_SLOT, 0, 0, 0)
+Bloodline1ValueLabel.Size = UDim2.new(1 - WIDTH_SLOT, 0, HEIGHT_SLOT, 0)
+Bloodline1ValueLabel.BorderSizePixel = 0
+Bloodline1ValueLabel.Text = "No element!"
+Bloodline1ValueLabel.TextScaled = true
+Bloodline1ValueLabel.TextWrapped = true
+
+local Bloodline2Frame = Instance.new("Frame")
+Bloodline2Frame.Name = "Bloodline2Frame"
+Bloodline2Frame.Parent = ToolBoxFrame
+Bloodline2Frame.Position = UDim2.new(Bloodline1Frame.Position.X.Scale, 0,
+    Bloodline1Frame.Position.Y.Scale + Bloodline1Frame.Size.Y.Scale, 0)
+Bloodline2Frame.Size = UDim2.new(WIDTH_SLOT, 0, 0.1, 0)
+Bloodline2Frame.InputBegan:Connect(function(input)
+    if (input.UserInputType == Enum.UserInputType.MouseButton1) then
+        if not (Bloodline2Frame:FindFirstChild("Bloodline2ValueLabel").Text == "Locked") then
+            Bloodline2Frame:FindFirstChild("Bloodline2ValueLabel").Text = "Locked"
+        else
+            Bloodline2Frame:FindFirstChild("Bloodline2ValueLabel").Text = getCurrentValues().bloodline[2]
+        end
+
+    end
+end)
+
+local WIDTH_SLOT = 0.4
+local HEIGHT_SLOT = 1
+local Bloodline2Label = Instance.new("TextLabel")
+Bloodline2Label.Name = "Bloodline2Label"
+Bloodline2Label.Parent = Bloodline2Frame
+Bloodline2Label.Text = "Bloodline2: "
+Bloodline2Label.TextScaled = true
+Bloodline2Label.TextColor3 = Color3.fromRGB(255, 0, 0)
+Bloodline2Label.Position = UDim2.new(0, 0, 0, 0)
+Bloodline2Label.Size = UDim2.new(WIDTH_SLOT - 0.01, 0, HEIGHT_SLOT, 0)
+Bloodline2Label.TextWrapped = true
+Bloodline2Label.BackgroundTransparency = 1
+
+local Bloodline2ValueLabel = Instance.new("TextLabel")
+Bloodline2ValueLabel.Name = "Bloodline2ValueLabel"
+Bloodline2ValueLabel.Parent = Bloodline2Frame
+Bloodline2ValueLabel.Position = UDim2.new(WIDTH_SLOT, 0, 0, 0)
+Bloodline2ValueLabel.Size = UDim2.new(1 - WIDTH_SLOT, 0, HEIGHT_SLOT, 0)
+Bloodline2ValueLabel.BorderSizePixel = 0
+Bloodline2ValueLabel.Text = "No element!"
+Bloodline2ValueLabel.TextScaled = true
+Bloodline2ValueLabel.TextWrapped = true
+
+local Bloodline3Frame = Instance.new("Frame")
+Bloodline3Frame.Name = "Bloodline3Frame"
+Bloodline3Frame.Parent = ToolBoxFrame
+Bloodline3Frame.Position = UDim2.new(Bloodline2Frame.Position.X.Scale, 0,
+    Bloodline2Frame.Position.Y.Scale + Bloodline2Frame.Size.Y.Scale, 0)
+Bloodline3Frame.Size = UDim2.new(WIDTH_SLOT, 0, 0.1, 0)
+Bloodline3Frame.InputBegan:Connect(function(input)
+    if (input.UserInputType == Enum.UserInputType.MouseButton1) then
+        if not (Bloodline3Frame:FindFirstChild("Bloodline3ValueLabel").Text == "Locked") then
+            Bloodline3Frame:FindFirstChild("Bloodline3ValueLabel").Text = "Locked"
+        else
+            if (gamepasses.genkai3) then
+                Bloodline3Frame:FindFirstChild("Bloodline3ValueLabel").Text = getCurrentValues().bloodline[3]
+            else
+                Bloodline3Frame:FindFirstChild("Bloodline3ValueLabel").Text = "Not have this gamepass!"
+            end
+
+        end
+
+    end
+end)
+
+local WIDTH_SLOT = 0.4
+local HEIGHT_SLOT = 1
+local Bloodline3Label = Instance.new("TextLabel")
+Bloodline3Label.Name = "Bloodline3Label"
+Bloodline3Label.Parent = Bloodline3Frame
+Bloodline3Label.Text = "Bloodline3: "
+Bloodline3Label.TextScaled = true
+Bloodline3Label.TextColor3 = Color3.fromRGB(255, 0, 0)
+Bloodline3Label.Position = UDim2.new(0, 0, 0, 0)
+Bloodline3Label.Size = UDim2.new(WIDTH_SLOT - 0.01, 0, HEIGHT_SLOT, 0)
+Bloodline3Label.TextWrapped = true
+Bloodline3Label.BackgroundTransparency = 1
+
+local Bloodline3ValueLabel = Instance.new("TextLabel")
+Bloodline3ValueLabel.Name = "Bloodline3ValueLabel"
+Bloodline3ValueLabel.Parent = Bloodline3Frame
+Bloodline3ValueLabel.Position = UDim2.new(WIDTH_SLOT, 0, 0, 0)
+Bloodline3ValueLabel.Size = UDim2.new(1 - WIDTH_SLOT, 0, HEIGHT_SLOT, 0)
+Bloodline3ValueLabel.BorderSizePixel = 0
+Bloodline3ValueLabel.Text = "No element!"
+Bloodline3ValueLabel.TextScaled = true
+Bloodline3ValueLabel.TextWrapped = true
+
+local Bloodline4Frame = Instance.new("Frame")
+Bloodline4Frame.Name = "Bloodline4Frame"
+Bloodline4Frame.Parent = ToolBoxFrame
+Bloodline4Frame.Position = UDim2.new(Bloodline3Frame.Position.X.Scale, 0,
+    Bloodline3Frame.Position.Y.Scale + Bloodline3Frame.Size.Y.Scale, 0)
+Bloodline4Frame.Size = UDim2.new(WIDTH_SLOT, 0, 0.1, 0)
+Bloodline4Frame.InputBegan:Connect(function(input)
+    if (input.UserInputType == Enum.UserInputType.MouseButton1) then
+        if not (Bloodline4Frame:FindFirstChild("Bloodline4ValueLabel").Text == "Locked") then
+            Bloodline4Frame:FindFirstChild("Bloodline4ValueLabel").Text = "Locked"
+        else
+            if (gamepasses.genkai4) then
+                Bloodline4Frame:FindFirstChild("Bloodline4ValueLabel").Text = getCurrentValues().bloodline[4]
+            else
+                Bloodline4Frame:FindFirstChild("Bloodline4ValueLabel").Text = "Not have this gamepass!"
+            end
+
+        end
+
+    end
+end)
+
+local WIDTH_SLOT = 0.4
+local HEIGHT_SLOT = 1
+local Bloodline4Label = Instance.new("TextLabel")
+Bloodline4Label.Name = "Bloodline4Label"
+Bloodline4Label.Parent = Bloodline4Frame
+Bloodline4Label.Text = "Bloodline4: "
+Bloodline4Label.TextScaled = true
+Bloodline4Label.TextColor3 = Color3.fromRGB(255, 0, 0)
+Bloodline4Label.Position = UDim2.new(0, 0, 0, 0)
+Bloodline4Label.Size = UDim2.new(WIDTH_SLOT - 0.01, 0, HEIGHT_SLOT, 0)
+Bloodline4Label.TextWrapped = true
+Bloodline4Label.BackgroundTransparency = 1
+
+local Bloodline4ValueLabel = Instance.new("TextLabel")
+Bloodline4ValueLabel.Name = "Bloodline4ValueLabel"
+Bloodline4ValueLabel.Parent = Bloodline4Frame
+Bloodline4ValueLabel.Position = UDim2.new(WIDTH_SLOT, 0, 0, 0)
+Bloodline4ValueLabel.Size = UDim2.new(1 - WIDTH_SLOT, 0, HEIGHT_SLOT, 0)
+Bloodline4ValueLabel.BorderSizePixel = 0
+Bloodline4ValueLabel.Text = "No element!"
+Bloodline4ValueLabel.TextScaled = true
+Bloodline4ValueLabel.TextWrapped = true
+
+local StopSpinFrame = Instance.new("Frame")
+StopSpinFrame.Name = "StopSpinFrame"
+StopSpinFrame.Parent = ToolBoxFrame
+StopSpinFrame.Position = UDim2.new(0.1, 0, 0.75, 0)
+StopSpinFrame.Size = UDim2.new(WIDTH_SLOT + 0.2, 0, 0.15, 0)
+StopSpinFrame.BorderSizePixel = 0
+
+local StopSpinLabel = Instance.new("TextLabel")
+StopSpinLabel.Name = "StopSpinLabel"
+StopSpinLabel.Parent = StopSpinFrame
+StopSpinLabel.Position = UDim2.new(0, 0, 0, 0)
+StopSpinLabel.Size = UDim2.new(0.3, 0, 1, 0)
+StopSpinLabel.BorderSizePixel = 0
+StopSpinLabel.Text = "Stop at:"
+StopSpinLabel.TextScaled = true
+StopSpinLabel.TextWrapped = true
+
+local StopSpinScrollFrame = Instance.new("ScrollingFrame")
+StopSpinScrollFrame.Name = "StopSpinScrollFrame"
+StopSpinScrollFrame.Parent = StopSpinFrame
+StopSpinScrollFrame.Position = UDim2.new(StopSpinLabel.Size.X.Scale, 0, 0, 0)
+StopSpinScrollFrame.Size = UDim2.new(1 - StopSpinLabel.Size.X.Scale, 0, 1, 0)
+StopSpinScrollFrame.BorderSizePixel = 0
+StopSpinScrollFrame.TopImage = "rbxassetid://12943960083"
+StopSpinScrollFrame.MidImage = "rbxassetid://12943960083"
+StopSpinScrollFrame.BottomImage = "rbxassetid://12943960083"
+StopSpinScrollFrame.AutomaticCanvasSize = Enum.AutomaticSize.Y
+StopSpinScrollFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
+StopSpinScrollFrame.ScrollBarThickness = 10
+Instance.new("UIListLayout").Parent = StopSpinScrollFrame
+
+local SpinBtn = Instance.new("TextButton")
+SpinBtn.Name = "SpinBtn"
+SpinBtn.Parent = ToolBoxFrame
+SpinBtn.Text = "Spin"
+SpinBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+SpinBtn.Position = UDim2.new(WIDTH_SLOT + StopSpinFrame.Position.X.Scale + 0.2, 0, StopSpinFrame.Position.Y.Scale, 0)
+SpinBtn.Size = UDim2.new(0.2, 0, StopSpinFrame.Size.Y.Scale, 0)
+SpinBtn.BorderSizePixel = 0
+SpinBtn.TextScaled = true
+SpinBtn.TextWrapped = true
+SpinBtn.Activated:Connect(function()
+    SpinBtn.Selected = not SpinBtn.Selected
+    if (SpinBtn.Selected) then
+        SpinBtn.Text = "Spinning..."
+        SpinBtn.TextColor3 = Color3.fromRGB(100, 255, 0)
+        isSpin = true
+        spin()
+    else
+        SpinBtn.Text = "Spin"
+        SpinBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+        isSpin = false
+    end
+end)
+
+stop_spin_choose_scroll_frame = Instance.new("ScrollingFrame")
+stop_spin_choose_scroll_frame.Name = "stop_spin_choose_scroll_frame"
+stop_spin_choose_scroll_frame.Parent = ToolBoxFrame
+stop_spin_choose_scroll_frame.Position = UDim2.new(0.1, 0, SpinBtn.Position.Y.Scale + SpinBtn.Size.Y.Scale, 0)
+stop_spin_choose_scroll_frame.Size = UDim2.new(0.8, 0, 0.1, 0)
+stop_spin_choose_scroll_frame.BorderSizePixel = 0
+stop_spin_choose_scroll_frame.BackgroundColor3 = Color3.fromRGB(88, 80, 80)
+stop_spin_choose_scroll_frame.TopImage = "rbxassetid://12943960083"
+stop_spin_choose_scroll_frame.MidImage = "rbxassetid://12943960083"
+stop_spin_choose_scroll_frame.BottomImage = "rbxassetid://12943960083"
+stop_spin_choose_scroll_frame.AutomaticCanvasSize = Enum.AutomaticSize.X
+stop_spin_choose_scroll_frame.CanvasSize = UDim2.new(0, 0, 0, 0)
+stop_spin_choose_scroll_frame.ScrollBarThickness = 2
+local a = Instance.new("UIListLayout")
+a.Parent = stop_spin_choose_scroll_frame
+a.FillDirection = Enum.FillDirection.Horizontal
+
+local GUI = ToolBoxFrame
+local dragging = nil
+local dragInput = nil
+local dragStart = nil
+local startPos = nil
+
+local function update(input)
+    local delta = input.Position - dragStart
+    GUI.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale,
+        startPos.Y.Offset + delta.Y)
+end
+
+MoveGUIBtn.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = true
+        dragStart = input.Position
+        startPos = GUI.Position
+
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+
+MoveGUIBtn.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+        dragInput = input
+    end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+    if input == dragInput and dragging then
+        update(input)
+    end
+end)
+
+local function getAllValues(alljutsu)
+    local result = {}
+    local resultDisplay = {}
+    local currentIndex = #result + 1
+    for _, v in pairs(alljutsu:GetChildren()) do
+        if v:FindFirstChild(string.upper("kg")) then
+            resultDisplay[currentIndex] = v:FindFirstChild(string.upper("realname")).Value
+            result[currentIndex] = v.Name
+            currentIndex = currentIndex + 1
+        end
+        if v:FindFirstChild(string.upper("element")) then
+            resultDisplay[currentIndex] = v:FindFirstChild(string.upper("realname")).Value
+            result[currentIndex] = v.Name
+            currentIndex = currentIndex + 1
+        end
+    end
+    return result, resultDisplay
+end
+
+local function getDisplayName(name)
+    local data, dataDisplay = getAllValues(alljutsu)
+    for k, v in pairs(data) do
+        if (string.upper(v) == string.upper(name)) then
+            return dataDisplay[k]
+        end
+    end
+end
+
+local function getName(displayname)
+    local data, dataDisplay = getAllValues(alljutsu)
+    for k, v in pairs(dataDisplay) do
+        if (string.upper(v) == string.upper(displayname)) then
+            return data[k]
+        end
+    end
+end
+
+function getCurrentValues()
+    local main = statz:FindFirstChild("main")
+    local e1, e2, e3, e4
+    local b1, b2, b3, b4
+    e1 = getDisplayName(main:FindFirstChild("element1").Value)
+    e2 = getDisplayName(main:FindFirstChild("element2").Value)
+    if (gamepasses.element3) then
+        e3 = getDisplayName(main:FindFirstChild("element3").Value)
+        if (gamepasses.element4) then
+            e4 = getDisplayName(main:FindFirstChild("element4").Value)
+        end
+    end
+
+    b1 = getDisplayName(main:FindFirstChild("kg1").Value)
+    b2 = getDisplayName(main:FindFirstChild("kg2").Value)
+    if (gamepasses.genkai3) then
+        b3 = getDisplayName(main:FindFirstChild("kg3").Value)
+        if (gamepasses.genkai4) then
+            b4 = getDisplayName(main:FindFirstChild("kg4").Value)
+        end
+    end
+    return {
+        element = {e1, e2, e3, e4},
+        bloodline = {b1, b2, b3, b4}
+    }
+end
+
+function setValues(currentValues)
+    currentValues = currentValues or getCurrentValues()
+    -- Element loop
+    local element = currentValues.element
+    local bloodline = currentValues.bloodline
+    for i = 1, 4 do
+        if (element[i]) then
+            if (ToolBoxGUI.Frame:WaitForChild("Element" .. i .. "Frame", TIME_OUT):WaitForChild("Element" .. i ..
+                                                                                                    "ValueLabel",
+                TIME_OUT).Text ~= "Locked") then
+                ToolBoxGUI.Frame:WaitForChild("Element" .. i .. "Frame", TIME_OUT):WaitForChild("Element" .. i ..
+                                                                                                    "ValueLabel",
+                    TIME_OUT).Text = element[i]
+            end
+        end
+    end
+    for i = 1, 4 do
+        if (bloodline[i]) then
+            if (ToolBoxGUI.Frame:WaitForChild("Bloodline" .. i .. "Frame", TIME_OUT):WaitForChild("Bloodline" .. i ..
+                                                                                                      "ValueLabel",
+                TIME_OUT).Text ~= "Locked") then
+                ToolBoxGUI.Frame:WaitForChild("Bloodline" .. i .. "Frame", TIME_OUT):WaitForChild("Bloodline" .. i ..
+                                                                                                      "ValueLabel",
+                    TIME_OUT).Text = bloodline[i]
+            end
+        end
+    end
+end
+
+local function initValues(currentValues)
+    if (not gamepasses.genkai4) then
+        if (not gamepasses.genkai3) then
+            ToolBoxGUI.Frame.Bloodline4Frame.Bloodline4ValueLabel.Text = "Not have this gamepass!"
+            ToolBoxGUI.Frame.Bloodline4Frame.Active = false
+            ToolBoxGUI.Frame.Bloodline3Frame.Bloodline3ValueLabel.Text = "Not have this gamepass!"
+            ToolBoxGUI.Frame.Bloodline3Frame.Active = false
+
+        else
+            ToolBoxGUI.Frame.Bloodline4Frame.Bloodline4ValueLabel.Text = "Not have this gamepass!"
+            ToolBoxGUI.Frame.Bloodline4Frame.Active = false
+        end
+    end
+    if (not gamepasses.element4) then
+        if (not gamepasses.element4) then
+            ToolBoxGUI.Frame.Element4Frame.Element4ValueLabel.Text = "Not have this gamepass!"
+            ToolBoxGUI.Frame.Element4Frame.Active = false
+            ToolBoxGUI.Frame.Element3Frame.Element3ValueLabel.Text = "Not have this gamepass!"
+            ToolBoxGUI.Frame.Element3Frame.Active = false
+
+        else
+            ToolBoxGUI.Frame.Element4Frame.Element4ValueLabel.Text = "Not have this gamepass!"
+            ToolBoxGUI.Frame.Element4Frame.Active = false
+        end
+    end
+    setValues(currentValues)
+    local _, dataDisplay = getAllValues(alljutsu)
+    for k, v in pairs(dataDisplay) do
+        createMenuList("btn" .. tostring(k), v, StopSpinScrollFrame)
+    end
+end
+
+function startSpinSupport(name, chosenItems)
+    local result = false
+    for _, v in pairs(chosenItems) do
+        if (v.Name ~= "UIListLayout") then
+            if (name == v.Text) then
+                result = true
+            end
+        end
+    end
+    return result
+end
+
+function startSpin(chosenItems)
+    local isE1 = false
+    local isE2 = false
+    local isE3 = false
+    local isE4 = false
+    local isB1 = false
+    local isB2 = false
+    local isB3 = false
+    local isB4 = false
+    if Element1ValueLabel.Text ~= "Locked" and isSpin then
+        if (chosenItems) then
+            if not startSpinSupport(Element1ValueLabel.Text, chosenItems) then
+                isE1 = true
+            end
+        else
+            isE1 = true
+        end
+    end
+
+    if Element2ValueLabel.Text ~= "Locked" and isSpin then
+        if (chosenItems) then
+            if not startSpinSupport(Element2ValueLabel.Text, chosenItems) then
+                isE2 = true
+            end
+        else
+            isE2 = true
+        end
+
+    end
+    if Element3ValueLabel.Text ~= "Locked" and gamepasses.element3 and isSpin then
+        if (chosenItems) then
+            if not startSpinSupport(Element3ValueLabel.Text, chosenItems) then
+                isE3 = true
+            end
+        else
+            isE3 = true
+        end
+
+    end
+    if Element4ValueLabel.Text ~= "Locked" and gamepasses.element4 and isSpin then
+        if (chosenItems) then
+            if not startSpinSupport(Element4ValueLabel.Text, chosenItems) then
+                isE4 = true
+            end
+        else
+            isE4 = true
+        end
+
+    end
+    if Bloodline1ValueLabel.Text ~= "Locked" and isSpin then
+        if (chosenItems) then
+            if not startSpinSupport(Bloodline1ValueLabel.Text, chosenItems) then
+                isB1 = true
+            end
+        else
+            isB1 = true
+        end
+
+    end
+    if Bloodline2ValueLabel.Text ~= "Locked" and isSpin then
+        if (chosenItems) then
+            if not startSpinSupport(Bloodline2ValueLabel.Text, chosenItems) then
+                isB2 = true
+            end
+        else
+            isB2 = true
+        end
+
+    end
+    if Bloodline3ValueLabel.Text ~= "Locked" and gamepasses.genkai3 and isSpin then
+        if (chosenItems) then
+            if not startSpinSupport(Bloodline3ValueLabel.Text, chosenItems) then
+                isB3 = true
+            end
+        else
+            isB3 = true
+        end
+
+    end
+    if Bloodline4ValueLabel.Text ~= "Locked" and gamepasses.genkai4 and isSpin then
+        if (chosenItems) then
+            if not startSpinSupport(Bloodline4ValueLabel.Text, chosenItems) then
+                isB4 = true
+            end
+        else
+            isB4 = true
+        end
+
+    end
+
+    if (statz:FindFirstChild("spins").Value > 0) then
+        if isE1 or isE2 or isE3 or isE4 or isB1 or isB2 or isB3 or isB4 then
+
+            if (isE1 and not statz:FindFirstChild("main"):FindFirstChild("element1"):FindFirstChild("dontspin")) then
+                startevent:FireServer("spin", "element1")
+            end
+            if (isE2 and not statz:FindFirstChild("main"):FindFirstChild("element2"):FindFirstChild("dontspin")) then
+                startevent:FireServer("spin", "element2")
+            end
+            if (isE3 and not statz:FindFirstChild("main"):FindFirstChild("element3"):FindFirstChild("dontspin")) then
+                startevent:FireServer("spin", "element3")
+            end
+            if (isE4 and not statz:FindFirstChild("main"):FindFirstChild("element4"):FindFirstChild("dontspin")) then
+                startevent:FireServer("spin", "element4")
+            end
+
+            if (isB1 and not statz:FindFirstChild("main"):FindFirstChild("kg1"):FindFirstChild("dontspin")) then
+                startevent:FireServer("spin", "kg1")
+            end
+            if (isB2 and not statz:FindFirstChild("main"):FindFirstChild("kg2"):FindFirstChild("dontspin")) then
+                startevent:FireServer("spin", "kg2")
+            end
+            if (isB3 and not statz:FindFirstChild("main"):FindFirstChild("kg3"):FindFirstChild("dontspin")) then
+                startevent:FireServer("spin", "kg3")
+            end
+            if (isB4 and not statz:FindFirstChild("main"):FindFirstChild("kg4"):FindFirstChild("dontspin")) then
+                startevent:FireServer("spin", "kg4")
+            end
+        else
+            SpinBtn.Selected = not SpinBtn.Selected
+            if (SpinBtn.Selected) then
+                SpinBtn.Text = "Spinning..."
+                SpinBtn.TextColor3 = Color3.fromRGB(100, 255, 0)
+                isSpin = true
+            else
+                SpinBtn.Text = "Spin"
+                SpinBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+                isSpin = false
+            end
+        end
+    else
+        SpinBtn.Selected = not SpinBtn.Selected
+        if (SpinBtn.Selected) then
+            SpinBtn.Text = "Spinning..."
+            SpinBtn.TextColor3 = Color3.fromRGB(100, 255, 0)
+            isSpin = true
+        else
+            SpinBtn.Text = "Spin"
+            SpinBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+            isSpin = false
+        end
+    end
+
+end
+
+local function spinWithChosen(chosenItems)
+    local element = getCurrentValues().element
+    local bloodline = getCurrentValues().bloodline
+    for i = 1, 4 do
+        if (element[i]) then
+            if (ToolBoxGUI.Frame:WaitForChild("Element" .. i .. "Frame", TIME_OUT):WaitForChild("Element" .. i ..
+                                                                                                    "ValueLabel",
+                TIME_OUT).Text ~= "Locked") then
+                for _, v in pairs(chosenItems) do
+                    if (v.Name ~= "UIListLayout") then
+                        if (v.Text == element[i]) then
+                            v:Remove()
+                            for k1, v1 in pairs(StopSpinScrollFrame:GetChildren()) do
+                                if (v1.Name ~= "UIListLayout") then
+                                    if (v1.Text == element[i]) then
+                                        v1.TextColor3 = Color3.fromRGB(50, 0, 255)
+                                        v1:SetAttribute("checked", not v:GetAttribute("checked"))
+                                        ToolBoxGUI.Frame:WaitForChild("Element" .. i .. "Frame", TIME_OUT):WaitForChild(
+                                            "Element" .. i .. "ValueLabel", TIME_OUT).Text = "Locked"
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+    for i = 1, 4 do
+        if (bloodline[i]) then
+            if (ToolBoxGUI.Frame:WaitForChild("Bloodline" .. i .. "Frame", TIME_OUT):WaitForChild("Bloodline" .. i ..
+                                                                                                      "ValueLabel",
+                TIME_OUT).Text ~= "Locked") then
+                for _, v in pairs(chosenItems) do
+                    if (v.Name ~= "UIListLayout") then
+                        if (v.Text == bloodline[i]) then
+                            v:Remove()
+                            for k1, v1 in pairs(StopSpinScrollFrame:GetChildren()) do
+                                if (v1.Name ~= "UIListLayout") then
+                                    if (v1.Text == bloodline[i]) then
+                                        v1.TextColor3 = Color3.fromRGB(50, 0, 255)
+                                        v1:SetAttribute("checked", not v:GetAttribute("checked"))
+                                        ToolBoxGUI.Frame:WaitForChild("Bloodline" .. i .. "Frame", TIME_OUT)
+                                            :WaitForChild("Bloodline" .. i .. "ValueLabel", TIME_OUT).Text = "Locked"
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+    local count = -1
+    chosenItems = stop_spin_choose_scroll_frame:GetChildren()
+    for k, v in pairs(chosenItems) do
+        if v.Name then
+            count = count + 1
+        end
+
+    end
+
+    if count == 0 then
+        SpinBtn.Text = "Spin"
+        SpinBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+        isSpin = false
+        isChosen = false
+    end
+end
+
+local function spinDefault()
+    startSpin()
+end
+
+function spin()
+    while (isSpin) do
+        local count = -1
+        local choosenItems = stop_spin_choose_scroll_frame:GetChildren()
+        for k, v in pairs(choosenItems) do
+            if v.Name then
+                count = count + 1
+            end
+
+        end
+
+        if count > 0 then
+            spinWithChosen(choosenItems)
+            startSpin(choosenItems)
+            isChosen = true
+        else
+            if (not isChosen) then
+                spinDefault()
+            else
+                SpinBtn.Text = "Spin"
+                SpinBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+                isSpin = false
+                isChosen = false
+            end
+        end
+
+        task.wait(0.2)
+    end
+end
+
+local LocalPlayer = game.Players.LocalPlayer
+local main = LocalPlayer.PlayerGui:WaitForChild("Main", TIME_OUT)
+statz = LocalPlayer:WaitForChild("statz", TIME_OUT)
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+alljutsu = ReplicatedStorage:WaitForChild("alljutsu", TIME_OUT)
+startevent = LocalPlayer:WaitForChild("startevent", TIME_OUT)
+ToolBoxGUI = LocalPlayer.PlayerGui:WaitForChild("ToolBox", TIME_OUT)
+
+gamepasses = {
+    genkai3 = LocalPlayer:WaitForChild("gamepasses", TIME_OUT):FindFirstChild("genkai3"),
+    genkai4 = LocalPlayer:WaitForChild("gamepasses", TIME_OUT):FindFirstChild("genkai4"),
+    element3 = LocalPlayer:WaitForChild("gamepasses", TIME_OUT):FindFirstChild("element3"),
+    element4 = LocalPlayer:WaitForChild("gamepasses", TIME_OUT):FindFirstChild("element4")
+}
+local stop_spin_data = getAllValues(alljutsu)
+
+local function setSpinnedLabel()
+    local text = "Spinned: " .. (initialSpin.bloodline + initialSpin.element) .. "(" .. (initialSpin.bloodline) ..
+                     " bloodlines, " .. (initialSpin.element) .. " elements)"
+    SpinnedLabel.Text = text
+end
+local function initConnection()
+    statz:FindFirstChild("main"):FindFirstChild("kg1").Changed:Connect(function()
+        setValues()
+        initialSpin.bloodline = initialSpin.bloodline + 1
+        setSpinnedLabel()
+    end)
+    statz:FindFirstChild("main"):FindFirstChild("kg2").Changed:Connect(function()
+        setValues()
+        initialSpin.bloodline = initialSpin.bloodline + 1
+        setSpinnedLabel()
+    end)
+    if (gamepasses.genkai3) then
+        statz:FindFirstChild("main"):FindFirstChild("kg3").Changed:Connect(function()
+            setValues()
+            initialSpin.bloodline = initialSpin.bloodline + 1
+            setSpinnedLabel()
+        end)
+        if (gamepasses.genkai4) then
+            statz:FindFirstChild("main"):FindFirstChild("kg4").Changed:Connect(function()
+                setValues()
+                initialSpin.bloodline = initialSpin.bloodline + 1
+                setSpinnedLabel()
+            end)
+        end
+    end
+
+    statz:FindFirstChild("main"):FindFirstChild("element1").Changed:Connect(function()
+        setValues()
+        initialSpin.element = initialSpin.element + 1
+        setSpinnedLabel()
+    end)
+    statz:FindFirstChild("main"):FindFirstChild("element2").Changed:Connect(function()
+        setValues()
+        initialSpin.element = initialSpin.element + 1
+        setSpinnedLabel()
+    end)
+    if (gamepasses.element3) then
+        statz:FindFirstChild("main"):FindFirstChild("element3").Changed:Connect(function()
+            setValues()
+            initialSpin.element = initialSpin.element + 1
+            setSpinnedLabel()
+        end)
+        if (gamepasses.element4) then
+            statz:FindFirstChild("main"):FindFirstChild("element4").Changed:Connect(function()
+                setValues()
+                initialSpin.element = initialSpin.element + 1
+                setSpinnedLabel()
+            end)
+        end
+    end
+
+end
+local function InitGUI(gamepasses)
+    initValues(getCurrentValues())
+    initConnection()
+
+end
+
+InitGUI(gamepasses)
+
