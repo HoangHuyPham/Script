@@ -1019,7 +1019,7 @@ UserInputService.InputBegan:Connect(
 )
 
 InitGUI(gamepasses)
-game.Players.LocalPlayer:FindFirstChild("statz", TIME_OUT).ChildAdded:Connect(function()
+game.Players.LocalPlayer:WaitForChild("statz", TIME_OUT).ChildAdded:Connect(function()
 	InitGUI(gamepasses)
 end)
 
