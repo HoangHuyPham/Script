@@ -135,13 +135,13 @@ displayRole = function()
 	local murdererCharacter = nil
 	local sheriffCharacter = nil
 	repeat
-	for _,v in pairs(game:WaitForChild("Players", 3):GetChildren()) do
+	for _,v in pairs(game:FindFirstChild"Players":GetChildren()) do
 		for _,v1 in pairs(v.Character:GetChildren()) do
 			local str = string.upper(v1.Name)
 			if (str == 'KNIFE' and murdererCharacter ~= v.Character) then
 					murdererCharacter = v.Character 
 					releasePart(roleparts, true, "MURDERER")
-					table.insert(roleparts, createBillboard("MURDERER", murdererCharacter:FindFirstChild"Head", Color3.fromRGB(255,0,0)))
+					table.insert(roleparts, createBillboard("MURDERER", murdererCharacter:"Head", Color3.fromRGB(255,0,0)))
 			end
 			if (str == 'GUN' and sheriffCharacter ~= v.Character) then
 					sheriffCharacter = v.Character 
