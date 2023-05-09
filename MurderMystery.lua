@@ -186,7 +186,7 @@ game.Players.LocalPlayer.Character.Humanoid.Died:Connect(
 		DisplayRoleBtn.Selected = false
 		noClip = false
 		NoClipBtn.Selected = false
-		task.wait(1)
+		task.wait(5)
 		loadstring(game:HttpGet"https://raw.githubusercontent.com/HoangHuyPham/Script/master/MurderMystery.lua")()
 	end
 )
