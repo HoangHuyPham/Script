@@ -128,7 +128,7 @@ DisplayRoleBtn.Activated:Connect(
 				releasePart(parts, true)
 			end
 			DisplayRoleBtn.BackgroundColor3 = Color3.fromRGB(255,0,0)
-			DisplayRoleBtn.Text = "Display rolep: off"
+			DisplayRoleBtn.Text = "Display role: off"
 		end
 	end
 )
@@ -138,10 +138,10 @@ displayRole = function()
 	local sheriffCharacter = nil
 	for _,v in pairs(game.Players:GetChildren()) do
 		for _,v1 in pairs(v.Character:GetChildren()) do
-			if (v1.Name == "Knife" and murdererCharacter == nil) then
+			if (string.upper(v1.Name) == "KNIFE" and murdererCharacter == nil) then
 				murdererCharacter = v.Character 
 			end
-			if (v1.Name == "Gun" and sheriffCharacter == nil) then
+			if (string.upper(v1.Name) == "GUN" and sheriffCharacter == nil) then
 				sheriffCharacter = v.Character 
 			end
 		end
