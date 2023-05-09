@@ -157,7 +157,7 @@ end
 
 releasePart = function(parts, isRole, name)
 	if isRole then
-		for k, v in pairs(roleparts) do
+		for k, v in pairs(parts) do
 			if (name) then
 				if (v.Name == name) then
 					v:Destroy()
@@ -167,15 +167,16 @@ releasePart = function(parts, isRole, name)
 				v:Destroy()
 				parts[k] = nil
 			end
-			
-		end
-end
-	for k, v in pairs(parts) do
-		v.CanCollide = true
-		parts[k] = nil
-	end
-end
 
+		end
+	else
+		for k, v in pairs(parts) do
+			v.CanCollide = true
+			parts[k] = nil
+		end
+	end
+	
+end
 
 
 game.Players.LocalPlayer.Character.Humanoid.Touched:Connect(function(part, pos)
