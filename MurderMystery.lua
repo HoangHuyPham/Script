@@ -103,7 +103,7 @@ createBillboard = function(name, target, RGBColor)
 	
 	
 	table.insert(roleparts, BillboardGui)
-	return true
+	return BillboardGui
 end
 
 
