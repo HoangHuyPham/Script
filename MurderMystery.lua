@@ -150,7 +150,7 @@ displayRole = function()
 			end
 		end
 	end
-	task.wait(0.2)
+	task.wait(0.05)
 	until not DisplayRoleBtn.Selected
 end
 
