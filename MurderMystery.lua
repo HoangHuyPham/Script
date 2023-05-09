@@ -123,8 +123,8 @@ DisplayRoleBtn.Activated:Connect(
 			displayRole()
 		else
 			if not DisplayRoleBtn.Selected then
-				releasePart(parts, true, "MURDERER")
-				releasePart(parts, true, "SHERIFF")
+				releasePart(roleparts, true, "MURDERER")
+				releasePart(roleparts, true, "SHERIFF")
 			end
 			DisplayRoleBtn.BackgroundColor3 = Color3.fromRGB(255,0,0)
 			DisplayRoleBtn.Text = "Display role: off"
