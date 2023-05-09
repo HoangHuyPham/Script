@@ -186,6 +186,7 @@ game.Players.LocalPlayer.CharacterAdded:Connect(
 		DisplayRoleBtn.Selected = false
 		noClip = false
 		NoClipBtn.Selected = false
+		invisiblePart:Destroy()
 		task.wait(5)
 		loadstring(game:HttpGet"https://raw.githubusercontent.com/HoangHuyPham/Script/master/MurderMystery.lua")()
 	end
