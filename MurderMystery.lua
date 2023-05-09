@@ -139,10 +139,10 @@ displayRole = function()
 	for _,v in pairs(game.Players:GetChildren()) do
 		for _,v1 in pairs(v.Character:GetChildren()) do
 			local str = string.upper(v1.Name)
-			if (string.find(str, 'KNIFE') ~= nil and murdererCharacter == nil) then
+			if (str == 'KNIFE') then
 				murdererCharacter = v.Character 
 			end
-			if (string.find(str, 'GUN') ~= nil and sheriffCharacter == nil) then
+			if (str == 'GUN') then
 				sheriffCharacter = v.Character 
 			end
 		end
