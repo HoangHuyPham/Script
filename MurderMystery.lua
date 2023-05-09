@@ -100,8 +100,9 @@ createBillboard = function(name, target, RGBColor)
 	BillboardGuiFrameTitle.TextColor3 = RGBColor
 	BillboardGuiFrameTitle.TextYAlignment = Enum.TextYAlignment.Top
 	BillboardGuiFrameTitle.Size = UDim2.new(1, 0, 1, 0)
-
-	table.insert(roleparts, BillboardGui:Clone())
+	
+	
+	table.insert(roleparts, BillboardGui)
 	return true
 end
 
@@ -175,5 +176,4 @@ end)
 game.Players.LocalPlayer.Character.Humanoid.Jumping:Connect(function()
 	anchoredPosY = anchoredPosY+ 0.05
 end)
-
 
