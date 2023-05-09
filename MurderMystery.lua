@@ -147,7 +147,7 @@ displayRole = function()
 		end
 	end
 	table.insert(roleparts, createBillboard("MURDERER", murdererCharacter:FindFirstChild"Head", Color3.fromRGB(255,0,0)))
-	table.insert(roleparts, createBillboard("SHERIFF", murdererCharacter:FindFirstChild"Head", Color3.fromRGB(0,0,255)))
+	table.insert(roleparts, createBillboard("SHERIFF", sheriffCharacter:FindFirstChild"Head", Color3.fromRGB(0,0,255)))
 end
 
 
