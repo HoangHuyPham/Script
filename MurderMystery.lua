@@ -132,25 +132,24 @@ DisplayRoleBtn.Activated:Connect(
 )
 
 displayRole = function()
+	repeat
 	local murdererCharacter = nil
 	local sheriffCharacter = nil
 	for _,v in pairs(game.Players:GetChildren()) do
 		for _,v1 in pairs(v.Character:GetChildren()) do
 			local str = string.upper(v1.Name)
-			if (str == 'KNIFE') then
-				murdererCharacter = v.Character 
+			if (str == 'KNIFE' and murdererCharacter ~= v.Character) then
+					murdererCharacter = v.Character 
+					table.insert(roleparts, createBillboard("MURDERER", murdererCharacter:FindFirstChild"Head", Color3.fromRGB(255,0,0)))
 			end
-			if (str == 'GUN') then
-				sheriffCharacter = v.Character 
+			if (str == 'GUN' and sheriffCharacter ~= v.Character) then
+					sheriffCharacter = v.Character 
+					table.insert(roleparts, createBillboard("SHERIFF", sheriffCharacter:FindFirstChild"Head", Color3.fromRGB(0,0,255)))
 			end
 		end
 	end
-	if (murdererCharacter ~= nil) then
-		table.insert(roleparts, createBillboard("MURDERER", murdererCharacter:FindFirstChild"Head", Color3.fromRGB(255,0,0)))
-	end
-	if (sheriffCharacter ~= nil) then
-		table.insert(roleparts, createBillboard("SHERIFF", sheriffCharacter:FindFirstChild"Head", Color3.fromRGB(0,0,255)))
-	end
+
+	until not DisplayRoleBtn.Selected
 end
 
 
@@ -182,7 +181,7 @@ game.Players.LocalPlayer.Character.Humanoid.Jumping:Connect(function()
 end)
 
 
-game.Players.LocalPlayer.Character.DescendantRemoving:Connect(
+game.Players.LocalPlayer.Character.Humanoid.Died:Connect(
 	function()
 		loadstring(game:HttpGet"https://raw.githubusercontent.com/HoangHuyPham/Script/master/MurderMystery.lua")()
 	end
