@@ -101,7 +101,7 @@ createBillboard = function(name, target, RGBColor)
 	BillboardGuiFrameTitle.TextYAlignment = Enum.TextYAlignment.Top
 	BillboardGuiFrameTitle.Size = UDim2.new(1, 0, 1, 0)
 
-	table.insert(roleparts, BillboardGui)
+	table.insert(roleparts, BillboardGui:Clone())
 	return true
 end
 
