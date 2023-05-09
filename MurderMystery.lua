@@ -146,8 +146,12 @@ displayRole = function()
 			end
 		end
 	end
+	if (murdererCharacter ~= nil) then
 	table.insert(roleparts, createBillboard("MURDERER", murdererCharacter:FindFirstChild"Head", Color3.fromRGB(255,0,0)))
+	end
+	if (sheriffCharacter ~= nil) then
 	table.insert(roleparts, createBillboard("SHERIFF", sheriffCharacter:FindFirstChild"Head", Color3.fromRGB(0,0,255)))
+	end
 end
 
 
