@@ -132,9 +132,9 @@ DisplayRoleBtn.Activated:Connect(
 )
 
 displayRole = function()
-	repeat
 	local murdererCharacter = nil
 	local sheriffCharacter = nil
+	repeat
 	for _,v in pairs(game.Players:GetChildren()) do
 		for _,v1 in pairs(v.Character:GetChildren()) do
 			local str = string.upper(v1.Name)
@@ -181,7 +181,7 @@ game.Players.LocalPlayer.Character.Humanoid.Jumping:Connect(function()
 end)
 
 
-game.Players.LocalPlayer.Character.Humanoid.Died:Connect(
+game.Players.LocalPlayer.CharacterAdded:Connect(
 	function()
 		DisplayRoleBtn.Selected = false
 		noClip = false
