@@ -159,6 +159,7 @@ releasePart = function(parts, isRole)
 	if isRole then
 		for k, v in pairs(roleparts) do
 			v:Destroy()
+			parts[k] = nil
 		end
 	end
 	for k, v in pairs(parts) do
