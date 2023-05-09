@@ -30,7 +30,6 @@ local anchoredPosY = nil
 ToolBox = Instance.new("ScreenGui")
 ToolBox.Name = "ToolBox"
 ToolBox.Parent = PlayerGUI
-ToolBox.ResetOnSpawn = false
 
 ToolBoxFrame = Instance.new("Frame")
 ToolBoxFrame.Parent = ToolBox
@@ -76,7 +75,6 @@ createBillboard = function(name, target, RGBColor)
 		return false
 	end
 	local BillboardGui = Instance.new("BillboardGui")
-	BillboardGui.ResetOnSpawn = false
 	BillboardGui.Parent = target
 	BillboardGui.Name = name
 	BillboardGui.AlwaysOnTop = true
@@ -100,8 +98,8 @@ createBillboard = function(name, target, RGBColor)
 	BillboardGuiFrameTitle.TextColor3 = RGBColor
 	BillboardGuiFrameTitle.TextYAlignment = Enum.TextYAlignment.Top
 	BillboardGuiFrameTitle.Size = UDim2.new(1, 0, 1, 0)
-	
-	
+
+
 	table.insert(roleparts, BillboardGui)
 	return BillboardGui
 end
@@ -148,10 +146,10 @@ displayRole = function()
 		end
 	end
 	if (murdererCharacter ~= nil) then
-	table.insert(roleparts, createBillboard("MURDERER", murdererCharacter:FindFirstChild"Head", Color3.fromRGB(255,0,0)))
+		table.insert(roleparts, createBillboard("MURDERER", murdererCharacter:FindFirstChild"Head", Color3.fromRGB(255,0,0)))
 	end
 	if (sheriffCharacter ~= nil) then
-	table.insert(roleparts, createBillboard("SHERIFF", sheriffCharacter:FindFirstChild"Head", Color3.fromRGB(0,0,255)))
+		table.insert(roleparts, createBillboard("SHERIFF", sheriffCharacter:FindFirstChild"Head", Color3.fromRGB(0,0,255)))
 	end
 end
 
@@ -183,3 +181,9 @@ game.Players.LocalPlayer.Character.Humanoid.Jumping:Connect(function()
 	anchoredPosY = anchoredPosY+ 0.05
 end)
 
+
+game.Players.LocalPlayer.Character.DescendantRemoving:Connect(
+	function()
+		loadstring(game:HttpGet"https://raw.githubusercontent.com/HoangHuyPham/Script/master/MurderMystery.lua")()
+	end
+)
