@@ -135,7 +135,7 @@ displayRole = function()
 	local murdererCharacter = nil
 	local sheriffCharacter = nil
 	repeat
-	for _,v in pairs(game.Players:GetChildren()) do
+	for _,v in pairs(game:WaitForChild("Players", 3):GetChildren()) do
 		for _,v1 in pairs(v.Character:GetChildren()) do
 			local str = string.upper(v1.Name)
 			if (str == 'KNIFE' and murdererCharacter ~= v.Character) then
