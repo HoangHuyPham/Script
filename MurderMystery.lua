@@ -123,7 +123,8 @@ DisplayRoleBtn.Activated:Connect(
 			displayRole()
 		else
 			if not DisplayRoleBtn.Selected then
-				releasePart(parts, true)
+				releasePart(parts, true, "MURDERER")
+				releasePart(parts, true, "SHERIFF")
 			end
 			DisplayRoleBtn.BackgroundColor3 = Color3.fromRGB(255,0,0)
 			DisplayRoleBtn.Text = "Display role: off"
@@ -135,11 +136,7 @@ displayRole = function()
 	local murdererCharacter = nil
 	local sheriffCharacter = nil
 	repeat
-	local players =	game:FindFirstChild"Players"
-	if not players then
-		continue
-	end
-	for _,v in pairs(players:GetChildren()) do
+	for _,v in pairs(game:FindFirstChild"Players":GetChildren()) do
 		for _,v1 in pairs(v.Character:GetChildren()) do
 			local str = string.upper(v1.Name)
 			if (str == 'KNIFE' and murdererCharacter ~= v.Character) then
