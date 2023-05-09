@@ -140,10 +140,12 @@ displayRole = function()
 			local str = string.upper(v1.Name)
 			if (str == 'KNIFE' and murdererCharacter ~= v.Character) then
 					murdererCharacter = v.Character 
+					releasePart(roleparts, true, "MURDERER")
 					table.insert(roleparts, createBillboard("MURDERER", murdererCharacter:FindFirstChild"Head", Color3.fromRGB(255,0,0)))
 			end
 			if (str == 'GUN' and sheriffCharacter ~= v.Character) then
 					sheriffCharacter = v.Character 
+					releasePart(roleparts, true, "SHERIFF")
 					table.insert(roleparts, createBillboard("SHERIFF", sheriffCharacter:FindFirstChild"Head", Color3.fromRGB(0,0,255)))
 			end
 		end
@@ -153,18 +155,27 @@ displayRole = function()
 end
 
 
-releasePart = function(parts, isRole)
+releasePart = function(parts, isRole, name)
 	if isRole then
 		for k, v in pairs(roleparts) do
-			v:Destroy()
-			parts[k] = nil
+			if (name) then
+				if (v.Name == name) then
+					v:Destroy()
+					parts[k] = nil
+				end
+			else
+				v:Destroy()
+				parts[k] = nil
+			end
+			
 		end
-	end
+end
 	for k, v in pairs(parts) do
 		v.CanCollide = true
 		parts[k] = nil
 	end
 end
+
 
 
 game.Players.LocalPlayer.Character.Humanoid.Touched:Connect(function(part, pos)
