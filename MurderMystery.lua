@@ -4,7 +4,7 @@ repeat task.wait() until game:IsLoaded()
 local allVariable = {}
 allVariable.Player = {}
 allVariable.Player.LocalPlayer = game.Players.LocalPlayer or game:WaitForChild("Players").LocalPlayer
-allVariable.Player.Character = allVariable.Player.LocalPlayer.CharacterAdded:Wait()
+allVariable.Player.Character = allVariable.Player.LocalPlayer.Character or allVariable.Player.LocalPlayer.CharacterAdded:Wait()
 allVariable.Player.Humanoid =  allVariable.Player.Character:WaitForChild"Humanoid"
 allVariable.Player.WalkSpeed = {}
 allVariable.Player.WalkSpeed.First =  allVariable.Player.Humanoid.WalkSpeed or 0
@@ -346,6 +346,7 @@ function allVariable:DisplayRole()
 end
 
 function allVariable:checkRoleScheduler()
+	while true do
 	for _,v in pairs(game.Players:GetChildren()) do
 		for _,v1 in pairs(v.Character:GetChildren()) do
 			local str = string.upper(v1.Name)
@@ -363,6 +364,7 @@ function allVariable:checkRoleScheduler()
 		end
 	end
 	task.wait(0.1)
+	end
 end
 
 
