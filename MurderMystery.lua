@@ -339,16 +339,17 @@ function allVariable:DisplayRole()
 	while (allVariable.ToolBoxFrame_ScrollFrame_displayRoleBtn.Selected) do
 		local murderer = allVariable.Player.Murderer.Current or allVariable.Player.Murderer.Last
 		local sheriff = allVariable.Player.Sheriff.Current or allVariable.Player.Sheriff.Last 
-		print(murderer, sheriff)
-		allVariable.Environment.Part.RoleSignal.Murderer:Attach(murderer)
-		allVariable.Environment.Part.RoleSignal.Sheriff:Attach(sheriff)
+		if (murderer) then
+			allVariable.Environment.Part.RoleSignal.Murderer:Attach(murderer)
+		elseif (sheriff) then
+			allVariable.Environment.Part.RoleSignal.Sheriff:Attach(sheriff)
+		end
 		task.wait(0.3)
 	end
 end
 
 function allVariable:checkRoleScheduler()
 	while true do
-		print(1)
 	for _,v in pairs(game.Players:GetChildren()) do
 		for _,v1 in pairs(v.Character:GetChildren()) do
 			local str = string.upper(v1.Name)
