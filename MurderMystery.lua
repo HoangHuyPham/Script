@@ -339,6 +339,7 @@ function allVariable:DisplayRole()
 	while (allVariable.ToolBoxFrame_ScrollFrame_displayRoleBtn.Selected) do
 		local murderer = allVariable.Player.Murderer.Current or allVariable.Player.Murderer.Last
 		local sheriff = allVariable.Player.Sheriff.Current or allVariable.Player.Sheriff.Last 
+		print(murderer, sheriff)
 		allVariable.Environment.Part.RoleSignal.Murderer:Attach(murderer)
 		allVariable.Environment.Part.RoleSignal.Sheriff:Attach(sheriff)
 		task.wait(0.3)
