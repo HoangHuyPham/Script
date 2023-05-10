@@ -536,7 +536,7 @@ allVariable.Connection.RemoveCharacterDetector = game.Players.LocalPlayer.Charac
 		allVariable:Release()
 		task.wait(5)
 		loadstring(game:HttpGet"https://raw.githubusercontent.com/HoangHuyPham/Script/master/MurderMystery.lua")()
-		allVariable:checkRoleScheduler()
+		
 	end
 )
 
@@ -548,7 +548,7 @@ function allVariable.Connection:Release()
 		end
 	end
 end
-
+allVariable:checkRoleScheduler()
 
 
 
