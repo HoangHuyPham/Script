@@ -25,12 +25,12 @@ allVariable.Environment = {}
 
 allVariable.Environment.Part = {}
 allVariable.Environment.Part.RoleSignal = {}
-allVariable.Environment.Part.RoleSignal.Murderer = {} 
+allVariable.Environment.Part.RoleSignal.Murderer = {}
 allVariable.Environment.Part.RoleSignal.Murderer.Instance = Instance.new("BillboardGui")
-allVariable.Environment.Part.RoleSignal.Murderer.Name = "MurdererSignal"
-allVariable.Environment.Part.RoleSignal.Murderer.AlwaysOnTop = true
-allVariable.Environment.Part.RoleSignal.Murderer.Size = UDim2.new(1, 0, 1, 0)
-allVariable.Environment.Part.RoleSignal.Murderer.ClipsDescendants = false
+allVariable.Environment.Part.RoleSignal.Murderer.Instance.Name = "SheriffSignal"
+allVariable.Environment.Part.RoleSignal.Murderer.Instance.AlwaysOnTop = true
+allVariable.Environment.Part.RoleSignal.Murderer.Instance.Size = UDim2.new(1, 0, 1, 0)
+allVariable.Environment.Part.RoleSignal.Murderer.Instance.ClipsDescendants = false
 function allVariable.Environment.Part.RoleSignal.Murderer:Attach(player)
 	self.Instance.Parent = player.Character:FindFirstChild"Head"
 end
@@ -59,10 +59,10 @@ allVariable.BillboardGuiFrameTitle1.Size = UDim2.new(1, 0, 1, 0)
 
 allVariable.Environment.Part.RoleSignal.Sheriff = {}
 allVariable.Environment.Part.RoleSignal.Sheriff.Instance = Instance.new("BillboardGui")
-allVariable.Environment.Part.RoleSignal.Sheriff.Name = "SheriffSignal"
-allVariable.Environment.Part.RoleSignal.Sheriff.AlwaysOnTop = true
-allVariable.Environment.Part.RoleSignal.Sheriff.Size = UDim2.new(1, 0, 1, 0)
-allVariable.Environment.Part.RoleSignal.Sheriff.ClipsDescendants = false
+allVariable.Environment.Part.RoleSignal.Sheriff.Instance.Name = "SheriffSignal"
+allVariable.Environment.Part.RoleSignal.Sheriff.Instance.AlwaysOnTop = true
+allVariable.Environment.Part.RoleSignal.Sheriff.Instance.Size = UDim2.new(1, 0, 1, 0)
+allVariable.Environment.Part.RoleSignal.Sheriff.Instance.ClipsDescendants = false
 function allVariable.Environment.Part.RoleSignal.Sheriff:Attach(player)
 	self.Instance.Parent = player.Character:FindFirstChild"Head"
 end
