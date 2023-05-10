@@ -348,6 +348,7 @@ end
 
 function allVariable:checkRoleScheduler()
 	while true do
+		print(1)
 	for _,v in pairs(game.Players:GetChildren()) do
 		for _,v1 in pairs(v.Character:GetChildren()) do
 			local str = string.upper(v1.Name)
