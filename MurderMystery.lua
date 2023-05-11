@@ -407,7 +407,7 @@ function allVariable:checkRoleScheduler()
 					if (allVariable.Player.Sheriff.Current ~= allVariable.Player.Sheriff.Last and allVariable.Player.Sheriff.Current ~= nil) then
 						allVariable.Player.Sheriff.Last = allVariable.Player.Sheriff.Current
 					end
-				elseif (str == 'DROPGUN') then
+				elseif (str == 'GUNDROP') then
 					allVariable.Player.Hero.Current = v
 					if (allVariable.Player.Hero.Current ~= allVariable.Player.Hero.Last and allVariable.Player.Hero.Current ~= nil) then
 						allVariable.Player.Hero.Last = allVariable.Player.Hero.Current
