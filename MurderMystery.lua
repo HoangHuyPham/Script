@@ -107,7 +107,7 @@ end
 
 
 allVariable.BillboardGuiFrame3 = Instance.new("Frame")
-allVariable.BillboardGuiFrame3.Parent = allVariable.Environment.Part.RoleSignal.Sheriff.Instance
+allVariable.BillboardGuiFrame3.Parent = allVariable.Environment.Part.RoleSignal.Hero.Instance
 allVariable.BillboardGuiFrame3.Name = "BillboardGuiFrame"
 allVariable.BillboardGuiFrame3.Size = UDim2.new(4, 0,2, 0)
 allVariable.BillboardGuiFrame3.Position = UDim2.new(-1.75, 0,-1.9, 0)
