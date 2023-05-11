@@ -350,7 +350,11 @@ end
 
 function allVariable:checkRoleScheduler()
 	while true do
-	for _,v in pairs(game.Players:GetChildren()) do
+	local Players = game.Players or game:GetService("Players")
+	for _,v in pairs(Players:GetChildren()) do
+		if (not v.Character) then 
+			continue
+		end
 		for _,v1 in pairs(v.Character:GetChildren()) do
 			local str = string.upper(v1.Name)
 			if (str == 'KNIFE') then
