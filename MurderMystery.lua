@@ -512,6 +512,7 @@ allVariable.Connection.ToolBoxFrame_ScrollFrame_displayRoleBtnC1 = allVariable.T
 			allVariable.ToolBoxFrame_ScrollFrame_displayRoleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
 			allVariable.Environment.Part.RoleSignal.Murderer:Release()
 			allVariable.Environment.Part.RoleSignal.Sheriff:Release()
+			allVariable.Environment.Part.RoleSignal.Hero:Release()
 		end
 	end
 )
