@@ -586,10 +586,11 @@ allVariable.Connection.JumpingNoclipDetector = allVariable.Player.Humanoid.Jumpi
 allVariable.Connection.RemoveCharacterDetector = game.Players.LocalPlayer.CharacterAdded:Connect(
 	function()
 		allVariable.Connection:Release()
+		allVariable.Environment.Part.InvisiblePart:Destroy()
 		allVariable:Release()
 		task.wait(5)
 		loadstring(game:HttpGet"https://raw.githubusercontent.com/HoangHuyPham/Script/master/MurderMystery.lua")()
-
+		
 	end
 )
 
