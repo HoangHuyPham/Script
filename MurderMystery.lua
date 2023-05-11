@@ -114,7 +114,7 @@ allVariable.BillboardGuiFrame3.Position = UDim2.new(-1.75, 0,-1.9, 0)
 allVariable.BillboardGuiFrame3.BackgroundTransparency = 1
 
 allVariable.BillboardGuiFrameTitle3 = Instance.new("TextLabel")
-allVariable.BillboardGuiFrameTitle3.Parent = allVariable.BillboardGuiFrame2
+allVariable.BillboardGuiFrameTitle3.Parent = allVariable.BillboardGuiFrame3
 allVariable.BillboardGuiFrameTitle3.Name = "BillboardGuiFrame"
 allVariable.BillboardGuiFrameTitle3.Text = "HERO"
 allVariable.BillboardGuiFrameTitle3.TextScaled = true
