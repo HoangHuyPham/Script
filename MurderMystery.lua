@@ -96,7 +96,7 @@ allVariable.Environment.Part.RoleSignal.Hero = {}
 allVariable.Environment.Part.RoleSignal.Hero.Instance = Instance.new("BillboardGui")
 allVariable.Environment.Part.RoleSignal.Hero.Instance.Name = "HeroSignal"
 allVariable.Environment.Part.RoleSignal.Hero.Instance.AlwaysOnTop = true
-allVariable.Environment.Part.RoleSignal.Hero.Instance.Size = UDim2.new(1, 200, 1, 100)
+allVariable.Environment.Part.RoleSignal.Hero.Instance.Size = UDim2.new(1, 2, 1, 1)
 allVariable.Environment.Part.RoleSignal.Hero.Instance.ClipsDescendants = false
 function allVariable.Environment.Part.RoleSignal.Hero:Attach(gunPart)
 	self.Instance.Parent = gunPart
@@ -109,7 +109,7 @@ end
 allVariable.BillboardGuiFrame3 = Instance.new("Frame")
 allVariable.BillboardGuiFrame3.Parent = allVariable.Environment.Part.RoleSignal.Hero.Instance
 allVariable.BillboardGuiFrame3.Name = "BillboardGuiFrame"
-allVariable.BillboardGuiFrame3.Size = UDim2.new(4, 200,2, 100)
+allVariable.BillboardGuiFrame3.Size = UDim2.new(4, 2,2, 1)
 allVariable.BillboardGuiFrame3.Position = UDim2.new(-1.75, 0,-1.9, 0)
 allVariable.BillboardGuiFrame3.BackgroundTransparency = 1
 
