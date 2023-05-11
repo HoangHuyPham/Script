@@ -534,6 +534,9 @@ allVariable.Connection.JumpingNoclipDetector = allVariable.Player.Humanoid.Jumpi
 		end
 	end
 )
+allVariable.Connection.SheriffDiedDetector = allVariable.Player.Sheriff.Last.Character:WaitForChild"Humanoid".Died:Connect(
+	allVariable.Environment.Part.RoleSignal.Sheriff:Release(allVariable.Player.Sheriff)
+)
 
 allVariable.Connection.RemoveCharacterDetector = game.Players.LocalPlayer.CharacterAdded:Connect(
 	function()
