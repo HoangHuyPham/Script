@@ -20,6 +20,9 @@ allVariable.Player.Murderer.Current = nil
 allVariable.Player.Sheriff = {}
 allVariable.Player.Sheriff.Last = nil
 allVariable.Player.Sheriff.Current = nil
+allVariable.Player.Hero = {}
+allVariable.Player.Hero.Last = nil
+allVariable.Player.Hero.Current = nil
 
 allVariable.Environment = {}
 
@@ -88,6 +91,40 @@ allVariable.BillboardGuiFrameTitle2.BackgroundTransparency = 1
 allVariable.BillboardGuiFrameTitle2.TextColor3 = Color3.fromRGB(0, 0, 255)
 allVariable.BillboardGuiFrameTitle2.TextYAlignment = Enum.TextYAlignment.Top
 allVariable.BillboardGuiFrameTitle2.Size = UDim2.new(1, 0, 1, 0)
+
+allVariable.Environment.Part.RoleSignal.Hero = {}
+allVariable.Environment.Part.RoleSignal.Hero.Instance = Instance.new("BillboardGui")
+allVariable.Environment.Part.RoleSignal.Hero.Instance.Name = "HeroSignal"
+allVariable.Environment.Part.RoleSignal.Hero.Instance.AlwaysOnTop = true
+allVariable.Environment.Part.RoleSignal.Hero.Instance.Size = UDim2.new(1, 0, 1, 0)
+allVariable.Environment.Part.RoleSignal.Hero.Instance.ClipsDescendants = false
+function allVariable.Environment.Part.RoleSignal.Hero:Attach(player)
+	self.Instance.Parent = player.Character:FindFirstChild"Head"
+end
+function allVariable.Environment.Part.RoleSignal.Hero:Release(player)
+	self.Instance.Parent = nil
+end
+
+
+allVariable.BillboardGuiFrame3 = Instance.new("Frame")
+allVariable.BillboardGuiFrame3.Parent = allVariable.Environment.Part.RoleSignal.Sheriff.Instance
+allVariable.BillboardGuiFrame3.Name = "BillboardGuiFrame"
+allVariable.BillboardGuiFrame3.Size = UDim2.new(4, 0,2, 0)
+allVariable.BillboardGuiFrame3.Position = UDim2.new(-1.75, 0,-1.9, 0)
+allVariable.BillboardGuiFrame3.BackgroundTransparency = 1
+
+allVariable.BillboardGuiFrameTitle3 = Instance.new("TextLabel")
+allVariable.BillboardGuiFrameTitle3.Parent = allVariable.BillboardGuiFrame2
+allVariable.BillboardGuiFrameTitle3.Name = "BillboardGuiFrame"
+allVariable.BillboardGuiFrameTitle3.Text = "HERO"
+allVariable.BillboardGuiFrameTitle3.TextScaled = true
+allVariable.BillboardGuiFrameTitle3.RichText = true
+allVariable.BillboardGuiFrameTitle3.BackgroundTransparency = 1
+allVariable.BillboardGuiFrameTitle3.TextColor3 = Color3.fromRGB(255, 255, 0)
+allVariable.BillboardGuiFrameTitle3.TextYAlignment = Enum.TextYAlignment.Top
+allVariable.BillboardGuiFrameTitle3.Size = UDim2.new(1, 0, 1, 0)
+
+
 
 allVariable.Environment.Part.InvisiblePart = Instance.new("Part")
 allVariable.Environment.Part.InvisiblePart.Parent = workspace
@@ -293,16 +330,16 @@ allVariable.ToolBoxFrame_ScrollFrame_increaseJumpHeightBtn.Selected = false
 
 
 --variableMoveGui
-local UserInputService = game:GetService("UserInputService")
-local gui = allVariable.ToolBoxFrame
-local dragging = nil
-local dragInput = nil
-local dragStart = nil
-local startPos = nil
+allVariable.UserInputService = game:GetService("UserInputService")
+allVariable.gui = allVariable.ToolBoxFrame
+allVariable.dragging = nil
+allVariable.dragInput = nil
+allVariable.dragStart = nil
+allVariable.startPos = nil
 
 function allVariable:ToolBoxFrame_moveGuiBtnUpdate(input)
 	local delta = input.Position - dragStart
-	gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	allVariable.gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
 end
 
 function allVariable:NoClip(part)
@@ -318,7 +355,7 @@ function allVariable:Observation(length)
 	while (allVariable.ToolBoxFrame_ScrollFrame_observationBtn.Selected) do
 		local RayCastConfig = RaycastParams.new()
 		RayCastConfig.FilterDescendantsInstances = allVariable.Player.Character:GetChildren()
-		length = length or 50
+		length = length or 100
 		local RayCast = workspace:Raycast(allVariable.Player.Humanoid.RootPart.CFrame.Position, allVariable.Player.Humanoid.RootPart.CFrame.LookVector * length, RayCastConfig)
 		local CurrentTrans = 0
 		if (RayCast ~= nil and RayCast.Instance ~= nil) then
@@ -331,7 +368,7 @@ function allVariable:Observation(length)
 		else
 			task.wait(0.1)
 		end
-		
+
 	end
 end
 
@@ -339,10 +376,13 @@ function allVariable:DisplayRole()
 	while (allVariable.ToolBoxFrame_ScrollFrame_displayRoleBtn.Selected) do
 		local murderer = allVariable.Player.Murderer.Current or allVariable.Player.Murderer.Last
 		local sheriff = allVariable.Player.Sheriff.Current or allVariable.Player.Sheriff.Last 
+		local hero = allVariable.Player.Hero.Current or allVariable.Player.Hero.Last
 		if (murderer) then
 			allVariable.Environment.Part.RoleSignal.Murderer:Attach(murderer)
 		elseif (sheriff) then
 			allVariable.Environment.Part.RoleSignal.Sheriff:Attach(sheriff)
+		elseif (hero) then
+			allVariable.Environment.Part.RoleSignal.Hero:Attach(hero)
 		end
 		task.wait(0.3)
 	end
@@ -350,27 +390,32 @@ end
 
 function allVariable:checkRoleScheduler()
 	while true do
-	local Players = game.Players or game:GetService("Players")
-	for _,v in pairs(Players:GetChildren()) do
-		if (not v.Character) then 
-			continue
-		end
-		for _,v1 in pairs(v.Character:GetChildren()) do
-			local str = string.upper(v1.Name)
-			if (str == 'KNIFE') then
-				allVariable.Player.Murderer.Current = v
-				if (allVariable.Player.Murderer.Current ~= allVariable.Player.Murderer.Last and allVariable.Player.Murderer.Current ~= nil) then
-					allVariable.Player.Murderer.Last = allVariable.Player.Murderer.Current
-				end
-			elseif (str == 'GUN') then
-				allVariable.Player.Sheriff.Current = v
-				if (allVariable.Player.Sheriff.Current ~= allVariable.Player.Sheriff.Last and allVariable.Player.Sheriff.Current ~= nil) then
-					allVariable.Player.Sheriff.Last = allVariable.Player.Sheriff.Current
+		local Players = game.Players or game:GetService("Players")
+		for _,v in pairs(Players:GetChildren()) do
+			if (not v.Character) then 
+				continue
+			end
+			for _,v1 in pairs(v.Character:GetChildren()) do
+				local str = string.upper(v1.Name)
+				if (str == 'KNIFE') then
+					allVariable.Player.Murderer.Current = v
+					if (allVariable.Player.Murderer.Current ~= allVariable.Player.Murderer.Last and allVariable.Player.Murderer.Current ~= nil) then
+						allVariable.Player.Murderer.Last = allVariable.Player.Murderer.Current
+					end
+				elseif (str == 'GUN') then
+					allVariable.Player.Sheriff.Current = v
+					if (allVariable.Player.Sheriff.Current ~= allVariable.Player.Sheriff.Last and allVariable.Player.Sheriff.Current ~= nil) then
+						allVariable.Player.Sheriff.Last = allVariable.Player.Sheriff.Current
+					end
+				elseif (str == 'DROPGUN') then
+					allVariable.Player.Hero.Current = v
+					if (allVariable.Player.Hero.Current ~= allVariable.Player.Hero.Last and allVariable.Player.Hero.Current ~= nil) then
+						allVariable.Player.Hero.Last = allVariable.Player.Hero.Current
+					end
 				end
 			end
 		end
-	end
-	task.wait(0.1)
+		task.wait(0.1)
 	end
 end
 
@@ -398,7 +443,7 @@ allVariable.Connection.ToolBoxFrame_moveGuiBtnC1 = allVariable.ToolBoxFrame_move
 		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
 			dragging = true
 			dragStart = input.Position
-			startPos = gui.Position
+			startPos = allVariable.gui.Position
 			input.Changed:Connect(
 				function()
 					if input.UserInputState == Enum.UserInputState.End then
@@ -418,7 +463,7 @@ allVariable.Connection.ToolBoxFrame_moveGuiBtnC2 = allVariable.ToolBoxFrame_move
 	end
 )
 
-allVariable.Connection.ToolBoxFrame_moveGuiBtnC3 = UserInputService.InputChanged:Connect(
+allVariable.Connection.ToolBoxFrame_moveGuiBtnC3 = allVariable.UserInputService.InputChanged:Connect(
 	function(input)
 		if input == dragInput and dragging then
 			allVariable:ToolBoxFrame_moveGuiBtnUpdate(input)
@@ -505,7 +550,7 @@ allVariable.Connection.ToolBoxFrame_ScrollFrame_decreaseJumpHeightBtnC1 = allVar
 
 allVariable.Connection.ToolBoxFrame_ScrollFrame_increaseJumpHeightBtnC1 = allVariable.ToolBoxFrame_ScrollFrame_increaseJumpHeightBtn.Activated:Connect(
 	function()
-		allVariable.Player.JumpHeight.Current = allVariable.Player.JumpHeight.Current + 1
+		allVariable.Player.JumpHeight.Current = allVariable.Player.JumpHeight.Current + 2
 		allVariable.ToolBoxFrame_ScrollFrame_defaultJumpHeightBtn.Text = "Jump height: "..allVariable.Player.JumpHeight.Current
 		allVariable.Player.Humanoid.JumpHeight = allVariable.Player.JumpHeight.Current
 	end
@@ -521,9 +566,9 @@ allVariable.Connection.ToolBoxFrame_ScrollFrame_defaultJumpHeightBtnC1 = allVari
 
 allVariable.Connection.TouchedPartDetector = allVariable.Player.Humanoid.Touched:Connect(
 	function(input, part)
-			if (part.Name == "UpperTorso" or part.Name == "LowerTorso" or part.Name == "Head") then
-				allVariable:NoClip(input)
-			end
+		if (part.Name == "UpperTorso" or part.Name == "LowerTorso" or part.Name == "Head") then
+			allVariable:NoClip(input)
+		end
 	end
 )
 
@@ -535,7 +580,7 @@ allVariable.Connection.JumpingNoclipDetector = allVariable.Player.Humanoid.Jumpi
 	end
 )
 
-	
+
 
 
 allVariable.Connection.RemoveCharacterDetector = game.Players.LocalPlayer.CharacterAdded:Connect(
@@ -544,7 +589,7 @@ allVariable.Connection.RemoveCharacterDetector = game.Players.LocalPlayer.Charac
 		allVariable:Release()
 		task.wait(5)
 		loadstring(game:HttpGet"https://raw.githubusercontent.com/HoangHuyPham/Script/master/MurderMystery.lua")()
-		
+
 	end
 )
 
@@ -557,7 +602,6 @@ function allVariable.Connection:Release()
 	end
 end
 allVariable:checkRoleScheduler()
-
 
 
 
