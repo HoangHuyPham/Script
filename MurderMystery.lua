@@ -389,11 +389,15 @@ end
 function allVariable:checkRoleScheduler()
 	while true do
 		local Players = game.Players or game:GetService("Players")
-		for _,v in pairs(Players:GetChildren()) do
+		local Workspace = game.Workspace or game:GetService("Workspace")
+		local PlayersChild = Players:GetChildren()
+		local WorkspaceChild = Workspace:GetChildren()
+		for _,v in pairs(PlayersChild) do
 			if (not v.Character) then 
 				continue
 			end
-			for _,v1 in pairs(v.Character:GetChildren()) do
+			local CharacterChild = v.Character:GetChildren()
+			for _,v1 in pairs(CharacterChild) do
 				local str = string.upper(v1.Name)
 				if (str == 'KNIFE') then
 					allVariable.Player.Murderer.Current = v
@@ -409,7 +413,7 @@ function allVariable:checkRoleScheduler()
 			end
 		end
 
-		for k, v in pairs(workspace:GetChildren()) do
+		for k, v in pairs(WorkspaceChild) do
 			local str = string.upper(v.Name)
 			if (str == 'GUNDROP') then
 				allVariable.Player.Hero.Current = v
@@ -614,4 +618,3 @@ function allVariable.Connection:Release()
 end
 
 allVariable:checkRoleScheduler()
-
