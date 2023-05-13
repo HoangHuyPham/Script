@@ -597,6 +597,7 @@ allVariable.Connection.RemoveCharacterDetector = game.Players.LocalPlayer.Charac
 		allVariable.Environment.Part.RoleSignal.Sheriff.Instance:Destroy()
 		allVariable.Environment.Part.RoleSignal.Hero.Instance:Destroy()
 		allVariable:Release()
+		script:Destroy()
 		task.wait(5)
 		loadstring(game:HttpGet"https://raw.githubusercontent.com/HoangHuyPham/Script/master/MurderMystery.lua")()
 
