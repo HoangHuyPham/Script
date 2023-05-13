@@ -35,7 +35,7 @@ allVariable.Environment.Part.RoleSignal.Murderer.Instance.AlwaysOnTop = true
 allVariable.Environment.Part.RoleSignal.Murderer.Instance.Size = UDim2.new(1, 0, 1, 0)
 allVariable.Environment.Part.RoleSignal.Murderer.Instance.ClipsDescendants = false
 function allVariable.Environment.Part.RoleSignal.Murderer:Attach(player)
-	self.Instance.Parent = player.Character:FindFirstChild"Head"
+	self.Instance.Parent = player.Character:FindFirstChild"Head" or player.Character:FindFirstChild"Torso"
 end
 function allVariable.Environment.Part.RoleSignal.Murderer:Release(player)
 	self.Instance.Parent = nil
@@ -67,7 +67,7 @@ allVariable.Environment.Part.RoleSignal.Sheriff.Instance.AlwaysOnTop = true
 allVariable.Environment.Part.RoleSignal.Sheriff.Instance.Size = UDim2.new(1, 0, 1, 0)
 allVariable.Environment.Part.RoleSignal.Sheriff.Instance.ClipsDescendants = false
 function allVariable.Environment.Part.RoleSignal.Sheriff:Attach(player)
-	self.Instance.Parent = player.Character:FindFirstChild"Head"
+	self.Instance.Parent = player.Character:FindFirstChild"Head" or player.Character:FindFirstChild"Torso"
 end
 function allVariable.Environment.Part.RoleSignal.Sheriff:Release(player)
 	self.Instance.Parent = nil
