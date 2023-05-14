@@ -525,7 +525,7 @@ function Tool:Observation(isReverse)
 	if isReverse then
 		for k,v in pairs(Tool.Part.CurrentMapModel:GetDescendants()) do
 			if (v:IsA"Part" or v:IsA"MeshPart") then
-				v.Transparency -= 0.5
+				v.Transparency += 0.5
 			end
 		end
 	end
