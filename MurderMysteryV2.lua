@@ -24,7 +24,7 @@ Tool.Player.Character = Tool.Player.LocalPlayer.Character or Tool.Player.LocalPl
 Tool.Player.Humanoid = Tool.Player.Character:FindFirstChild("Humanoid") or Tool.Player.Character:WaitForChild("Humanoid")
 Tool.Player.HumanoidRootPart = Tool.Player.Humanoid.RootPart
 Tool.Player.PlayerGui = Tool.Player.LocalPlayer:FindFirstChild("PlayerGui") or Tool.Player.LocalPlayer:WaitForChild("PlayerGui")
-Tool.Player.Camera = workspace.CurrentCamera or workspace:WaitForChild("Camera")
+Tool.Player.Camera = workspace.Camera or workspace:WaitForChild("Camera")
 Tool.Player.PosY = nil
 Tool.Player.SpectatePlayer = nil
 
