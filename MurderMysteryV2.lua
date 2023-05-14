@@ -527,6 +527,9 @@ function Tool:Observation(isReverse)
 			if (v:IsA"Part" or v:IsA"MeshPart") then
 				v.Transparency += 0.5
 			end
+			if (v:IsA"Terrian") then
+				v.WaterTransparency += 0.5
+			end
 		end
 	end
 	local map = Tool:GetCurrentMapModel()
@@ -536,6 +539,9 @@ function Tool:Observation(isReverse)
 	for k,v in pairs(map:GetDescendants()) do
 		if (v:IsA"Part" or v:IsA"MeshPart") then
 			v.Transparency -= 0.5
+		end
+		if (v:IsA"Terrian") then
+			v.WaterTransparency -= 0.5
 		end
 	end
 end
