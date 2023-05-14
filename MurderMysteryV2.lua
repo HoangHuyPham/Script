@@ -506,7 +506,7 @@ function Tool:RemovePlayerBtn(scrollframe, isRemoveData)
 end
 
 function Tool:Spectate()
-	while Tool.Gui.Frame2_SpectateBtn do
+	while Tool.Gui.Frame2_SpectateBtn.Selected do
 		if Tool.Player.Camera.CameraSubject ~= Tool.Player.SpectatePlayer.Character:FindFirstChild"Humanoid" then
 			Tool.Player.Camera.CameraSubject = Tool.Player.SpectatePlayer.Character:FindFirstChild"Humanoid"
 		end
