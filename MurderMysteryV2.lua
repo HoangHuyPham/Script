@@ -299,6 +299,7 @@ Tool.Connection.Instances.SpectateBtnC1 = Tool.Gui.Frame2_SpectateBtn.Activated:
 		Tool.Gui.Frame2_SpectateBtn_Frame.Size = UDim2.new(1, -Tool.Gui.Frame2.ScrollBarThickness, 0.6, 0)
 		Tool:LoadPlayerTo(Tool.Gui.Frame2_SpectateBtn_Frame)
 		Tool.Gui.Frame2_SpectateCancelBtn.Visible = true
+		Tool.Player.Camera.CameraSubject = Tool.Player.Humanoid
 	end
 )
 
@@ -309,7 +310,6 @@ Tool.Connection.Instances.SpectateCancelBtnC1 = Tool.Gui.Frame2_SpectateCancelBt
 		Tool:RemovePlayerBtn(Tool.Gui.Frame2_SpectateBtn_Frame, true)
 		Tool.Gui.Frame2_SpectateCancelBtn.Visible = false
 		Tool.Gui.Frame2_SpectateBtn.Text = "Spectate: No one*"
-		Tool.Player.Camera.CameraSubject = Tool.Player.Humanoid
 	end
 )
 
@@ -500,8 +500,8 @@ end
 
 function Tool:Spectate()
 	while Tool.Gui.Frame2_SpectateBtn do
-		if Tool.Player.Camera.CameraSubject ~= Tool.Player.SpectatePlayer.CharacterAdded:Wait():FindFirstChild"Humanoid" then
-			Tool.Player.Camera.CameraSubject = Tool.Player.SpectatePlayer.CharacterAdded:Wait():FindFirstChild"Humanoid"
+		if Tool.Player.Camera.CameraSubject ~= Tool.Player.SpectatePlayer.Character:FindFirstChild"Humanoid" then
+			Tool.Player.Camera.CameraSubject = Tool.Player.SpectatePlayer.Character:FindFirstChild"Humanoid"
 		end
 		task.wait(1)
 	end
