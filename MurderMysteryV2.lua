@@ -500,8 +500,8 @@ end
 
 function Tool:Spectate()
 	while Tool.Gui.Frame2_SpectateBtn do
-		if Tool.Player.Camera.CameraSubject ~= Tool.Player.SpectatePlayer:FindFirstChild"Character":FindFirstChild"Humanoid" then
-			Tool.Player.Camera.CameraSubject = Tool.Player.SpectatePlayer:FindFirstChild"Character":FindFirstChild"Humanoid"
+		if Tool.Player.Camera.CameraSubject ~= Tool.Player.SpectatePlayer.CharacterAdded:Wait():FindFirstChild"Humanoid" then
+			Tool.Player.Camera.CameraSubject = Tool.Player.SpectatePlayer.CharacterAdded:Wait():FindFirstChild"Humanoid"
 		end
 		task.wait(1)
 	end
