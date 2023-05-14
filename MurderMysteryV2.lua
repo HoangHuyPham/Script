@@ -441,6 +441,7 @@ function Tool:Release()
 	Tool.Gui.Frame2_ESPGunBtn.Selected = false
 	Tool.Gui.Frame2_ObservationBtn.Selected = false
 	Tool.Gui.Frame2_ESPCoinBtn.Selected = false
+	Tool.Gui.Frame2_SpectateBtn.Selected = false
 	task.wait(0.25)
 	Tool.Connection:Release()
 	Tool.Part.SignalPart:Release()
