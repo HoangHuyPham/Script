@@ -501,6 +501,7 @@ function Tool:RemovePlayerBtn(scrollframe, isRemoveData)
 	if (isRemoveData) then
 		Tool.Player.SpectatePlayer = nil
 	end
+	Tool.Player.Camera.CameraSubject = Tool.Player.Humanoid
 end
 
 function Tool:Spectate()
@@ -508,7 +509,7 @@ function Tool:Spectate()
 		if Tool.Player.Camera.CameraSubject ~= Tool.Player.SpectatePlayer.Character:FindFirstChild"Humanoid" then
 			Tool.Player.Camera.CameraSubject = Tool.Player.SpectatePlayer.Character:FindFirstChild"Humanoid"
 		end
-		task.wait(1)
+		task.wait(0.5)
 	end
 end
 
@@ -524,7 +525,7 @@ end
 function Tool:Observation(isReverse)
 	if isReverse then
 		for k,v in pairs(Tool.Part.CurrentMapModel:GetDescendants()) do
-			if (v:IsA"Part" or v:IsA"MeshPart") then
+			if (v:IsA"Part" or v:IsA"MeshPart" or v:IsA"WedgePart") then
 				v.Transparency += 0.5
 			end
 			if (v:IsA"Terrian") then
@@ -537,7 +538,7 @@ function Tool:Observation(isReverse)
 		Tool:Observation()
 	end
 	for k,v in pairs(map:GetDescendants()) do
-		if (v:IsA"Part" or v:IsA"MeshPart") then
+		if (v:IsA"Part" or v:IsA"MeshPart" or v:IsA"WedgePart") then
 			v.Transparency -= 0.5
 		end
 		if (v:IsA"Terrian") then
