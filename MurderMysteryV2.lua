@@ -18,6 +18,7 @@ Tool.Part.InvisiblePart = {}
 Tool.Part.SignalPart.Instances = {}
 Tool.Part.DisabledPart = {}
 Tool.Part.DisabledPart.Instances = {}
+Tool.Part.CurrentMapModel = nil
 
 Tool.Player.LocalPlayer = game.Players.LocalPlayer or game:GetService("Players").LocalPlayer
 Tool.Player.Character = Tool.Player.LocalPlayer.Character or Tool.Player.LocalPlayer.CharacterAdded:Wait()
@@ -27,6 +28,7 @@ Tool.Player.PlayerGui = Tool.Player.LocalPlayer:FindFirstChild("PlayerGui") or T
 Tool.Player.Camera = workspace.Camera or workspace:WaitForChild("Camera")
 Tool.Player.PosY = nil
 Tool.Player.SpectatePlayer = nil
+
 
 Tool.Part.InvisiblePart.Instance = Instance.new("Part")
 Tool.Part.InvisiblePart.Instance.Name = "InvisiblePart"
@@ -228,8 +230,10 @@ Tool.Connection.Instances.ObservationBtnC1 = Tool.Gui.Frame2_ObservationBtn.Acti
 		Tool.Gui.Frame2_ObservationBtn.Selected = not Tool.Gui.Frame2_ObservationBtn.Selected
 		if (Tool.Gui.Frame2_ObservationBtn.Selected) then
 			Tool.Gui.Frame2_ObservationBtn.TextColor3 = Color3.fromRGB(0,255,0)
+			Tool:Observation()
 		else
 			Tool.Gui.Frame2_ObservationBtn.TextColor3 = Color3.fromRGB(255,0,0)
+			Tool:Observation(true)
 		end
 	end
 )
@@ -430,6 +434,7 @@ function Tool.Part.DisabledPart:Release()
 end
 
 function Tool:Release()
+	Tool.Player.Camera.CameraSubject = Tool.Player.Humanoid
 	Tool.Gui.Frame1_ShowGuiBtn.Selected = false
 	Tool.Gui.Frame1_MoveGuiBtn.Selected = false
 	Tool.Gui.Frame2_NoClipBtn.Selected = false
@@ -507,3 +512,30 @@ function Tool:Spectate()
 	end
 end
 
+function Tool:GetCurrentMapModel()
+	for k,v in pairs(game:GetService("Workspace"):GetChildren()) do
+		if v:FindFirstChild"Map" then
+			Tool.Part.CurrentMapModel = v
+			return v
+		end
+	end
+end
+
+function Tool:Observation(isReverse)
+	if isReverse then
+		for k,v in pairs(Tool.Part.CurrentMapModel:GetDescendants()) do
+			if (v:IsA"Part" or v:IsA"MeshPart") then
+				v.Transparency -= 0.5
+			end
+		end
+	end
+	local map = Tool:GetCurrentMapModel()
+	if not map and Tool.Gui.Frame2_ObservationBtn.Selected then
+		Tool:Observation()
+	end
+	for k,v in pairs(map:GetDescendants()) do
+		if (v:IsA"Part" or v:IsA"MeshPart") then
+			v.Transparency -= 0.5
+		end
+	end
+end
