@@ -25,7 +25,7 @@ Tool.Player.Character = Tool.Player.LocalPlayer.Character or Tool.Player.LocalPl
 Tool.Player.Humanoid = Tool.Player.Character:FindFirstChild("Humanoid") or Tool.Player.Character:WaitForChild("Humanoid")
 Tool.Player.HumanoidRootPart = Tool.Player.Humanoid.RootPart
 Tool.Player.PlayerGui = Tool.Player.LocalPlayer:FindFirstChild("PlayerGui") or Tool.Player.LocalPlayer:WaitForChild("PlayerGui")
-Tool.Player.Camera = game:GetService"Workspace".CurrentCamera
+Tool.Player.Camera = workspace.Camera or workspace:WaitForChild("Camera")
 Tool.Player.PosY = nil
 Tool.Player.SpectatePlayer = nil
 
@@ -303,7 +303,7 @@ Tool.Connection.Instances.SpectateBtnC1 = Tool.Gui.Frame2_SpectateBtn.Activated:
 		Tool.Gui.Frame2_SpectateBtn_Frame.Size = UDim2.new(1, -Tool.Gui.Frame2.ScrollBarThickness, 0.6, 0)
 		Tool:LoadPlayerTo(Tool.Gui.Frame2_SpectateBtn_Frame)
 		Tool.Gui.Frame2_SpectateCancelBtn.Visible = true
-		Tool.Player.SpectatePlayer = nil
+		
 	end
 )
 
@@ -314,7 +314,6 @@ Tool.Connection.Instances.SpectateCancelBtnC1 = Tool.Gui.Frame2_SpectateCancelBt
 		Tool:RemovePlayerBtn(Tool.Gui.Frame2_SpectateBtn_Frame, true)
 		Tool.Gui.Frame2_SpectateCancelBtn.Visible = false
 		Tool.Gui.Frame2_SpectateBtn.Text = "Spectate: No one*"
-		Tool.Player.SpectatePlayer = nil
 		Tool.Player.Camera.CameraSubject = Tool.Player.Humanoid
 	end
 )
@@ -444,9 +443,8 @@ function Tool:Release()
 	Tool.Gui.Frame2_ObservationBtn.Selected = false
 	Tool.Gui.Frame2_ESPCoinBtn.Selected = false
 	Tool.Gui.Frame2_SpectateBtn.Selected = false
-	Tool.Player.SpectatePlayer = nil
-	if game:GetService"Workspace".CurrentCamera.CameraSubject ~=  game:GetService"Players".LocalPlayer.Character.Humanoid then
-		game:GetService"Workspace".CurrentCamera.CameraSubject = game:GetService"Players".LocalPlayer.Character.Humanoid
+	if Tool.Player.Camera.CameraSubject ~= Tool.Player.Humanoid then
+		Tool.Player.Camera.CameraSubject = Tool.Player.Humanoid
 	end
 	
 	task.wait(0.25)
@@ -513,7 +511,7 @@ function Tool:RemovePlayerBtn(scrollframe, isRemoveData)
 end
 
 function Tool:Spectate()
-	while Tool.Player.SpectatePlayer do
+	while Tool.Gui.Frame2_SpectateBtn.Selected and Tool.Player.SpectatePlayer do
 		if Tool.Player.Camera.CameraSubject ~= Tool.Player.SpectatePlayer.Character:FindFirstChild"Humanoid" then
 			Tool.Player.Camera.CameraSubject = Tool.Player.SpectatePlayer.Character:FindFirstChild"Humanoid"
 		end
@@ -530,14 +528,16 @@ function Tool:GetCurrentMapModel()
 	end
 end
 
+function Tool:CheckValidTransparency(instance)
+	local res = instance.Transparency
+end
+
 function Tool:Observation(isReverse)
 	if isReverse then
 		for k,v in pairs(Tool.Part.CurrentMapModel:GetDescendants()) do
-			if (v:IsA"Part" or v:IsA"MeshPart" or v:IsA"WedgePart" or v:IsA"UnionOperation") then
+			local result = pcall(Tool:CheckValidTransparency(v))
+			if result then
 				v.Transparency += 0.5
-			end
-			if (v:IsA"Terrian") then
-				v.WaterTransparency += 0.5
 			end
 		end
 	end
@@ -546,12 +546,11 @@ function Tool:Observation(isReverse)
 		Tool:Observation()
 	end
 	for k,v in pairs(map:GetDescendants()) do
-		if (v:IsA"Part" or v:IsA"MeshPart" or v:IsA"WedgePart" or v:IsA"UnionOperation") then
+		local result = pcall(Tool:CheckValidTransparency(v))
+		if result then
 			v.Transparency -= 0.5
-		end
-		if (v:IsA"Terrian") then
-			v.WaterTransparency -= 0.5
 		end
 	end
 end
+
 
