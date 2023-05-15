@@ -434,7 +434,7 @@ function Tool.Part.DisabledPart:Release()
 end
 
 function Tool:Release()
-	Tool.Player.Camera.CameraSubject = Tool.Player.Humanoid
+	
 	Tool.Gui.Frame1_ShowGuiBtn.Selected = false
 	Tool.Gui.Frame1_MoveGuiBtn.Selected = false
 	Tool.Gui.Frame2_NoClipBtn.Selected = false
@@ -442,6 +442,7 @@ function Tool:Release()
 	Tool.Gui.Frame2_ObservationBtn.Selected = false
 	Tool.Gui.Frame2_ESPCoinBtn.Selected = false
 	Tool.Gui.Frame2_SpectateBtn.Selected = false
+	Tool.Player.CurrentCamera.CameraSubject = Tool.Player.Humanoid
 	task.wait(0.25)
 	Tool.Connection:Release()
 	Tool.Part.SignalPart:Release()
