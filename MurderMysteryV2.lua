@@ -445,8 +445,8 @@ function Tool:Release()
 	Tool.Gui.Frame2_ESPCoinBtn.Selected = false
 	Tool.Gui.Frame2_SpectateBtn.Selected = false
 	Tool.Player.SpectatePlayer = nil
-	if Tool.Player.Camera.CameraSubject ~= Tool.Player.Humanoid then
-		Tool.Player.Camera.CameraSubject = Tool.Player.Humanoid
+	if game:GetService"Workspace".Camera.CameraSubject ~=  game:GetService"Players".LocalPlayer.Character.Humanoid then
+		game:GetService"Workspace".Camera.CameraSubject = game:GetService"Players".LocalPlayer.Character.Humanoid
 	end
 	
 	task.wait(0.25)
