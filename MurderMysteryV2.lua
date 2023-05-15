@@ -535,7 +535,12 @@ end
 function Tool:Observation(isReverse)
 	if isReverse then
 		for k,v in pairs(Tool.Part.CurrentMapModel:GetDescendants()) do
-			local result = pcall(Tool:CheckValidTransparency(v))
+			local result = pcall(
+				function()
+					Tool:CheckValidTransparency(v)
+				end
+			)
+			
 			if result then
 				v.Transparency += 0.5
 			end
@@ -546,7 +551,11 @@ function Tool:Observation(isReverse)
 		Tool:Observation()
 	end
 	for k,v in pairs(map:GetDescendants()) do
-		local result = pcall(Tool:CheckValidTransparency(v))
+		local result = pcall(
+			function()
+				Tool:CheckValidTransparency(v)
+			end
+		)
 		if result then
 			v.Transparency -= 0.5
 		end
