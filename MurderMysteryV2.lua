@@ -25,7 +25,7 @@ Tool.Player.Character = Tool.Player.LocalPlayer.Character or Tool.Player.LocalPl
 Tool.Player.Humanoid = Tool.Player.Character:FindFirstChild("Humanoid") or Tool.Player.Character:WaitForChild("Humanoid")
 Tool.Player.HumanoidRootPart = Tool.Player.Humanoid.RootPart
 Tool.Player.PlayerGui = Tool.Player.LocalPlayer:FindFirstChild("PlayerGui") or Tool.Player.LocalPlayer:WaitForChild("PlayerGui")
-Tool.Player.Camera = workspace.Camera or workspace:WaitForChild("Camera")
+Tool.Player.Camera = workspace.CurrentCamera or workspace:WaitForChild("Camera")
 Tool.Player.PosY = nil
 Tool.Player.SpectatePlayer = nil
 
@@ -442,7 +442,7 @@ function Tool:Release()
 	Tool.Gui.Frame2_ObservationBtn.Selected = false
 	Tool.Gui.Frame2_ESPCoinBtn.Selected = false
 	Tool.Gui.Frame2_SpectateBtn.Selected = false
-	Tool.Player.CurrentCamera.CameraSubject = Tool.Player.Humanoid
+	Tool.Player.Camera.CameraSubject = Tool.Player.Humanoid
 	task.wait(0.25)
 	Tool.Connection:Release()
 	Tool.Part.SignalPart:Release()
@@ -507,7 +507,7 @@ function Tool:RemovePlayerBtn(scrollframe, isRemoveData)
 end
 
 function Tool:Spectate()
-	while Tool.Gui.Frame2_SpectateBtn.Selected do
+	while Tool.Gui.Frame2_SpectateBtn.Selected and Tool.Player.SpectatePlayer do
 		if Tool.Player.Camera.CameraSubject ~= Tool.Player.SpectatePlayer.Character:FindFirstChild"Humanoid" then
 			Tool.Player.Camera.CameraSubject = Tool.Player.SpectatePlayer.Character:FindFirstChild"Humanoid"
 		end
@@ -527,7 +527,7 @@ end
 function Tool:Observation(isReverse)
 	if isReverse then
 		for k,v in pairs(Tool.Part.CurrentMapModel:GetDescendants()) do
-			if (v:IsA"Part" or v:IsA"MeshPart" or v:IsA"WedgePart") then
+			if (v:IsA"Part" or v:IsA"MeshPart" or v:IsA"WedgePart" or v:IsA"UnionOperation") then
 				v.Transparency += 0.5
 			end
 			if (v:IsA"Terrian") then
@@ -540,13 +540,11 @@ function Tool:Observation(isReverse)
 		Tool:Observation()
 	end
 	for k,v in pairs(map:GetDescendants()) do
-		
+		if (v:IsA"Part" or v:IsA"MeshPart" or v:IsA"WedgePart" or v:IsA"UnionOperation") then
+			v.Transparency -= 0.5
+		end
 		if (v:IsA"Terrian") then
 			v.WaterTransparency -= 0.5
-		else
-			if (v.Transparency) then
-				v.Transparency -= 0.5
-			end
 		end
 	end
 end
