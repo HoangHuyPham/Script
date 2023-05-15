@@ -545,6 +545,7 @@ function Tool:Observation(isReverse)
 				v.Transparency += 0.5
 			end
 		end
+		return
 	end
 	local map = Tool:GetCurrentMapModel()
 	if not map and Tool.Gui.Frame2_ObservationBtn.Selected then
