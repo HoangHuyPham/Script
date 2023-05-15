@@ -543,7 +543,9 @@ function Tool:Observation(isReverse)
 		if (v:IsA"Terrian") then
 			v.WaterTransparency -= 0.5
 		else
-			v.Transparency -= 0.5
+			if (v.Transparency) then
+				v.Transparency -= 0.5
+			end
 		end
 	end
 end
