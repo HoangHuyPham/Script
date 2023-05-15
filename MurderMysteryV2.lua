@@ -356,7 +356,7 @@ function Tool.Part.SignalPart:Create(adornee, text, color3)
 	SignalPart.AlwaysOnTop = true
 	SignalPart.ZIndexBehavior = Enum.ZIndexBehavior.Global
 	SignalPart.Size = UDim2.new(3, 0, 1.5, 0)
-	
+
 	if (adornee:isA("Part") and adornee.Name ~= "HumanoidRootPart") then
 		SignalPart.ExtentsOffset = Vector3.new(0, 2, 0)
 		SignalPart.Name = adornee.Name
@@ -364,7 +364,7 @@ function Tool.Part.SignalPart:Create(adornee, text, color3)
 		SignalPart.ExtentsOffset = Vector3.new(0, 3, 0)
 		SignalPart.Name = adornee.Parent.Name
 	end
-	
+
 	local SignalPart_Text = Instance.new("TextLabel")
 	SignalPart_Text.Parent = SignalPart
 	SignalPart_Text.Name = "SignalPart_Text"
@@ -487,7 +487,7 @@ function Tool:LoadPlayerTo(scrollframe)
 		local Button = Tool:CreateBtn(v.Name, v)
 		Button.Parent = scrollframe
 	end
-	
+
 end
 
 function Tool:RemovePlayerBtn(scrollframe, isRemoveData)
@@ -539,11 +539,11 @@ function Tool:Observation(isReverse)
 		Tool:Observation()
 	end
 	for k,v in pairs(map:GetDescendants()) do
-		if (v:IsA"Part" or v:IsA"MeshPart" or v:IsA"WedgePart") then
-			v.Transparency -= 0.5
-		end
+		
 		if (v:IsA"Terrian") then
 			v.WaterTransparency -= 0.5
+		else
+			v.Transparency -= 0.5
 		end
 	end
 end
