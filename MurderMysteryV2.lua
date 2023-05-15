@@ -25,7 +25,7 @@ Tool.Player.Character = Tool.Player.LocalPlayer.Character or Tool.Player.LocalPl
 Tool.Player.Humanoid = Tool.Player.Character:FindFirstChild("Humanoid") or Tool.Player.Character:WaitForChild("Humanoid")
 Tool.Player.HumanoidRootPart = Tool.Player.Humanoid.RootPart
 Tool.Player.PlayerGui = Tool.Player.LocalPlayer:FindFirstChild("PlayerGui") or Tool.Player.LocalPlayer:WaitForChild("PlayerGui")
-Tool.Player.Camera = workspace.CurrentCamera or workspace:WaitForChild("Camera")
+Tool.Player.Camera = workspace.Camera or workspace:WaitForChild("Camera")
 Tool.Player.PosY = nil
 Tool.Player.SpectatePlayer = nil
 
@@ -303,7 +303,7 @@ Tool.Connection.Instances.SpectateBtnC1 = Tool.Gui.Frame2_SpectateBtn.Activated:
 		Tool.Gui.Frame2_SpectateBtn_Frame.Size = UDim2.new(1, -Tool.Gui.Frame2.ScrollBarThickness, 0.6, 0)
 		Tool:LoadPlayerTo(Tool.Gui.Frame2_SpectateBtn_Frame)
 		Tool.Gui.Frame2_SpectateCancelBtn.Visible = true
-		Tool.Player.Camera.CameraSubject = Tool.Player.Humanoid
+		
 	end
 )
 
@@ -314,6 +314,7 @@ Tool.Connection.Instances.SpectateCancelBtnC1 = Tool.Gui.Frame2_SpectateCancelBt
 		Tool:RemovePlayerBtn(Tool.Gui.Frame2_SpectateBtn_Frame, true)
 		Tool.Gui.Frame2_SpectateCancelBtn.Visible = false
 		Tool.Gui.Frame2_SpectateBtn.Text = "Spectate: No one*"
+		Tool.Player.Camera.CameraSubject = Tool.Player.Humanoid
 	end
 )
 
@@ -442,7 +443,10 @@ function Tool:Release()
 	Tool.Gui.Frame2_ObservationBtn.Selected = false
 	Tool.Gui.Frame2_ESPCoinBtn.Selected = false
 	Tool.Gui.Frame2_SpectateBtn.Selected = false
-	Tool.Player.Camera.CameraSubject = Tool.Player.Humanoid
+	if Tool.Player.Camera.CameraSubject ~= Tool.Player.Humanoid then
+		Tool.Player.Camera.CameraSubject = Tool.Player.Humanoid
+	end
+	
 	task.wait(0.25)
 	Tool.Connection:Release()
 	Tool.Part.SignalPart:Release()
@@ -548,3 +552,4 @@ function Tool:Observation(isReverse)
 		end
 	end
 end
+
