@@ -25,7 +25,7 @@ Tool.Player.Character = Tool.Player.LocalPlayer.Character or Tool.Player.LocalPl
 Tool.Player.Humanoid = Tool.Player.Character:FindFirstChild("Humanoid") or Tool.Player.Character:WaitForChild("Humanoid")
 Tool.Player.HumanoidRootPart = Tool.Player.Humanoid.RootPart
 Tool.Player.PlayerGui = Tool.Player.LocalPlayer:FindFirstChild("PlayerGui") or Tool.Player.LocalPlayer:WaitForChild("PlayerGui")
-Tool.Player.Camera = workspace.Camera or workspace:WaitForChild("Camera")
+Tool.Player.Camera = game:GetService"Workspace".CurrentCamera
 Tool.Player.PosY = nil
 Tool.Player.SpectatePlayer = nil
 
@@ -445,8 +445,8 @@ function Tool:Release()
 	Tool.Gui.Frame2_ESPCoinBtn.Selected = false
 	Tool.Gui.Frame2_SpectateBtn.Selected = false
 	Tool.Player.SpectatePlayer = nil
-	if game:GetService"Workspace".Camera.CameraSubject ~=  game:GetService"Players".LocalPlayer.Character.Humanoid then
-		game:GetService"Workspace".Camera.CameraSubject = game:GetService"Players".LocalPlayer.Character.Humanoid
+	if game:GetService"Workspace".CurrentCamera.CameraSubject ~=  game:GetService"Players".LocalPlayer.Character.Humanoid then
+		game:GetService"Workspace".CurrentCamera.CameraSubject = game:GetService"Players".LocalPlayer.Character.Humanoid
 	end
 	
 	task.wait(0.25)
