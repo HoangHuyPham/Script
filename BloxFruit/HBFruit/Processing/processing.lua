@@ -35,7 +35,7 @@ function _G.HBFruit.Function:saveAs()
 	local HBFruit = {
 		Data = {
 			UI = {
-				Misc = {farmChest=FarmChestBtn.Selected, fastMode=FastModeBtn.ImageButton.Selected, beliStop=HBFruit.background.container.stopAtBeli.TextBox.Text}
+				Misc = {farmChest=FarmChestBtn.Selected, fastMode=FastModeBtn.Selected, beliStop=HBFruit.background.container.stopAtBeli.TextBox.Text}
 			},
 			ServerJoined = {}
 		}
