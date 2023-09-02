@@ -2,13 +2,14 @@ repeat task.wait() until game:IsLoaded() and KRNL_LOADED and game.GameId == 9947
 task.wait(3)
 
 -- Instances:
-
+local toggle = function(instance) end
 local HBFruit = Instance.new("ScreenGui")
 local background = Instance.new("ImageLabel")
 local container = Instance.new("ScrollingFrame")
 local farmChest = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local ImageButton = Instance.new("ImageButton")
+ImageButton.Activated:Connect(toggle, ImageButton)
 local UIListLayout = Instance.new("UIListLayout")
 local UIListLayout_2 = Instance.new("UIListLayout")
 local stopAtBeli = Instance.new("Frame")
@@ -18,8 +19,16 @@ local TextBox = Instance.new("TextBox")
 local fastMode = Instance.new("Frame")
 local TextLabel_3 = Instance.new("TextLabel")
 local ImageButton_2 = Instance.new("ImageButton")
+ImageButton_2.Activated:Connect(toggle, ImageButton_2)
 local UIListLayout_4 = Instance.new("UIListLayout")
 local TextLabel_4 = Instance.new("TextLabel")
+
+local dragging = nil
+local dragInput = nil
+local dragStart = nil
+local startPos = nil
+
+local UserInputService = game:GetService("UserInputService")
 
 --Properties:
 
@@ -168,6 +177,39 @@ TextLabel_4.Text = "Misc"
 TextLabel_4.TextColor3 = Color3.fromRGB(9, 9, 9)
 TextLabel_4.TextSize = 25.000
 TextLabel_4.TextWrapped = true
+
+local gui = HBFruit --guihere (frame)
+local function update(input)
+	local delta = input.Position - dragStart
+	gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+end
+
+--component for handle
+gui.InputBegan:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+		dragging = true
+		dragStart = input.Position
+		startPos = gui.Position
+
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				dragging = false
+			end
+		end)
+	end
+end)
+
+gui.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+		dragInput = input
+	end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+	if input == dragInput and dragging then
+		update(input)
+	end
+end)
 
 --Functions:
 local function toggle(instance)
