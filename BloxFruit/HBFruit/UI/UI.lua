@@ -1,7 +1,7 @@
 repeat task.wait() until game:IsLoaded() and KRNL_LOADED and game.GameId == 994732206
 task.wait(3)
 
--- Instances:
+ --Instances:
 local toggle = function(instance) end
 local HBFruit = Instance.new("ScreenGui")
 local background = Instance.new("ImageLabel")
@@ -9,7 +9,9 @@ local container = Instance.new("ScrollingFrame")
 local farmChest = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local ImageButton = Instance.new("ImageButton")
-ImageButton.Activated:Connect(toggle, ImageButton)
+ImageButton.Activated:Connect(function()
+	toggle(ImageButton)
+end)
 local UIListLayout = Instance.new("UIListLayout")
 local UIListLayout_2 = Instance.new("UIListLayout")
 local stopAtBeli = Instance.new("Frame")
@@ -19,7 +21,9 @@ local TextBox = Instance.new("TextBox")
 local fastMode = Instance.new("Frame")
 local TextLabel_3 = Instance.new("TextLabel")
 local ImageButton_2 = Instance.new("ImageButton")
-ImageButton_2.Activated:Connect(toggle, ImageButton_2)
+ImageButton_2.Activated:Connect(function()
+	toggle(ImageButton_2)
+end)
 local UIListLayout_4 = Instance.new("UIListLayout")
 local TextLabel_4 = Instance.new("TextLabel")
 
@@ -212,7 +216,7 @@ UserInputService.InputChanged:Connect(function(input)
 end)
 
 --Functions:
-local function toggle(instance)
+function toggle(instance)
 	if (instance:IsA("TextButton")) then
 		instance.Selected = not instance.Selected
 	elseif (instance:IsA("ImageButton")) then
