@@ -182,6 +182,9 @@ TextLabel_4.TextColor3 = Color3.fromRGB(9, 9, 9)
 TextLabel_4.TextSize = 25.000
 TextLabel_4.TextWrapped = true
 
+_G.HBFruitIsLoaded = true
+
+
 local gui = background --guihere (frame)
 local function update(input)
 	local delta = input.Position - dragStart
