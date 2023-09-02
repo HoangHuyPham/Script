@@ -1,6 +1,7 @@
 repeat task.wait() until game:IsLoaded() and KRNL_LOADED and game.GameId == 994732206
 task.wait(3)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/HoangHuyPham/Script/master/BloxFruit/HBFruit/UI/UI.lua", true))()
+
+
 if not (game.Players.LocalPlayer.PlayerGui:FindFirstChild("HBFruit")) then
 	repeat task.wait(1) until game.Players.LocalPlayer.PlayerGui:FindFirstChild("HBFruit")
 	task.wait(3)
