@@ -178,7 +178,7 @@ TextLabel_4.TextColor3 = Color3.fromRGB(9, 9, 9)
 TextLabel_4.TextSize = 25.000
 TextLabel_4.TextWrapped = true
 
-local gui = HBFruit --guihere (frame)
+local gui = background --guihere (frame)
 local function update(input)
 	local delta = input.Position - dragStart
 	gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
