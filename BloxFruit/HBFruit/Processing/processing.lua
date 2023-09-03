@@ -9,6 +9,7 @@ if not (game.Players.LocalPlayer.PlayerGui:FindFirstChild("HBFruit")) then
 	repeat task.wait(1) until game.Players.LocalPlayer.PlayerGui:FindFirstChild("HBFruit")
 	task.wait(3)
 end
+warn("Loading script success!")
 --Declare functions
 local preWriteOrRead = function() end
 
