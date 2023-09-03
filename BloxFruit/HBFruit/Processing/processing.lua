@@ -2,7 +2,8 @@ repeat task.wait() until game:IsLoaded() and KRNL_LOADED and game.GameId == 9947
 task.wait(3)
 
 if not (_G.HBFruitIsLoaded) then 
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/HoangHuyPham/Script/master/BloxFruit/HBFruit/UI/UI.lua", true))()
+	coroutine.resume(coroutine.create(function(...) 	loadstring(game:HttpGet("https://raw.githubusercontent.com/HoangHuyPham/Script/master/BloxFruit/HBFruit/UI/UI.lua", true))()
+	end))
 end
 
 if not (game.Players.LocalPlayer.PlayerGui:FindFirstChild("HBFruit")) then
