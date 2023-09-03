@@ -37,6 +37,7 @@ end
 
 
 _G.HBFruit = {}
+_G.HBFruit.JSON = JSON
 _G.HBFruit.Function = {}
 function _G.HBFruit.Function:saveAs()
 	local HBFruit = {
