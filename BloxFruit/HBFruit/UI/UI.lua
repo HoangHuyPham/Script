@@ -3,6 +3,8 @@ task.wait(3)
 
  --Instances:
 local toggle = function(instance) end
+local reloadToggle = function(imagebutton) end
+local loadUIFromData = function() end
 local HBFruit = Instance.new("ScreenGui")
 local background = Instance.new("ImageLabel")
 local container = Instance.new("ScrollingFrame")
@@ -18,6 +20,14 @@ local stopAtBeli = Instance.new("Frame")
 local UIListLayout_3 = Instance.new("UIListLayout")
 local TextLabel_2 = Instance.new("TextLabel")
 local TextBox = Instance.new("TextBox")
+TextBox.Changed:Connect(function(property)
+	if (property == "Text") then
+		if not (_G.HBFruit) then
+			repeat task.wait(1) until _G.HBFruit
+		end
+		_G.HBFruit.Function:saveAs()
+	end
+end)
 local fastMode = Instance.new("Frame")
 local TextLabel_3 = Instance.new("TextLabel")
 local ImageButton_2 = Instance.new("ImageButton")
@@ -26,6 +36,7 @@ ImageButton_2.Activated:Connect(function()
 end)
 local UIListLayout_4 = Instance.new("UIListLayout")
 local TextLabel_4 = Instance.new("TextLabel")
+local LocalPlayer = game:GetService("Players").LocalPlayer
 
 local dragging = nil
 local dragInput = nil
@@ -182,8 +193,11 @@ TextLabel_4.TextColor3 = Color3.fromRGB(9, 9, 9)
 TextLabel_4.TextSize = 25.000
 TextLabel_4.TextWrapped = true
 
+--Initialize
 _G.HBFruitIsLoaded = true
+repeat task.wait() until _G.HBFruit
 
+loadUIFromData()
 
 local gui = background --guihere (frame)
 local function update(input)
@@ -220,18 +234,33 @@ end)
 
 --Functions:
 function toggle(instance)
-	if (instance:IsA("TextButton")) then
+	if (instance:IsA("TextButton") or instance:IsA("ImageButton")) then
 		instance.Selected = not instance.Selected
-	elseif (instance:IsA("ImageButton")) then
-		instance.Selected = not instance.Selected
-		if (instance.Selected) then
-			instance.Image = "rbxassetid://14655571847"
-		else
-			instance.Image = "rbxassetid://14652140686"
-		end
 	end
+	reloadToggle(instance)
 	if not (_G.HBFruit) then
 		repeat task.wait(1) until _G.HBFruit
 	end
 	_G.HBFruit.Function:saveAs()
+end
+
+function reloadToggle(imagebutton)
+	if (imagebutton:IsA("ImageButton")) then
+		if (imagebutton.Selected) then
+			imagebutton.Image = "rbxassetid://14655571847"
+	else
+			imagebutton.Image = "rbxassetid://14652140686"
+	end
+	end
+end
+
+function loadUIFromData()
+	if (isfile("HBFruit/"..LocalPlayer.Name.."/data.json")) then
+		local data = _G.HBFruit.JSON.decode(readfile("HBFruit/"..LocalPlayer.Name.."/data.json"))
+		ImageButton.Selected = data.UI.Misc.farmChest
+		ImageButton_2.Selected = data.UI.Misc.fastMode
+		TextBox.Text = data.UI.Misc.beliStop
+		reloadToggle(ImageButton)
+		reloadToggle(ImageButton_2)
+	end
 end
