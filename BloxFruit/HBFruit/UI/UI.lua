@@ -20,14 +20,6 @@ local stopAtBeli = Instance.new("Frame")
 local UIListLayout_3 = Instance.new("UIListLayout")
 local TextLabel_2 = Instance.new("TextLabel")
 local TextBox = Instance.new("TextBox")
-TextBox.Changed:Connect(function(property)
-	if (property == "Text") then
-		if not (_G.HBFruit) then
-			repeat task.wait(1) until _G.HBFruit
-		end
-		_G.HBFruit.Function:saveAs()
-	end
-end)
 local fastMode = Instance.new("Frame")
 local TextLabel_3 = Instance.new("TextLabel")
 local ImageButton_2 = Instance.new("ImageButton")
@@ -145,6 +137,14 @@ TextBox.TextColor3 = Color3.fromRGB(0, 255, 127)
 TextBox.TextScaled = true
 TextBox.TextSize = 14.000
 TextBox.TextWrapped = true
+TextBox.Changed:Connect(function(property)
+	if (property == "Text") then
+		if not (_G.HBFruit) then
+			repeat task.wait(1) until _G.HBFruit
+		end
+		_G.HBFruit.Function:saveAs()
+	end
+end)
 
 fastMode.Name = "fastMode"
 fastMode.Parent = container
