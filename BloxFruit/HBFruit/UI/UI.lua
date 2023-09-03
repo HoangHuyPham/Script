@@ -255,11 +255,14 @@ function reloadToggle(imagebutton)
 end
 
 function loadUIFromData()
+	if not (_G.HBFruit) then
+		repeat task.wait(1) until _G.HBFruit
+	end
 	if (isfile("HBFruit/"..LocalPlayer.Name.."/data.json")) then
 		local data = _G.HBFruit.JSON.decode(readfile("HBFruit/"..LocalPlayer.Name.."/data.json"))
-		ImageButton.Selected = data.UI.Misc.farmChest
-		ImageButton_2.Selected = data.UI.Misc.fastMode
-		TextBox.Text = data.UI.Misc.beliStop
+		ImageButton.Selected = data.Data.UI.Misc.farmChest
+		ImageButton_2.Selected = data.Data.UI.Misc.fastMode
+		TextBox.Text = data.Data.UI.Misc.beliStop
 		reloadToggle(ImageButton)
 		reloadToggle(ImageButton_2)
 	end
