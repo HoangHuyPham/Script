@@ -90,12 +90,13 @@ function preWriteOrRead()
 		}
 	}
 	if (isfolder("HBFruit")) then
-		if (isfolder(LocalPlayer.Name)) then
+		if (isfile("HBFruit/"..LocalPlayer.Name.."/data.json")) then
 			return
 		end
 	end
-	writefile("HBFruit/"..LocalPlayer.Name.."/data.json", JSON.encode(HBFruitDefault))
 	makefolder("HBFruit/"..LocalPlayer.Name)
+	writefile("HBFruit/"..LocalPlayer.Name.."/data.json", JSON.encode(HBFruitDefault))
+	
 	
 end
 
