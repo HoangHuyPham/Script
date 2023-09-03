@@ -25,7 +25,7 @@ TextBox.Changed:Connect(function(property)
 		if not (_G.HBFruit) then
 			repeat task.wait(1) until _G.HBFruit
 		end
-		_G.HBFruit.Function:saveAs()
+		
 	end
 end)
 local fastMode = Instance.new("Frame")
@@ -239,7 +239,7 @@ function toggle(instance)
 	if not (_G.HBFruit) then
 		repeat task.wait(1) until _G.HBFruit
 	end
-	
+	_G.HBFruit.Function:saveAs()
 end
 
 function reloadToggle(imagebutton)
