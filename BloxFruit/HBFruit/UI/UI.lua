@@ -195,7 +195,7 @@ TextLabel_4.TextWrapped = true
 
 --Initialize
 _G.HBFruitIsLoaded = true
-loadUIFromData()
+pcall(loadUIFromData)
 
 local gui = background --guihere (frame)
 local function update(input)
@@ -253,7 +253,9 @@ function reloadToggle(imagebutton)
 end
 
 function loadUIFromData()
-	
+	if not (_G.HBFruit.JSON) then
+		repeat task.wait(1) until _G.HBFruit.JSON
+	end
 	if (isfile("HBFruit/"..LocalPlayer.Name.."/data.json")) then
 		print("loading..")
 		local data = _G.HBFruit.JSON.decode(readfile("HBFruit/"..LocalPlayer.Name.."/data.json"))
