@@ -17,6 +17,7 @@ local HBFruit = game.Players.LocalPlayer.PlayerGui:FindFirstChild("HBFruit")
 local ErrorTitle = game.CoreGui:FindFirstChild("ErrorTitle", true)
 local FarmChestBtn = HBFruit.background.container.farmChest.ImageButton
 local FastModeBtn = HBFruit.background.container.fastMode.ImageButton
+local BeliStopTextBox = HBFruit.background.container.stopAtBeli.TextBox
 local VirtualUser = game:GetService("VirtualUser")
 local TeleportService = game:GetService("TeleportService")
 local LocalPlayer = game:GetService("Players").LocalPlayer
@@ -33,13 +34,15 @@ if _G.HBFruit then
 	_G.HBFruit = nil
 end
 
+
+
 _G.HBFruit = {}
 _G.HBFruit.Function = {}
 function _G.HBFruit.Function:saveAs()
 	local HBFruit = {
 		Data = {
 			UI = {
-				Misc = {farmChest=FarmChestBtn.Selected, fastMode=FastModeBtn.Selected, beliStop=HBFruit.background.container.stopAtBeli.TextBox.Text}
+				Misc = {farmChest=FarmChestBtn.Selected, fastMode=FastModeBtn.Selected, beliStop=function() if(BeliStopTextBox.Text == nil or not string.match(BeliStopTextBox.Text, "^%s*%s*$") or not tonumber(BeliStopTextBox.Text)) then return "-1" else return BeliStopTextBox.Text end end}
 			},
 			ServerJoined = {}
 		}
@@ -66,7 +69,9 @@ _G.HBFruit.Connection.TeleportFailed = TeleportService.TeleportInitFailed:Connec
 
 function _G.HBFruit.Connection:DisconnectAll()
 	for _,v in pairs(self) do
-		v:Disconnect()
+		if(typeof(v)=="RBXScriptConnection") then
+			v:Disconnect()
+		end
 	end
 end
 
