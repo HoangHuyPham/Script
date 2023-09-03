@@ -43,7 +43,7 @@ function _G.HBFruit.Function:saveAs()
 	local HBFruit = {
 		Data = {
 			UI = {
-				Misc = {farmChest=FarmChestBtn.Selected, fastMode=FastModeBtn.Selected, beliStop=function() if(BeliStopTextBox.Text == nil or not string.match(BeliStopTextBox.Text, "^%s*%s*$") or not tonumber(BeliStopTextBox.Text)) then return "-1" else return BeliStopTextBox.Text end end}
+				Misc = {farmChest=FarmChestBtn.Selected, fastMode=FastModeBtn.Selected, beliStop=function() if(BeliStopTextBox.Text == nil or string.match(BeliStopTextBox.Text, "^%s*%s*$") or not tonumber(BeliStopTextBox.Text)) then return "-1" else return BeliStopTextBox.Text end end}
 			},
 			ServerJoined = {}
 		}
