@@ -370,12 +370,12 @@ Connection.Container.TPToSea1 = sea1Btn.Activated:Connect(function()
 		_G.HBFruit.Function:TPToSea(1)
 	end
 end)
-Connection.Container.TPToSea2 = sea1Btn.Activated:Connect(function()
+Connection.Container.TPToSea2 = sea2Btn.Activated:Connect(function()
 	if (_G.HBFruit.IsReady) then
 		_G.HBFruit.Function:TPToSea(2)
 	end
 end)
-Connection.Container.TPToSea3 = sea1Btn.Activated:Connect(function()
+Connection.Container.TPToSea3 = sea3Btn.Activated:Connect(function()
 	if (_G.HBFruit.IsReady) then
 		_G.HBFruit.Function:TPToSea(3)
 	end
