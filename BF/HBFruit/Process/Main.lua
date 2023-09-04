@@ -20,6 +20,7 @@ if JSON and TeleportService and VirtualUser and LocalPlayer and UI then
 	warn("Loading script successful!", os.clock()-initialTime.."s")
 else
 	warn("Can't load script!")
+	return
 end 
 
 
