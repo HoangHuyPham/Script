@@ -12,7 +12,7 @@ local LocalPlayer = game:GetService("Players").LocalPlayer
 local SCRIPT_ID = "HBFruit"
 local UI = nil
 delay(delayTime, function()
-	UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/HoangHuyPham/Script/testui/BF/HBFruit/UI/Main.lua", true))
+	UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/HoangHuyPham/Script/testui/BF/HBFruit/UI/Main.lua", true))()
 end)
 task.wait(delayTime+1)
 
