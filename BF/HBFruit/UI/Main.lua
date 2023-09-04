@@ -527,7 +527,7 @@ function loadUIWithArgs(isPagination, farmChest, fastMode, lockFPS, stopBeliAt)
 	if (lockFPS) then
 		toggle(lockFPSBtn)
 	end
-	stopAtBeliTextBox.Text = stopAtBeli
+	stopAtBeliTextBox.Text = tostring(stopBeliAt)
 	updateStatusUI()
 end
 
