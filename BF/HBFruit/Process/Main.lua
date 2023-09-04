@@ -4,15 +4,19 @@ task.wait(3)
 
 if (_G.HBFruit) then return end
 local initialTime = os.clock()
+local delayTime = 0.5
 local JSON = loadstring(game:HttpGet("https://raw.githubusercontent.com/HoangHuyPham/Script/master/jsonLib", true))()
 local TeleportService = game:GetService("TeleportService")
 local VirtualUser = game:GetService("VirtualUser")
 local LocalPlayer = game:GetService("Players").LocalPlayer
 local SCRIPT_ID = "HBFruit"
-local UI = game:HttpGet("https://raw.githubusercontent.com/HoangHuyPham/Script/testui/BF/HBFruit/UI/Main.lua", true)
+local UI = nil
+delay(delayTime, function()
+	UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/HoangHuyPham/Script/testui/BF/HBFruit/UI/Main.lua", true))
+end)
+task.wait(delayTime)
 
 if JSON and TeleportService and VirtualUser and LocalPlayer and UI then
-	loadstring(UI, true)()
 	warn("Loading script successful!", os.clock()-initialTime.."s")
 else
 	warn("Can't load script!")
