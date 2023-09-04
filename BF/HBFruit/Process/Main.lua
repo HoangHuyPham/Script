@@ -10,11 +10,7 @@ local TeleportService = game:GetService("TeleportService")
 local VirtualUser = game:GetService("VirtualUser")
 local LocalPlayer = game:GetService("Players").LocalPlayer
 local SCRIPT_ID = "HBFruit"
-local UI = nil
-coroutine.resume(coroutine.create(function()
-	UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/HoangHuyPham/Script/testui/BF/HBFruit/UI/Main.lua", true))()
-end))
-task.wait(1)
+local UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/HoangHuyPham/Script/testui/BF/HBFruit/UI/Main.lua", true))()
 
 if JSON and TeleportService and VirtualUser and LocalPlayer and UI then
 	warn("Loading script successful!", os.clock()-initialTime.."s")
