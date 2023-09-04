@@ -555,3 +555,7 @@ end
 notify("HBFruit welcome!")
 repeat task.wait() until _G.HBFruit.IsReady
 loadUIWithArgs(_G.HBFruit.Function:loadDataUI())
+
+
+
+return true
