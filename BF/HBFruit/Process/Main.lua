@@ -14,7 +14,7 @@ local UI = nil
 delay(delayTime, function()
 	UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/HoangHuyPham/Script/testui/BF/HBFruit/UI/Main.lua", true))()
 end)
-task.wait(delayTime+1)
+task.wait(delayTime)
 
 if JSON and TeleportService and VirtualUser and LocalPlayer and UI then
 	warn("Loading script successful!", os.clock()-initialTime.."s")
