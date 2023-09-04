@@ -9,7 +9,7 @@ local TeleportService = game:GetService("TeleportService")
 local VirtualUser = game:GetService("VirtualUser")
 local LocalPlayer = game:GetService("Players").LocalPlayer
 local SCRIPT_ID = "HBFruit"
-local UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/HoangHuyPham/Script/testui/BF/HBFruit/UI/Main.lua", true))()
+local UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/HoangHuyPham/Script/testui/BF/HBFruit/UI/Main.lua", true))
 
 if JSON and TeleportService and VirtualUser and LocalPlayer and UI then
 	warn("Loading script successful!", os.clock()-initialTime.."s")
@@ -107,7 +107,5 @@ function _G.HBFruit.Function:TPToSea(sea)
 end
 
 
-
 _G.HBFruit.IsReady = true
-
 coroutine.resume(_G.HBFruit.Coroutine.AntiAFK)
