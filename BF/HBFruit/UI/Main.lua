@@ -30,6 +30,14 @@ local sea2 = Instance.new("TextLabel")
 local sea2Btn = Instance.new("TextButton")
 local sea3 = Instance.new("TextLabel")
 local sea3Btn = Instance.new("TextButton")
+local hopServer = Instance.new("TextLabel")
+local hopServerBtn = Instance.new("TextButton")
+local hopLowServer = Instance.new("TextLabel")
+local hopLowServerBtn = Instance.new("TextButton")
+local changeToMarine = Instance.new("TextLabel")
+local changeToMarineBtn = Instance.new("TextButton")
+local changeToPirate = Instance.new("TextLabel")
+local changeToPirateBtn = Instance.new("TextButton")
 
 local pagination = Instance.new("ScrollingFrame")
 local UIListLayout_2 = Instance.new("UIListLayout")
@@ -246,6 +254,103 @@ sea3Btn.Text = ""
 sea3Btn.TextColor3 = Color3.fromRGB(0, 0, 0)
 sea3Btn.TextSize = 14
 
+hopServer.Name = "hopServer"
+hopServer.Parent = container
+hopServer.BackgroundColor3 = Color3.fromRGB(85, 170, 0)
+hopServer.BorderColor3 = Color3.fromRGB(255, 255, 0)
+hopServer.BorderSizePixel = 1
+hopServer.BorderMode = Enum.BorderMode.Inset
+hopServer.Size = UDim2.new(1, 0, 0.1, 0)
+hopServer.Font = Enum.Font.Roboto
+hopServer.Text = "Hop Server"
+hopServer.TextColor3 = Color3.fromRGB(255, 255, 255)
+hopServer.TextSize = 25
+hopServer:SetAttribute("id", 1)
+
+hopServerBtn.Parent = hopServer
+hopServerBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hopServerBtn.BackgroundTransparency = 1
+hopServerBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+hopServerBtn.BorderSizePixel = 0
+hopServerBtn.Size = UDim2.new(1, 0, 1, 0)
+hopServerBtn.Font = Enum.Font.SourceSans
+hopServerBtn.Text = ""
+hopServerBtn.TextColor3 = Color3.fromRGB(0, 0, 0)
+hopServerBtn.TextSize = 14
+
+hopLowServer.Name = "hopLowServer"
+hopLowServer.Parent = container
+hopLowServer.BackgroundColor3 = Color3.fromRGB(85, 170, 0)
+hopLowServer.BorderColor3 = Color3.fromRGB(255, 255, 0)
+hopLowServer.Size = UDim2.new(1, 0, 0.1, 0)
+hopLowServer.Font = Enum.Font.Roboto
+hopLowServer.BorderSizePixel = 1
+hopLowServer.BorderMode = Enum.BorderMode.Inset
+hopLowServer.Text = "Hop Server(low player)"
+hopLowServer.TextColor3 = Color3.fromRGB(255, 255, 255)
+hopLowServer.TextSize = 25
+hopLowServer:SetAttribute("id", 1)
+
+hopLowServerBtn.Parent = hopLowServer
+hopLowServerBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hopLowServerBtn.BackgroundTransparency = 1
+hopLowServerBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+hopLowServerBtn.BorderSizePixel = 0
+hopLowServerBtn.Size = UDim2.new(1, 0, 1, 0)
+hopLowServerBtn.Font = Enum.Font.SourceSans
+hopLowServerBtn.Text = ""
+hopLowServerBtn.TextColor3 = Color3.fromRGB(0, 0, 0)
+hopLowServerBtn.TextSize = 14
+
+changeToPirate.Name = "changeToPirate"
+changeToPirate.Parent = container
+changeToPirate.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+changeToPirate.BorderColor3 = Color3.fromRGB(184, 0, 0)
+changeToPirate.Size = UDim2.new(1, 0, 0.1, 0)
+changeToPirate.Font = Enum.Font.Roboto
+changeToPirate.Text = "Change to Pirate"
+changeToPirate.BorderSizePixel = 1
+changeToPirate.BorderMode = Enum.BorderMode.Inset
+changeToPirate.TextColor3 = Color3.fromRGB(255, 255, 255)
+changeToPirate.TextSize = 25
+changeToPirate:SetAttribute("id", 1)
+
+changeToPirateBtn.Parent = changeToPirate
+changeToPirateBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+changeToPirateBtn.BackgroundTransparency = 1
+changeToPirateBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+changeToPirateBtn.BorderSizePixel = 0
+changeToPirateBtn.Size = UDim2.new(1, 0, 1, 0)
+changeToPirateBtn.Font = Enum.Font.Roboto
+changeToPirateBtn.Text = ""
+changeToPirateBtn.TextColor3 = Color3.fromRGB(0, 0, 0)
+changeToPirateBtn.TextSize = 14
+
+changeToMarine.Name = "changeToMarine"
+changeToMarine.Parent = container
+changeToMarine.BackgroundColor3 = Color3.fromRGB(255, 85, 127)
+changeToMarine.BorderColor3 = Color3.fromRGB(255, 255, 0)
+changeToMarine.Size = UDim2.new(1, 0, 0.1, 0)
+changeToMarine.Font = Enum.Font.Roboto
+changeToMarine.Text = "Change to Marine"
+changeToMarine.BorderSizePixel = 1
+changeToMarine.BorderMode = Enum.BorderMode.Inset
+changeToMarine.TextColor3 = Color3.fromRGB(255, 255, 255)
+changeToMarine.TextSize = 25
+changeToMarine:SetAttribute("id", 1)
+
+changeToMarineBtn.Parent = changeToMarine
+changeToMarineBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+changeToMarineBtn.BackgroundTransparency = 1
+changeToMarineBtn.BorderColor3 = Color3.fromRGB(69, 69, 206)
+changeToMarineBtn.BorderSizePixel = 0
+changeToMarineBtn.Size = UDim2.new(1, 0, 1, 0)
+changeToMarineBtn.Font = Enum.Font.Roboto
+changeToMarineBtn.Text = ""
+changeToMarineBtn.TextColor3 = Color3.fromRGB(0, 0, 0)
+changeToMarineBtn.TextSize = 14
+
+
 pagination.Name = "pagination"
 pagination.Parent = background
 pagination.Active = true
@@ -380,6 +485,27 @@ Connection.Container.TPToSea3 = sea3Btn.Activated:Connect(function()
 		_G.HBFruit.Function:TPToSea(3)
 	end
 end)
+Connection.Container.HopServer = hopServerBtn.Activated:Connect(function()
+	if (_G.HBFruit.IsReady) then
+		_G.HBFruit.Function:HopServer(false)
+	end
+end)
+Connection.Container.HopLowServer = hopLowServerBtn.Activated:Connect(function()
+	if (_G.HBFruit.IsReady) then
+		_G.HBFruit.Function:HopServer(true)
+	end
+end)
+Connection.Container.changeToPirate = changeToPirateBtn.Activated:Connect(function()
+	if (_G.HBFruit.IsReady) then
+		_G.HBFruit.Function:ChangeSide(1)
+	end
+end)
+Connection.Container.changeToMarine = changeToMarineBtn.Activated:Connect(function()
+	if (_G.HBFruit.IsReady) then
+		_G.HBFruit.Function:ChangeSide(2)
+	end
+end)
+
 
 
 local gui = background --guihere (frame)
