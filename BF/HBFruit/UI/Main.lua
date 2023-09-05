@@ -328,7 +328,7 @@ changeToPirateBtn.TextSize = 14
 
 changeToMarine.Name = "changeToMarine"
 changeToMarine.Parent = container
-changeToMarine.BackgroundColor3 = Color3.fromRGB(255, 85, 127)
+changeToMarine.BackgroundColor3 = Color3.fromRGB(0, 0, 140)
 changeToMarine.BorderColor3 = Color3.fromRGB(255, 255, 0)
 changeToMarine.Size = UDim2.new(1, 0, 0.1, 0)
 changeToMarine.Font = Enum.Font.Roboto
@@ -471,37 +471,37 @@ Connection.Container.StopAtBeli = stopAtBeliTextBox.FocusLost:Connect(function(e
 	end
 end)
 Connection.Container.TPToSea1 = sea1Btn.Activated:Connect(function()
-	if (_G.HBFruit.IsReady) then
+	if (_G.HBFruit.Variable.IsReady) then
 		_G.HBFruit.Function:TPToSea(1)
 	end
 end)
 Connection.Container.TPToSea2 = sea2Btn.Activated:Connect(function()
-	if (_G.HBFruit.IsReady) then
+	if (_G.HBFruit.Variable.IsReady) then
 		_G.HBFruit.Function:TPToSea(2)
 	end
 end)
 Connection.Container.TPToSea3 = sea3Btn.Activated:Connect(function()
-	if (_G.HBFruit.IsReady) then
+	if (_G.HBFruit.Variable.IsReady) then
 		_G.HBFruit.Function:TPToSea(3)
 	end
 end)
 Connection.Container.HopServer = hopServerBtn.Activated:Connect(function()
-	if (_G.HBFruit.IsReady) then
+	if (_G.HBFruit.Variable.IsReady) then
 		_G.HBFruit.Function:HopServer(false)
 	end
 end)
 Connection.Container.HopLowServer = hopLowServerBtn.Activated:Connect(function()
-	if (_G.HBFruit.IsReady) then
+	if (_G.HBFruit.Variable.IsReady) then
 		_G.HBFruit.Function:HopServer(true)
 	end
 end)
 Connection.Container.changeToPirate = changeToPirateBtn.Activated:Connect(function()
-	if (_G.HBFruit.IsReady) then
+	if (_G.HBFruit.Variable.IsReady) then
 		_G.HBFruit.Function:ChangeSide(1)
 	end
 end)
 Connection.Container.changeToMarine = changeToMarineBtn.Activated:Connect(function()
-	if (_G.HBFruit.IsReady) then
+	if (_G.HBFruit.Variable.IsReady) then
 		_G.HBFruit.Function:ChangeSide(2)
 	end
 end)
@@ -591,8 +591,8 @@ function toggle(instance)
 			instance.Selected = not instance.Selected
 		end
 	end
-	if _G.HBFruit.IsReady then
-		local paginationI = 1
+	if _G.HBFruit.Variable.IsReady then
+		local paginationI = 0
 		for _,v in pairs(pagination:GetChildren()) do
 			if v:IsA("TextButton") then
 				if (v.Selected) then
@@ -679,7 +679,7 @@ end
 
 --Hello
 notify("HBFruit welcome!")
-repeat task.wait() until _G.HBFruit.IsReady
+repeat task.wait() until _G.HBFruit.Variable.IsReady
 loadUIWithArgs(_G.HBFruit.Function:loadDataUI())
 
 
