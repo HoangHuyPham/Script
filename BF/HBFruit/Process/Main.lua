@@ -110,7 +110,7 @@ function _G.HBFruit.Function:preProcessData()
 			}
 		}
 		makefolder(SCRIPT_ID.."/"..LocalPlayer.Name)
-		writefile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp", _G.HBFruit.Function:Stringify({}))
+		writefile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp", _G.HBFruit.Function:Stringify({})))
 		writefile(SCRIPT_ID.."/"..LocalPlayer.Name.."/data.json", JSON.encode(default))
 	end
 end
@@ -129,14 +129,14 @@ end
 
 function _G.HBFruit.Function:HopServer(isLow)
 	_G.HBFruit.Function:preProcessData()
-	local data = loadfile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp")
+	local data = loadfile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp")()
 	
 	if (#data >= 20) then
 		writefile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp", _G.HBFruit.Function:Stringify({}))
 	else
 		local server = nil
 		repeat server = _G.HBFruit.Function:GetBestServer(isLow) task.wait(1) until not table.find(data,server.id, 1)
-		writefile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp", _G.HBFruit.Function:Stringify(table.insert(data, server.id)))
+		writefile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp", _G.HBFruit.Function:Stringify(table.insert(data, server.id))
 		warn(server.id, "ping: "..server.ping)
 		local TeleportService = game:GetService("TeleportService")
 		TeleportService:TeleportToPlaceInstance(game.PlaceId, server.id, game.Players.LocalPlayer)
@@ -144,7 +144,7 @@ function _G.HBFruit.Function:HopServer(isLow)
 end
 
 function _G.HBFruit.Function:Stringify(tableA)
-	local res = "{"
+	local res = "return {"
 	for k,v in ipairs(tableA) do
 		if (k<#tableA) then
 			res = res .. "\"" .. tableA[k].. "\"" .. ","
