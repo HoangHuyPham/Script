@@ -48,7 +48,7 @@ end)
 _G.HBFruit.Coroutine.LockFPS = coroutine.create(function()
 	while true do
 		pcall(function()
-			repeat task.wait(8) if (not LocalPlayer.PlayerGui.HBFruit.background.container.lockFPS.lockFPSBtn.Selected) then setfpscap(240) end until LocalPlayer.PlayerGui.HBFruit.background.container.lockFPS.lockFPSBtn.Selected
+			repeat task.wait(8) if (not LocalPlayer.PlayerGui.HBFruit.background.container.lockFPS.ImageButton.Selected) then setfpscap(240) end until LocalPlayer.PlayerGui.HBFruit.background.container.lockFPS.ImageButton.Selected
 			setfpscap(30)
 		end)
 	end
