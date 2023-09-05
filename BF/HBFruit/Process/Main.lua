@@ -33,6 +33,10 @@ _G.HBFruit.Variable.Enum = {}
 _G.HBFruit.Variable.Enum.Sea1 = 1
 _G.HBFruit.Variable.Enum.Sea2 = 2
 _G.HBFruit.Variable.Enum.Sea3 = 3
+_G.HBFruit.Variable.Enum.Pirate = 1
+_G.HBFruit.Variable.Enum.Marine = 2
+
+_G.HBFruit.Variable.IsFPSCap = false
 
 _G.HBFruit.Coroutine.AntiAFK = coroutine.create(function()
 	while true do
@@ -40,6 +44,16 @@ _G.HBFruit.Coroutine.AntiAFK = coroutine.create(function()
 		VirtualUser:Button1Down(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
 		VirtualUser:Button1Up(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
 		warn("Anti AFK is activated!")
+	end
+end)
+
+_G.HBFruit.Coroutine.LockFPS = coroutine.create(function()
+	while true do
+		pcall(function()
+			repeat task.wait(10) setfpscap(240) until LocalPlayer.PlayerGui.HBFruit.background.container.lockFPSBtn.Selected and not _G.HBFruit.Variable.IsFPSCap
+			setfpscap(30)
+			_G.HBFruit.Variable.IsFPSCap = true
+		end)
 	end
 end)
 
@@ -81,7 +95,7 @@ function _G.HBFruit.Function:loadDataUI()
 end
 
 function _G.HBFruit.Function:preProcessData()
-	if (isfile(SCRIPT_ID.."/"..LocalPlayer.Name.."/data.json")) then
+	if (isfile(SCRIPT_ID.."/"..LocalPlayer.Name.."/data.json") and isfile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp")) then
 		return
 	else
 		local default = {
@@ -96,6 +110,7 @@ function _G.HBFruit.Function:preProcessData()
 			}
 		}
 		makefolder(SCRIPT_ID.."/"..LocalPlayer.Name)
+		writefile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp", JSON.encode({}))
 		writefile(SCRIPT_ID.."/"..LocalPlayer.Name.."/data.json", JSON.encode(default))
 	end
 end
@@ -112,6 +127,62 @@ function _G.HBFruit.Function:TPToSea(sea)
 	game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
 end
 
+function _G.HBFruit.Function:HopServer(isLow)
+	_G.HBFruit.Function:preProcessData()
+	local servers = JSON.decode(readfile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp"))
+	if (#servers >= 20) then
+		writefile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp", JSON.encode({}))
+	else
+		local server = nil
+		repeat server = _G.HBFruit.Function:GetBestServer(isLow) task.wait(1) until not table.find(JSON.decode(readfile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp")), server.id, 1)
+		warn(server.id, "ping: "..server.ping)
+		local TeleportService = game:GetService("TeleportService")
+		TeleportService:TeleportToPlaceInstance(game.PlaceId, server.id, game.Players.LocalPlayer)
+	end	
+end
 
-_G.HBFruit.IsReady = true
+function _G.HBFruit.Function:GetBestServer(isLow)
+	local requestURL = nil
+	if (isLow) then
+		requestURL = JSON.decode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?cursor=".."".."&sortOrder=Asc&excludeFullGames=true",true))
+	else
+		requestURL = JSON.decode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?cursor=".."".."&sortOrder=Desc&excludeFullGames=true",true))
+	end
+	local bestServer = requestURL.data[1]
+	for _,v in pairs(requestURL.data) do
+		if (v.ping < bestServer.ping) then
+			bestServer = v
+		end
+	end	
+	return bestServer
+end
+
+function _G.HBFruit.Function:ChangeSide(side)
+	local args={
+		[1] = "SetTeam"
+	}
+	if (LocalPlayer.PlayerGui:FindFirstChild("ChooseTeam", true)) then
+		LocalPlayer.PlayerGui:FindFirstChild("ChooseTeam", true):Destroy()
+		game:GetService("Workspace").CurrentCamera.CameraType = Enum.CameraType.Custom
+	end
+	if (side==1) then
+		args[2] = "Pirates"
+	elseif (side==2) then
+		args[2] = "Marines"
+	end
+	game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
+end
+
+
+_G.HBFruit.Variable.IsReady = true
 coroutine.resume(_G.HBFruit.Coroutine.AntiAFK)
+coroutine.resume(_G.HBFruit.Coroutine.LockFPS)
+delay(delayTime, function()
+	if (LocalPlayer.PlayerGui:FindFirstChild("ChooseTeam", true)) then
+		if (_G.HBFruit.Side == "Pirates") then
+			_G.HBFruit.Function:ChangeSide(1)
+		else
+			_G.HBFruit.Function:ChangeSide(2)
+		end
+	end
+end)
