@@ -86,6 +86,7 @@ container.CanvasSize = UDim2.new(0, 0, 0, 0)
 container.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
 container.ScrollBarThickness = 5
 container.VerticalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+container.AutomaticCanvasSize = Enum.AutomaticSize.Y
 
 UIListLayout.Parent = container
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
@@ -304,8 +305,8 @@ hopLowServerBtn.TextSize = 14
 
 changeToPirate.Name = "changeToPirate"
 changeToPirate.Parent = container
-changeToPirate.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-changeToPirate.BorderColor3 = Color3.fromRGB(184, 0, 0)
+changeToPirate.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+changeToPirate.BorderColor3 = Color3.fromRGB(255, 255, 0)
 changeToPirate.Size = UDim2.new(1, 0, 0.1, 0)
 changeToPirate.Font = Enum.Font.Roboto
 changeToPirate.Text = "Change to Pirate"
