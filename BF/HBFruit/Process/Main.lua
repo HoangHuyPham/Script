@@ -36,8 +36,6 @@ _G.HBFruit.Variable.Enum.Sea3 = 3
 _G.HBFruit.Variable.Enum.Pirate = 1
 _G.HBFruit.Variable.Enum.Marine = 2
 
-_G.HBFruit.Variable.IsFPSCap = false
-
 _G.HBFruit.Coroutine.AntiAFK = coroutine.create(function()
 	while true do
 		task.wait(60*5)
@@ -50,9 +48,8 @@ end)
 _G.HBFruit.Coroutine.LockFPS = coroutine.create(function()
 	while true do
 		pcall(function()
-			repeat task.wait(10) setfpscap(240) until LocalPlayer.PlayerGui.HBFruit.background.container.lockFPSBtn.Selected and not _G.HBFruit.Variable.IsFPSCap
+			repeat task.wait(10) setfpscap(240) until LocalPlayer.PlayerGui.HBFruit.background.container.lockFPSBtn.Selected
 			setfpscap(30)
-			_G.HBFruit.Variable.IsFPSCap = true
 		end)
 	end
 end)
