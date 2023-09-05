@@ -183,6 +183,19 @@ function _G.HBFruit.Function:ChangeSide(side)
 	}
 	if (LocalPlayer.PlayerGui:FindFirstChild("ChooseTeam", true)) then
 		LocalPlayer.PlayerGui:FindFirstChild("ChooseTeam", true):Destroy()
+		LocalPlayer.PlayerGui:WaitForChild("Main"):FindFirstChild("Code").Visible = true
+		LocalPlayer.PlayerGui:WaitForChild("Main"):FindFirstChild("HomeButton").Visible = true
+		LocalPlayer.PlayerGui:WaitForChild("Main"):FindFirstChild("Mute").Visible = true
+		LocalPlayer.PlayerGui:WaitForChild("Main"):FindFirstChild("Settings").Visible = true
+		LocalPlayer.PlayerGui:WaitForChild("Main"):FindFirstChild("AlliesButton").Visible = true
+		LocalPlayer.PlayerGui:WaitForChild("Main"):FindFirstChild("Beli").Visible = true
+		LocalPlayer.PlayerGui:WaitForChild("Main"):FindFirstChild("Fragments").Visible = true
+		LocalPlayer.PlayerGui:WaitForChild("Main"):FindFirstChild("Level").Visible = true
+		LocalPlayer.PlayerGui:WaitForChild("Main"):FindFirstChild("HP").Visible = true
+		LocalPlayer.PlayerGui:WaitForChild("Main"):FindFirstChild("Energy").Visible = true
+		LocalPlayer.PlayerGui:WaitForChild("Main"):FindFirstChild("MenuButton").Visible = true
+		LocalPlayer.PlayerGui:WaitForChild("Main"):FindFirstChild("Compass").Visible = true
+
 		game:GetService("Workspace").CurrentCamera.CameraType = Enum.CameraType.Custom
 	end
 	if (side==1) then
