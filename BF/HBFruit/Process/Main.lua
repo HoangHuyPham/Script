@@ -48,7 +48,7 @@ end)
 _G.HBFruit.Coroutine.LockFPS = coroutine.create(function()
 	while true do
 		pcall(function()
-			repeat task.wait(10) if (not LocalPlayer.PlayerGui.HBFruit.background.container.lockFPSBtn.Selected) then setfpscap(240) end until LocalPlayer.PlayerGui.HBFruit.background.container.lockFPSBtn.Selected
+			repeat task.wait(8) if (not LocalPlayer.PlayerGui.HBFruit.background.container.lockFPS.lockFPSBtn.Selected) then setfpscap(240) end until LocalPlayer.PlayerGui.HBFruit.background.container.lockFPS.lockFPSBtn.Selected
 			setfpscap(30)
 		end)
 	end
@@ -206,3 +206,15 @@ delay(delayTime, function()
 		end
 	end
 end)
+
+
+--local RS = game:GetService("RunService")
+--local Frames = 0
+--RS.RenderStepped:Connect(function()
+--	Frames += 1
+--end)
+--while true do
+--	task.wait(1)
+--	print("FPS: "..Frames)
+--	Frames = 0
+--end
