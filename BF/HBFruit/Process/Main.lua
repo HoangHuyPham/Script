@@ -136,7 +136,8 @@ function _G.HBFruit.Function:HopServer(isLow)
 	else
 		local server = nil
 		repeat server = _G.HBFruit.Function:GetBestServer(isLow) task.wait(1) until not table.find(data,server.id, 1)
-		writefile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp", _G.HBFruit.Function:Stringify(table.insert(data, server.id)))
+		table.insert(data, server.id)
+		writefile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp", _G.HBFruit.Function:Stringify(data))
 		warn(server.id, "ping: "..server.ping)
 		local TeleportService = game:GetService("TeleportService")
 		TeleportService:TeleportToPlaceInstance(game.PlaceId, server.id, game.Players.LocalPlayer)
@@ -194,7 +195,7 @@ coroutine.resume(_G.HBFruit.Coroutine.AntiAFK)
 coroutine.resume(_G.HBFruit.Coroutine.LockFPS)
 delay(delayTime, function()
 	if (LocalPlayer.PlayerGui:FindFirstChild("ChooseTeam", true)) then
-		if (_G.HBFruit.Side == "Pirates") then
+		if (_G.Side == "Pirates") then
 			_G.HBFruit.Function:ChangeSide(1)
 		else
 			_G.HBFruit.Function:ChangeSide(2)
