@@ -133,6 +133,13 @@ function _G.HBFruit.Function:HopServer(isLow)
 	
 	if (#data >= 20) then
 		writefile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp", _G.HBFruit.Function:Stringify({}))
+		local server = nil
+		repeat server = _G.HBFruit.Function:GetBestServer(isLow) task.wait(1) until not table.find(data,server.id, 1)
+		table.insert(data, server.id)
+		writefile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp", _G.HBFruit.Function:Stringify(data))
+		warn(server.id, "ping: "..server.ping)
+		local TeleportService = game:GetService("TeleportService")
+		TeleportService:TeleportToPlaceInstance(game.PlaceId, server.id, game.Players.LocalPlayer)
 	else
 		local server = nil
 		repeat server = _G.HBFruit.Function:GetBestServer(isLow) task.wait(1) until not table.find(data,server.id, 1)
