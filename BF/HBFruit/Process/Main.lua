@@ -127,6 +127,8 @@ _G.HBFruit.Coroutine.FarmChest = coroutine.create(function()
 		end
 		if (_G.HBFruit.Variable.LootedChest%5 ==0) then
 			LocalPlayer.Character.Humanoid.RigType = Enum.HumanoidRigType.R6
+			LocalPlayer.CharacterAdded:Wait()
+			task.wait(1)
 		end
 	end
 end)
