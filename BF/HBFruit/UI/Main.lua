@@ -24,6 +24,12 @@ local lockFPS = Instance.new("TextLabel")
 local lockFPSBtn = Instance.new("ImageButton")
 local stopAtBeli = Instance.new("TextLabel")
 local stopAtBeliTextBox = Instance.new("TextBox")
+local hopAtChest = Instance.new("TextLabel")
+local hopAtChestTextBox = Instance.new("TextBox")
+local stopAtFist = Instance.new("TextLabel")
+local stopAtFistBtn = Instance.new("ImageButton")
+local stopAtChalice = Instance.new("TextLabel")
+local stopAtChaliceBtn = Instance.new("ImageButton")
 local sea1 = Instance.new("TextLabel")
 local sea1Btn = Instance.new("TextButton")
 local sea2 = Instance.new("TextLabel")
@@ -51,7 +57,6 @@ local content = Instance.new("TextLabel")
 --Functions
 local updateStatusUI = function()end
 local toggle = function(instance)end
-local notify = function(content)end
 local loadUIWithArgs = function(isPagination, farmChest, fastMode, lockFPS, stopBeliAt)end
 local processStopAtBeli = function()end
 
@@ -115,7 +120,7 @@ fastMode.Name = "fastMode"
 fastMode.Parent = container
 fastMode.BackgroundColor3 = Color3.fromRGB(85, 170, 0)
 fastMode.BorderColor3 = Color3.fromRGB(255, 255, 0)
-fastMode.Size = UDim2.new(0.800000012, 0, 0.100000001, 0)
+fastMode.Size = UDim2.new(0.8, 0, 0.1, 0)
 fastMode.Font = Enum.Font.Roboto
 fastMode.Text = "Fast Mode"
 fastMode.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -136,7 +141,7 @@ lockFPS.Name = "lockFPS"
 lockFPS.Parent = container
 lockFPS.BackgroundColor3 = Color3.fromRGB(85, 170, 0)
 lockFPS.BorderColor3 = Color3.fromRGB(255, 255, 0)
-lockFPS.Size = UDim2.new(0.800000012, 0, 0.100000001, 0)
+lockFPS.Size = UDim2.new(0.8, 0, 0.1, 0)
 lockFPS.Font = Enum.Font.Roboto
 lockFPS.Text = "Lock FPS(Decrease CPU/GPU consumption)"
 lockFPS.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -181,6 +186,79 @@ stopAtBeliTextBox.TextColor3 = Color3.fromRGB(0, 255, 127)
 stopAtBeliTextBox.TextScaled = true
 stopAtBeliTextBox.TextSize = 25
 stopAtBeliTextBox.TextWrapped = true
+
+hopAtChest.Name = "hopAtChest"
+hopAtChest.Parent = container
+hopAtChest.BackgroundColor3 = Color3.fromRGB(85, 170, 0)
+hopAtChest.BorderColor3 = Color3.fromRGB(255, 255, 0)
+hopAtChest.BorderSizePixel = 1
+hopAtChest.BorderMode = Enum.BorderMode.Inset
+hopAtChest.Size = UDim2.new(0.6, 0, 0.1, 0)
+hopAtChest.Font = Enum.Font.Roboto
+hopAtChest.Text = "Hop At Chest:"
+hopAtChest.TextColor3 = Color3.fromRGB(255, 255, 255)
+hopAtChest.TextSize = 25
+hopAtChest:SetAttribute("id", 3)
+
+hopAtChestTextBox.Parent = hopAtChest
+hopAtChestTextBox.BackgroundColor3 = Color3.fromRGB(165, 165, 82)
+hopAtChestTextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+hopAtChestTextBox.BorderSizePixel = 0
+hopAtChestTextBox.Position = UDim2.new(1, 0, 0, 0)
+hopAtChestTextBox.Size = UDim2.new(0.65, 0, 1, 0)
+hopAtChestTextBox.Font = Enum.Font.Roboto
+hopAtChestTextBox.PlaceholderText = "-1 is no limit"
+hopAtChestTextBox.Text = "20"
+hopAtChestTextBox.PlaceholderColor3 = Color3.fromRGB(0,0,255)
+hopAtChestTextBox.TextColor3 = Color3.fromRGB(0, 255, 127)
+hopAtChestTextBox.TextScaled = true
+hopAtChestTextBox.TextSize = 25
+hopAtChestTextBox.TextWrapped = true
+
+stopAtFist.Name = "stopAtFist"
+stopAtFist.Parent = container
+stopAtFist.BackgroundColor3 = Color3.fromRGB(85, 170, 0)
+stopAtFist.BorderColor3 = Color3.fromRGB(255, 255, 0)
+stopAtFist.Size = UDim2.new(0.8, 0, 0.1, 0)
+stopAtFist.Font = Enum.Font.Roboto
+stopAtFist.Text = "Stop at fist"
+stopAtFist.TextColor3 = Color3.fromRGB(255, 255, 255)
+stopAtFist.TextSize = 25
+stopAtFist.TextScaled = true
+stopAtFist.BorderSizePixel = 1
+stopAtFist.BorderMode = Enum.BorderMode.Inset
+stopAtFist:SetAttribute("id", 3)
+
+stopAtFistBtn.Parent = stopAtFist
+stopAtFistBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+stopAtFistBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+stopAtFistBtn.BorderSizePixel = 0
+stopAtFistBtn.Position = UDim2.new(1, 0, 0, 0)
+stopAtFistBtn.Size = UDim2.new(0.25, 0, 1, 0)
+stopAtFistBtn.Image = "rbxassetid://14652140686"
+
+stopAtChalice.Name = "stopAtChalice"
+stopAtChalice.Parent = container
+stopAtChalice.BackgroundColor3 = Color3.fromRGB(85, 170, 0)
+stopAtChalice.BorderColor3 = Color3.fromRGB(255, 255, 0)
+stopAtChalice.Size = UDim2.new(0.8, 0, 0.1, 0)
+stopAtChalice.Font = Enum.Font.Roboto
+stopAtChalice.Text = "Stop at chalice"
+stopAtChalice.TextColor3 = Color3.fromRGB(255, 255, 255)
+stopAtChalice.TextSize = 25
+stopAtChalice.TextScaled = true
+stopAtChalice.BorderSizePixel = 1
+stopAtChalice.BorderMode = Enum.BorderMode.Inset
+stopAtChalice:SetAttribute("id", 3)
+
+stopAtChaliceBtn.Parent = stopAtChalice
+stopAtChaliceBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+stopAtChaliceBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+stopAtChaliceBtn.BorderSizePixel = 0
+stopAtChaliceBtn.Position = UDim2.new(1, 0, 0, 0)
+stopAtChaliceBtn.Size = UDim2.new(0.25, 0, 1, 0)
+stopAtChaliceBtn.Image = "rbxassetid://14652140686"
+
 
 sea1.Name = "sea1"
 sea1.Parent = container
@@ -465,9 +543,16 @@ Connection.Container = {}
 Connection.Container.FarmChest = farmChestBtn.Activated:Connect(function()toggle(farmChestBtn)end)
 Connection.Container.FastMode = fastModeBtn.Activated:Connect(function()toggle(fastModeBtn)end)
 Connection.Container.LockFPS = lockFPSBtn.Activated:Connect(function()toggle(lockFPSBtn)end)
+Connection.Container.StopAtFist = stopAtFistBtn.Activated:Connect(function()toggle(stopAtFistBtn)end)
+Connection.Container.StopAtChalice = stopAtChaliceBtn.Activated:Connect(function()toggle(stopAtChaliceBtn)end)
 Connection.Container.StopAtBeli = stopAtBeliTextBox.FocusLost:Connect(function(enter)
 	if (enter) then
 		pcall(processStopAtBeli)
+	end
+end)
+Connection.Container.HopAtChest = hopAtChestTextBox.FocusLost:Connect(function(enter)
+	if (enter) then
+		pcall(processHopAtChest)
 	end
 end)
 Connection.Container.TPToSea1 = sea1Btn.Activated:Connect(function()
@@ -612,7 +697,7 @@ function toggle(instance)
 	updateStatusUI()
 end
 
-function notify(text)
+function _G.HBFruit.Function:notify(text)
 	coroutine.resume(coroutine.create(function()
 		pcall(function()
 			repeat task.wait() until not notifierBusy
@@ -638,12 +723,8 @@ function notify(text)
 	end))
 end
 
-function loadUIWithArgs(isPagination, farmChest, fastMode, lockFPS, stopBeliAt)
-	local isPagination = isPagination or 0
-	local farmChest = farmChest or false
-	local fastMode = fastMode or false
-	local lockFPS = lockFPS or false
-	local stopBeliAt = stopBeliAt or "-1"
+function loadUIWithArgs(isPagination, farmChest, fastMode, lockFPS, stopBeliAt, hopChestAt, stopAtFistA, stopAtChaliceA)
+	
 	for _,v in pairs(pagination:GetChildren()) do
 		if (v:GetAttribute("id") == isPagination) then
 			toggle(v)
@@ -659,33 +740,75 @@ function loadUIWithArgs(isPagination, farmChest, fastMode, lockFPS, stopBeliAt)
 	if (lockFPS) then
 		toggle(lockFPSBtn)
 	end
+	--sea preprocess
+	if _G.HBFruit.Variable.Update.Sea == 1 then
+		stopAtChaliceBtn.Selected = false
+		stopAtFistBtn.Selected = false
+		stopAtChalice.Visible = false
+		stopAtFist.Visible = false
+	elseif _G.HBFruit.Variable.Update.Sea == 2 then
+		stopAtChaliceBtn.Selected = false
+		stopAtChalice.Visible = false
+		if (stopAtFistA) then
+			toggle(stopAtFistBtn)
+		end
+	elseif _G.HBFruit.Variable.Update.Sea == 3 then
+		stopAtFistBtn.Selected = false
+		stopAtFist.Visible = false
+		if (stopAtChaliceA) then
+			toggle(stopAtChaliceBtn)
+		end
+	end
+	
 	stopAtBeliTextBox.Text = tostring(stopBeliAt)
+	hopAtChest.Text = tostring(hopChestAt)
 	updateStatusUI()
 end
 
 function processStopAtBeli()
 	local beli = tonumber(stopAtBeliTextBox.Text)
 	if not (beli) then
-		notify("Can't identify this number!")
+		_G.HBFruit.Function:notify("Can't identify this number!")
 		stopAtBeliTextBox.Text = "-1"
 	else
 		if (beli < 0) then
 			if( beli==-1) then
-				notify("Stop farm beli at: no limit")
+				_G.HBFruit.Function:notify("Stop farm beli at: no limit")
 			else
-				notify("Negative number is invalid! Try set into -1?")
+				_G.HBFruit.Function:notify("Negative number is invalid! Try set into -1?")
 				stopAtBeliTextBox.Text = "-1"
 			end
 		else
-			notify("Stop farm beli at: "..beli)
+			_G.HBFruit.Function:notify(string.format("Stop farm beli at: %d beli", beli))
+		end
+	end
+	toggle()
+end
+
+function processHopAtChest()
+	local chest = tonumber(hopAtChestTextBox.Text)
+	if not (chest) then
+		_G.HBFruit.Function:notify("Can't identify this number!")
+		hopAtChestTextBox.Text = "20"
+	else
+		if (chest < 0) then
+			if( chest==-1) then
+				_G.HBFruit.Function:notify("Stop farm beli at: no limit")
+			else
+				_G.HBFruit.Function:notify("Negative number is invalid! Try set into 20?")
+				hopAtChestTextBox.Text = "20"
+			end
+		else
+			_G.HBFruit.Function:notify(string.format("Hop at chest: %d", chest))
 		end
 	end
 	toggle()
 end
 
 --Hello
-notify("HBFruit welcome!")
+
 repeat task.wait() until _G.HBFruit.Variable.IsReady
+_G.HBFruit.Function:notify("HBFruit welcome!")
 loadUIWithArgs(_G.HBFruit.Function:loadDataUI())
 
 
