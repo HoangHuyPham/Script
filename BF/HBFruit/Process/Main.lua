@@ -145,13 +145,13 @@ function _G.HBFruit.Function:checkBeforeLootChest()
 			_G.HBFruit.Function:HopServer(true)
 		end
 	end
+
 	if (_G.HBFruit.Variable.Update.StopAtBeli ~= -1) then
 		if (LocalPlayer:WaitForChild("Data", 3):FindFirstChild("Beli").Value >= _G.HBFruit.Variable.Update.HopAtChest) then
-			return false
-		end
-	end
-	if (_G.HBFruit.Variable.Update.StopAtBeli ~= -1) then
-		if (LocalPlayer:WaitForChild("Data", 3):FindFirstChild("Beli").Value >= _G.HBFruit.Variable.Update.HopAtChest) then
+			pcall(function()
+				_G.HBFruit.Function:notify(string.format("Beli is enough: %d!", LocalPlayer:WaitForChild("Data", 3):FindFirstChild("Beli").Value))
+			end)
+			task.wait(3)
 			return false
 		end
 	end
