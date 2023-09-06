@@ -36,6 +36,8 @@ _G.HBFruit.Variable.Enum.Sea3 = 3
 _G.HBFruit.Variable.Enum.Pirate = 1
 _G.HBFruit.Variable.Enum.Marine = 2
 
+_G.HBFruit.Variable.IsFastMode = false
+
 _G.HBFruit.Coroutine.AntiAFK = coroutine.create(function()
 	while true do
 		task.wait(60*5)
@@ -50,6 +52,23 @@ _G.HBFruit.Coroutine.LockFPS = coroutine.create(function()
 		pcall(function()
 			repeat task.wait(8) if (not LocalPlayer.PlayerGui.HBFruit.background.container.lockFPS.ImageButton.Selected) then setfpscap(240) end until LocalPlayer.PlayerGui.HBFruit.background.container.lockFPS.ImageButton.Selected
 			setfpscap(30)
+		end)
+	end
+end)
+
+_G.HBFruit.Coroutine.FastMode = coroutine.create(function()
+	while true do
+		pcall(function()
+			repeat task.wait(8) until LocalPlayer.PlayerGui.HBFruit.background.container.fastMode.ImageButton.Selected and not _G.HBFruit.Variable.IsFastMode
+			for _,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+				if (v:IsA("Part") or v:IsA("UnionOperation")) and not (v:FindFirstAncestor(LocalPlayer.Name) or v:FindFirstAncestor(LocalPlayer.DisplayName)) then
+					v.Material = Enum.Material.SmoothPlastic
+				elseif v:IsA("Texture") then
+					v:Destroy()	
+				end
+			end
+			warn("Fast mode is active!(HBFruit)")
+			_G.HBFruit.Variable.IsFastMode = true
 		end)
 	end
 end)
@@ -127,7 +146,7 @@ end
 function _G.HBFruit.Function:HopServer(isLow)
 	_G.HBFruit.Function:preProcessData()
 	local data = loadfile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp")()
-	
+
 	if (#data >= 20) then
 		writefile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp", _G.HBFruit.Function:Stringify({}))
 		local server = nil
