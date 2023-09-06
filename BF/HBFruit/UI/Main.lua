@@ -541,7 +541,7 @@ UserInputService.InputChanged:Connect(function(input)
 end)
 
 UserInputService.InputBegan:Connect(function(input)
-	if (input.KeyCode == Enum.KeyCode.RightControl) then
+	if (input.KeyCode == Enum.KeyCode.F5) then
 		HBFruit.Enabled = not HBFruit.Enabled
 	end
 end)
