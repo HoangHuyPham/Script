@@ -172,9 +172,31 @@ function _G.HBFruit.Function:checkBeforeLootChest()
 				end
 			end
 		end
+		for _,v in pairs(LocalPlayer.Character:GetDescendants()) do
+			if (v:IsA("Tool")) then
+				if (string.find(string.upper(v.Name), "FIST", 1, false)) then
+					pcall(function()
+						_G.HBFruit.Function:notify("Found fist of darkness!")
+					end)
+					task.wait(3)
+					return false
+				end
+			end
+		end
 	end
 	if (_G.HBFruit.Variable.Update.StopAtChalice) then
 		for _,v in pairs(LocalPlayer.Backpack:GetDescendants()) do
+			if (v:IsA("Tool")) then
+				if (string.find(string.upper(v.Name), "CHALICE", 1, false)) then
+					pcall(function()
+						_G.HBFruit.Function:notify("Found god chalice!")
+					end)
+					task.wait(3)
+					return false
+				end
+			end
+		end
+		for _,v in pairs(LocalPlayer.Character:GetDescendants()) do
 			if (v:IsA("Tool")) then
 				if (string.find(string.upper(v.Name), "CHALICE", 1, false)) then
 					pcall(function()
