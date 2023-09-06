@@ -643,6 +643,10 @@ function updateStatusUI()
 				for _,v1 in pairs(container:GetChildren()) do
 					if v1:IsA("TextLabel") then
 						if v1:GetAttribute("id") == v:GetAttribute("id") then
+							if (v1:GetAttribute("invalid")) then
+								v1.Visible = false
+								continue
+							end
 							v1.Visible = true
 						else
 							v1.Visible = false
@@ -746,22 +750,26 @@ function loadUIWithArgs(isPagination, farmChest, fastMode, lockFPS, stopBeliAt, 
 		stopAtFistBtn.Selected = false
 		stopAtChalice.Visible = false
 		stopAtFist.Visible = false
+		stopAtChalice:SetAttribute("invalid", true)
+		stopAtFist:SetAttribute("invalid", true)
 	elseif _G.HBFruit.Variable.Update.Sea == 2 then
 		stopAtChaliceBtn.Selected = false
 		stopAtChalice.Visible = false
+		stopAtChalice:SetAttribute("invalid", true)
 		if (stopAtFistA) then
 			toggle(stopAtFistBtn)
 		end
 	elseif _G.HBFruit.Variable.Update.Sea == 3 then
 		stopAtFistBtn.Selected = false
 		stopAtFist.Visible = false
+		stopAtFist:SetAttribute("invalid", true)
 		if (stopAtChaliceA) then
 			toggle(stopAtChaliceBtn)
 		end
 	end
 	
 	stopAtBeliTextBox.Text = tostring(stopBeliAt)
-	hopAtChest.Text = tostring(hopChestAt)
+	hopAtChestTextBox.Text = tostring(hopChestAt)
 	updateStatusUI()
 end
 
