@@ -119,6 +119,9 @@ _G.HBFruit.Coroutine.FarmChest = coroutine.create(function()
 	local Chest = nil
 	while true do
 		repeat task.wait(0.05) if(_G.HBFruit.Variable.Update.FarmChest) then Chest = _G.HBFruit.Function:GetChestSub() end until Chest and _G.HBFruit.Variable.Update.FarmChest
+		if not Chest then 
+			_G.HBFruit.Function:HopServer(true)
+		end
 		if not (_G.HBFruit.Function:checkBeforeLootChest()) then
 			continue
 		end
