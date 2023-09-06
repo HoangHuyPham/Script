@@ -40,6 +40,7 @@ _G.HBFruit.Variable.Enum.Marine = 2
 
 _G.HBFruit.Variable.IsFastMode = false
 _G.HBFruit.Variable.LootedChest = 0
+_G.HBFruit.Variable.LootTimes = 0
 _G.HBFruit.Variable.Update = {}
 _G.HBFruit.Variable.Update.FarmChest = false
 _G.HBFruit.Variable.Update.FastMode = false
@@ -124,8 +125,10 @@ _G.HBFruit.Coroutine.FarmChest = coroutine.create(function()
 		_G.HBFruit.Function:LootChestSub(Chest.Position)
 		if not (Chest == _G.HBFruit.Function:GetChestSub()) then
 			_G.HBFruit.Variable.LootedChest+=1
+			_G.HBFruit.Variable.LootTimes+=1
 		end
-		if (_G.HBFruit.Variable.LootedChest%5 ==0) then
+		if (_G.HBFruit.Variable.LootTimes == 5) then
+			_G.HBFruit.Variable.LootTimes = 0
 			LocalPlayer.Character.Humanoid.RigType = Enum.HumanoidRigType.R6
 			LocalPlayer.CharacterAdded:Wait()
 			task.wait(1)
