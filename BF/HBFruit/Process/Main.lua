@@ -229,6 +229,8 @@ end
 _G.HBFruit.Variable.IsReady = true
 coroutine.resume(_G.HBFruit.Coroutine.AntiAFK)
 coroutine.resume(_G.HBFruit.Coroutine.LockFPS)
+coroutine.resume(_G.HBFruit.Coroutine.FastMode)
+
 delay(delayTime, function()
 	if (LocalPlayer.PlayerGui:FindFirstChild("ChooseTeam", true)) then
 		if (_G.Side == "Pirates") then
