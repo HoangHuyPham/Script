@@ -696,7 +696,7 @@ function toggle(instance)
 				end
 			end
 		end
-		_G.HBFruit.Function:saveDataUI(paginationI, farmChestBtn.Selected, fastModeBtn.Selected, lockFPSBtn.Selected, tonumber(stopAtBeliTextBox.Text))
+		_G.HBFruit.Function:saveDataUI(paginationI, farmChestBtn.Selected, fastModeBtn.Selected, lockFPSBtn.Selected, tonumber(stopAtBeliTextBox.Text), tonumber(hopAtChestTextBox.Text), stopAtFistBtn.Selected, stopAtChaliceBtn.Selected)
 	end
 	updateStatusUI()
 end
