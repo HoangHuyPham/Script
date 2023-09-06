@@ -86,7 +86,6 @@ container.CanvasSize = UDim2.new(0, 0, 0, 0)
 container.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
 container.ScrollBarThickness = 5
 container.VerticalScrollBarInset = Enum.ScrollBarInset.ScrollBar
-container.AutomaticCanvasSize = Enum.AutomaticSize.Y
 
 UIListLayout.Parent = container
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
@@ -538,6 +537,12 @@ end)
 UserInputService.InputChanged:Connect(function(input)
 	if input == dragInput and dragging then
 		update(input)
+	end
+end)
+
+UserInputService.InputBegan:Connect(function(input)
+	if (input.KeyCode == Enum.KeyCode.RightControl) then
+		HBFruit.Enabled = not HBFruit.Enabled
 	end
 end)
 
