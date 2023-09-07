@@ -316,7 +316,7 @@ function _G.HBFruit.Function:HopServer(isLow)
 	if (#data >= 20) then
 		writefile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp", _G.HBFruit.Function:Stringify({}))
 		local server = nil
-		repeat pcall(function()server = _G.HBFruit.Function:GetBestServer(isLow)end) task.wait(1) until server and not table.find(data,server.id, 1)
+		repeat  server = _G.HBFruit.Function:GetBestServer(isLow) task.wait(1) until server and not table.find(data,server.id, 1)
 		table.insert(data, server.id)
 		writefile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp", _G.HBFruit.Function:Stringify(data))
 		warn(server.id, "ping: "..server.ping)
@@ -324,7 +324,7 @@ function _G.HBFruit.Function:HopServer(isLow)
 		TeleportService:TeleportToPlaceInstance(game.PlaceId, server.id, game.Players.LocalPlayer)
 	else
 		local server = nil
-		repeat pcall(function()server = _G.HBFruit.Function:GetBestServer(isLow)end) task.wait(1) until server and not table.find(data,server.id, 1) 
+		repeat server = _G.HBFruit.Function:GetBestServer(isLow) task.wait(1) until server and not table.find(data,server.id, 1) 
 		table.insert(data, server.id)
 		writefile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp", _G.HBFruit.Function:Stringify(data))
 		warn(server.id, "ping: "..server.ping)
@@ -354,6 +354,7 @@ function _G.HBFruit.Function:GetBestServer(isLow)
 		requestURL = JSON.decode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?cursor=".."".."&sortOrder=Desc&excludeFullGames=true",true))
 	end
 	local bestServer = requestURL.data[1]
+	if not bestServer then return nil end
 	for _,v in pairs(requestURL.data) do
 		if (v.ping < bestServer.ping) then
 			bestServer = v
