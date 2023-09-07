@@ -74,7 +74,7 @@ background.Parent = HBFruit
 background.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 background.BorderColor3 = Color3.fromRGB(0, 0, 0)
 background.BorderSizePixel = 0
-background.Position = UDim2.new(0.5, 0, 0.1, 0)
+background.Position = UDim2.new(0.45, 0, 0.05, 0)
 background.Size = UDim2.new(0, 320, 0, 480)
 background.Image = "rbxassetid://14646385618"
 
