@@ -29,6 +29,7 @@ _G.HBFruit = {}
 _G.HBFruit.Variable = {}
 _G.HBFruit.Function = {}
 _G.HBFruit.Coroutine = {}
+_G.HBFruit.Connection = {}
 
 _G.HBFruit.Variable.Enum = {}
 _G.HBFruit.Variable.Enum.Sea1 = 2753915549
@@ -57,7 +58,13 @@ elseif(game.PlaceId == _G.HBFruit.Variable.Enum.Sea2) then
 elseif(game.PlaceId == _G.HBFruit.Variable.Enum.Sea3) then
 	_G.HBFruit.Variable.Update.Sea = 3
 end
- 
+
+
+_G.HBFruit.Connection.TeleportServerFailed = TeleportService.TeleportInitFailed:Connect(function()
+	pcall(function()
+		_G.HBFruit.Function:HopServer(true)
+	end)
+end)
 
 _G.HBFruit.Coroutine.AntiAFK = coroutine.create(function()
 	while true do
@@ -135,6 +142,23 @@ _G.HBFruit.Coroutine.FarmChest = coroutine.create(function()
 			LocalPlayer.CharacterAdded:Wait()
 			task.wait(1)
 		end
+	end
+end)
+
+_G.HBFruit.Coroutine.RejoinWhenKicked = coroutine.create(function ()
+	while true do
+		task.wait(0.5)
+		pcall(function()
+			for _,v in pairs(game:GetDescendants()) do
+				if (v:IsA("TextLabel") and v:FindFirstAncestor("CoreGui")) then
+					if (string.find(string.upper(v.Text), "SECURITY KICK", 1, false)) then
+						if v.Parent.Parent.Parent.Visible then
+							TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId,LocalPlayer)
+						end
+					end
+				end
+			end
+		end)
 	end
 end)
 
@@ -224,8 +248,8 @@ function _G.HBFruit.Function:saveDataUI(pagination, farmChest, fastMode, lockFPS
 				lockFPS = lockFPS or false,
 				stopAtBeli = stopBeliAt or -1,
 				hopChestAt = hopChestAt or -1,
-				stopAtFist = stopAtFist or true,
-				stopAtChalice = stopAtChalice or true
+				stopAtFist = stopAtFist or false,
+				stopAtChalice = stopAtChalice or false
 			},
 			pagination = pagination
 		}
@@ -406,6 +430,8 @@ coroutine.resume(_G.HBFruit.Coroutine.LockFPS)
 coroutine.resume(_G.HBFruit.Coroutine.FastMode)
 coroutine.resume(_G.HBFruit.Coroutine.FarmChest)
 coroutine.resume(_G.HBFruit.Coroutine.UpdateVariable)
+coroutine.resume(_G.HBFruit.Coroutine.RejoinWhenKicked)
+
 
 delay(delayTime, function()
 	if (LocalPlayer.PlayerGui:FindFirstChild("ChooseTeam", true)) then
