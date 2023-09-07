@@ -57,7 +57,7 @@ local content = Instance.new("TextLabel")
 --Functions
 local updateStatusUI = function()end
 local toggle = function(instance)end
-local loadUIWithArgs = function(isPagination, farmChest, fastMode, lockFPS, stopBeliAt)end
+local loadUIWithArgs = function(isPagination, farmChest, fastMode, lockFPS, stopBeliAt, hopChestAt, stopAtFistA, stopAtChaliceA)end
 local processStopAtBeli = function()end
 
 --Properties:
@@ -730,7 +730,8 @@ function _G.HBFruit.Function:notify(text)
 end
 
 function loadUIWithArgs(isPagination, farmChest, fastMode, lockFPS, stopBeliAt, hopChestAt, stopAtFistA, stopAtChaliceA)
-	
+	stopAtBeliTextBox.Text = tostring(stopBeliAt)
+	hopAtChestTextBox.Text = tostring(hopChestAt)
 	for _,v in pairs(pagination:GetChildren()) do
 		if (v:GetAttribute("id") == isPagination) then
 			toggle(v)
@@ -770,8 +771,7 @@ function loadUIWithArgs(isPagination, farmChest, fastMode, lockFPS, stopBeliAt, 
 		end
 	end
 	
-	stopAtBeliTextBox.Text = tostring(stopBeliAt)
-	hopAtChestTextBox.Text = tostring(hopChestAt)
+	
 	updateStatusUI()
 end
 
