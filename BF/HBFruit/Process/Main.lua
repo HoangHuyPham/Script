@@ -62,7 +62,7 @@ end
 
 _G.HBFruit.Connection.TeleportServerFailed = TeleportService.TeleportInitFailed:Connect(function()
 	pcall(function()
-		_G.HBFruit.Function:HopServer()
+		_G.HBFruit.Function:HopServer(true)
 	end)
 end)
 
@@ -126,7 +126,7 @@ _G.HBFruit.Coroutine.FarmChest = coroutine.create(function()
 	local Chest = nil
 	local noChestTimes = 0
 	while true do
-		repeat task.wait(0.05) if(_G.HBFruit.Variable.Update.FarmChest) then Chest = _G.HBFruit.Function:GetChestSub() if (not Chest) then noChestTimes+=1 end  if (noChestTimes==5) then _G.HBFruit.Function:HopServer() end end until Chest and _G.HBFruit.Variable.Update.FarmChest
+		repeat task.wait(0.05) if(_G.HBFruit.Variable.Update.FarmChest) then Chest = _G.HBFruit.Function:GetChestSub() if (not Chest) then noChestTimes+=1 end  if (noChestTimes==5) then _G.HBFruit.Function:HopServer(true) end end until Chest and _G.HBFruit.Variable.Update.FarmChest
 		
 		if not (_G.HBFruit.Function:checkBeforeLootChest()) then
 			continue
@@ -173,7 +173,7 @@ end
 function _G.HBFruit.Function:checkBeforeLootChest()
 	if (_G.HBFruit.Variable.Update.HopAtChest ~= -1) then
 		if (_G.HBFruit.Variable.LootedChest >= _G.HBFruit.Variable.Update.HopAtChest) then
-			_G.HBFruit.Function:HopServer()
+			_G.HBFruit.Function:HopServer(true)
 		end
 	end
 
@@ -316,7 +316,7 @@ function _G.HBFruit.Function:HopServer(isLow)
 	if (#data >= 20) then
 		writefile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp", _G.HBFruit.Function:Stringify({}))
 		local server = nil
-		repeat  server = _G.HBFruit.Function:GetBestServer(isLow) task.wait(1) until server and not table.find(data,server.id, 1)
+		repeat pcall(function()server = _G.HBFruit.Function:GetBestServer(isLow)end) task.wait(1) until server and not table.find(data,server.id, 1)
 		table.insert(data, server.id)
 		writefile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp", _G.HBFruit.Function:Stringify(data))
 		warn(server.id, "ping: "..server.ping)
@@ -324,7 +324,7 @@ function _G.HBFruit.Function:HopServer(isLow)
 		TeleportService:TeleportToPlaceInstance(game.PlaceId, server.id, game.Players.LocalPlayer)
 	else
 		local server = nil
-		repeat server = _G.HBFruit.Function:GetBestServer(isLow) task.wait(1) until server and not table.find(data,server.id, 1) 
+		repeat pcall(function()server = _G.HBFruit.Function:GetBestServer(isLow)end) task.wait(1) until server and not table.find(data,server.id, 1) 
 		table.insert(data, server.id)
 		writefile(SCRIPT_ID.."/"..LocalPlayer.Name.."/hopservers.temp", _G.HBFruit.Function:Stringify(data))
 		warn(server.id, "ping: "..server.ping)
@@ -353,14 +353,21 @@ function _G.HBFruit.Function:GetBestServer(isLow)
 	else
 		requestURL = JSON.decode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?cursor=".."".."&sortOrder=Desc&excludeFullGames=true",true))
 	end
-	local bestServer = requestURL.data[1]
-	if not bestServer then return nil end
-	for _,v in pairs(requestURL.data) do
-		if (v.ping < bestServer.ping) then
-			bestServer = v
+	local bestServer = nil
+	for k,_ in pairs(requestURL.data) do
+		if (not requestURL.data[k].ping) then
+			continue
+		else
+			bestServer = requestURL.data[k]
+			for i=k, #requestURL.data do
+				if (requestURL.data[i].ping < bestServer.ping) then
+				bestServer = requestURL.data[i]
+				end
+			end
+			return bestServer
 		end
 	end	
-	return bestServer
+	
 end
 
 function _G.HBFruit.Function:ChangeSide(side)
