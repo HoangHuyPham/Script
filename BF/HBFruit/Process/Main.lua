@@ -62,7 +62,7 @@ end
 
 _G.HBFruit.Connection.TeleportServerFailed = TeleportService.TeleportInitFailed:Connect(function()
 	pcall(function()
-		_G.HBFruit.Function:HopServer(true)
+		_G.HBFruit.Function:HopServer()
 	end)
 end)
 
@@ -126,7 +126,7 @@ _G.HBFruit.Coroutine.FarmChest = coroutine.create(function()
 	local Chest = nil
 	local noChestTimes = 0
 	while true do
-		repeat task.wait(0.05) if(_G.HBFruit.Variable.Update.FarmChest) then Chest = _G.HBFruit.Function:GetChestSub() if (not Chest) then noChestTimes+=1 end  if (noChestTimes==5) then _G.HBFruit.Function:HopServer(true) end end until Chest and _G.HBFruit.Variable.Update.FarmChest
+		repeat task.wait(0.05) if(_G.HBFruit.Variable.Update.FarmChest) then Chest = _G.HBFruit.Function:GetChestSub() if (not Chest) then noChestTimes+=1 end  if (noChestTimes==5) then _G.HBFruit.Function:HopServer() end end until Chest and _G.HBFruit.Variable.Update.FarmChest
 		
 		if not (_G.HBFruit.Function:checkBeforeLootChest()) then
 			continue
@@ -173,7 +173,7 @@ end
 function _G.HBFruit.Function:checkBeforeLootChest()
 	if (_G.HBFruit.Variable.Update.HopAtChest ~= -1) then
 		if (_G.HBFruit.Variable.LootedChest >= _G.HBFruit.Variable.Update.HopAtChest) then
-			_G.HBFruit.Function:HopServer(true)
+			_G.HBFruit.Function:HopServer()
 		end
 	end
 
